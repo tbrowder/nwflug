@@ -1,0 +1,204 @@
+%!PS-Adobe-3.0
+%%Creator: Written and programmed by Tom Browder.
+%%+        Designed to fit a standard bus card page, 20 per page,
+%%+          from Gartner Studios.
+%%CreationDate: 2015-05-04
+%%LanguageLevel: 2
+%%BeginProlog
+%
+% For printing, convert to pdf first.
+%
+% definitions:
+/mt {moveto} bind def
+/lto {lineto} bind def
+/np {newpath} bind def
+/cp {closepath} bind def
+/rl {rlineto} bind def
+/rm {rmoveto} bind def
+/tr {translate} bind def
+/st {stroke} bind def
+/rot {rotate} bind def
+/sl {setlinewidth} bind def
+/i2p {72 mul} bind def           % convert inches to points
+/s2p {60 div 72 mul} bind def    % convert 60ths of inches to points
+/mm2p {25.4 div 72 mul} bind def % convert inches to points
+
+% old usage:     /fontname findfont size scalefont setfont
+% level 2 usage: /fontname size selectfont
+
+/puttext { % string location_code [integer: 0-8] (to place--relative to the current point);
+	   % must have a current and correct font
+  20 dict begin
+  /code exch def
+  /stname exch def
+  gsave
+  currentpoint translate np
+  0 0 mt stname false charpath flattenpath pathbbox
+  /ury exch def
+  /urx exch def
+  /lly exch def
+  /llx exch def
+  /mx urx llx add .5 mul def
+  /my ury lly add .5 mul def
+
+  0 code eq {/ox 0 mx  sub def /oy 0 my  sub def} if %               center of text bounding box positioned at the current point
+  1 code eq {/ox 0 llx sub def /oy 0 my  sub def} if %  center of left edge of text bounding box positioned at the current point
+  2 code eq {/ox 0 llx sub def /oy 0 lly sub def} if %    lower left corner of text bounding box positioned at the current point
+  3 code eq {/ox 0 mx  sub def /oy 0 lly sub def} if % center of lower edge of text bounding box positioned at the current point
+  4 code eq {/ox 0 urx sub def /oy 0 lly sub def} if %   lower right corner of text bounding box positioned at the current point
+  5 code eq {/ox 0 urx sub def /oy 0 my  sub def} if % center of right edge of text bounding box positioned at the current point
+  6 code eq {/ox 0 urx sub def /oy 0 ury sub def} if %   upper right corner of text bounding box positioned at the current point
+  7 code eq {/ox 0 mx  sub def /oy 0 ury sub def} if % center of upper edge of text bounding box positioned at the current point
+  8 code eq {/ox 0 llx sub def /oy 0 ury sub def} if %    upper left corner of text bounding box positioned at the current point
+
+  9 code eq {/ox 0 llx sub def /oy 0         def} if % on base line (y of current point), left-justified on current point
+ 10 code eq {/ox 0 mx  sub def /oy 0         def} if % on base line (y of current point), centered horizontally
+ 11 code eq {/ox 0 urx sub def /oy 0         def} if % on base line (y of current point), right-justified on current point
+
+  ox oy translate
+
+  % now the text
+  gsave
+  0 setgray
+  np 0 0 mt stname show
+  grestore
+
+%for debug
+%  gsave
+%  [3] 0 setdash
+%  .1 setlinewidth np
+%  llx lly mt urx lly lineto urx ury lineto llx ury lineto closepath stroke
+%  grestore
+
+  grestore
+  end
+} bind def % puttext
+
+/legfontsize 10 def
+/legradius   3 mm2p def % 17 def % radius for the head
+/make_legend { % usage: xpox ypos (first name) (last name) make_legend
+  20 dict begin
+  /last exch def  % last name
+  /first exch def % first name
+  /y exch def
+  /x exch def
+
+  gsave
+  x y translate
+
+  % set desired font
+  /Times-Roman legfontsize selectfont
+
+  % make a circle for the head
+  0 0 legradius 0 360 arc stroke
+
+  % first name above
+  0 legfontsize .1 mul  % x y
+  first 3 boxtext
+
+  % last name below
+  0 legfontsize -.1 mul % x y
+  last 7 boxtext
+
+  grestore
+  end
+} bind def
+
+/make_circ_legend { % usage: xpox ypos (number) make_circ_legend
+  20 dict begin
+  /number exch def  % reference number
+  /y exch def
+  /x exch def
+
+  gsave
+  x y translate
+
+  % set desired font
+  /Times-Roman legfontsize selectfont
+
+  % make a circle for the head
+  gsave
+  0.8 1.0 scale
+  newpath
+  0 0 legradius 0 360 arc stroke
+  grestore
+
+  % put number in the middle
+  0 0 moveto number 0 puttext
+
+
+  grestore
+  end
+} bind def
+
+%**** end definitions ***********************************************************************************
+%**** syntax of major procedures **********************************************
+% (put|box)text
+%   usage: (text) loc_code [0-8; position relative to current point] puttext
+%   Notes: 1. There must be a current and correct font.
+%          2. The loc[ation] code is 0 to place the center of the test at the
+%             current point; code 1 starts at 0 degrees, and the other codes
+%             continue counterclockwise around the current point every 45
+%             degrees. Code 1 will place the center of the left edge of the text
+%             at the current point, 2 places the lower left corner of the text
+%             at the current point, and so on.
+%
+
+% define the master page (5.5" wide by 3.75" high)
+/w{210 s2p}def
+/h{120 s2p}def
+/page { % x  y page (top left corner of our virtual page)
+  20 dict begin
+  /py exch def
+  /px exch def
+  gsave
+  px py translate
+
+  % all references are now from upper left corner of this page
+  % as the origin
+
+  % outline the page (if desired)
+  0 0 moveto
+  0  h neg rlineto
+  w  0 rlineto
+  0  h rlineto closepath stroke
+
+  /ls 12 def
+  /Times-Roman legfontsize selectfont
+
+  /tm .4 i2p def
+  0.5 i2p tm neg moveto (NWFLUG <https://nwflug.org>) 9 puttext
+  0.5 i2p tm ls 1 mul add neg moveto (Northwest Florida Linux User Group) 9 puttext
+  0.5 i2p tm ls 2 mul add neg moveto (Contact: <tom.browder@gmail.com>) 9 puttext
+  0.5 i2p tm ls 4 mul add neg moveto (Meets first Monday of every month:) 9 puttext
+  0.6 i2p tm ls 5 mul add neg moveto (Room 400, 5:00-7:00 PM) 9 puttext
+  0.6 i2p tm ls 6 mul add neg moveto (Crosspoint United Methodist Church) 9 puttext
+  0.6 i2p tm ls 7 mul add neg moveto (214 Partin Drive South) 9 puttext
+  0.6 i2p tm ls 8 mul add neg moveto (Niceville, FL  32578) 9 puttext
+
+  grestore
+  end
+} def
+%%EndProlog
+%%Page: legends 1
+gsave
+% upper-left card
+ 48 s2p 630 s2p page
+258 s2p 630 s2p page
+
+ 48 s2p 510 s2p page
+258 s2p 510 s2p page
+
+ 48 s2p 390 s2p page
+258 s2p 390 s2p page
+
+ 48 s2p 270 s2p page
+258 s2p 270 s2p page
+
+ 48 s2p 150 s2p page
+258 s2p 150 s2p page
+
+grestore
+showpage
+%%EndPage
+%%EOF
