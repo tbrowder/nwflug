@@ -1,0 +1,3 @@
+package User;
+
+use Moose;

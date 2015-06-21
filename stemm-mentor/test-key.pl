@@ -64,20 +64,20 @@ my %choices = ();
 my %cb      = ();
 my $ntb;
 
-if (1) {
+# use GUI =====================
 
-  # the GUI
-  # prep for display
-  my $mw = MainWindow->new;
-  $mw->title("Secret Key");
+# the GUI
+# prep for display
+my $mw = MainWindow->new;
+$mw->title("Secret Key");
 
-  # at least two frames
-  my $f1 = $mw->Frame();
-  my $f2 = $mw->Frame();
+# at least two frames
+my $f1 = $mw->Frame();
+my $f2 = $mw->Frame();
 
 
-  # key info
-  my $text_1 =<< "HERE";
+# key info
+my $text_1 =<< "HERE";
 Select keys until you guess the secret key.
 
 Unsuccessful attempts prior to finding the key will turn yellow.
@@ -85,88 +85,70 @@ Unsuccessful attempts prior to finding the key will turn yellow.
 If the selected key is the secret one, it will turn green and no more tries are logged.  Further selections will turn red.
 HERE
 
-  my $tb = $f1->Text(
-		     -width => 40,
-		     -wrap => 'word',
-		     -relief => 'flat',
-		     -height => 15,
-		    )->pack(-side => 'top');
-  $tb->insert('end', $text_1);
-  $tb->configure(-state => 'disabled');
-  $f1->Button(
-	      -text => "Number possible keys: $nkeys\nAverage tries to solve: $nhalf",
-	     )->pack(-side => 'top');
+my $tb = $f1->Text(
+		   -width => 40,
+		   -wrap => 'word',
+		   -relief => 'flat',
+		   -height => 15,
+		  )->pack(-side => 'top');
+$tb->insert('end', $text_1);
+$tb->configure(-state => 'disabled');
+$f1->Button(
+	    -text => "Number possible keys: $nkeys\nAverage tries to solve: $nhalf",
+	   )->pack(-side => 'top');
 
-  $ntb = $f1->Button(
-		     -text => "Keys tried: $ntries",
-		    )->pack(-side => 'top');
+$ntb = $f1->Button(
+		   -text => "Keys tried: $ntries",
+		  )->pack(-side => 'top');
 
-  # results and exit
-  $f1->Button(
-	      -text => 'Done',
-	      -command => sub { $mw->destroy },
-	     )->pack(-side => 'bottom');
-  $f1->pack(-side => 'left');
+# results and exit
+$f1->Button(
+	    -text => 'Done',
+	    -command => sub { $mw->destroy },
+	   )->pack(-side => 'bottom');
+$f1->pack(-side => 'left');
 
 
-  # create check buttons with all possible keys, use colums with
-  # max of 24 rows (a grid)
-  my $nrows = $nkeys > 24 ? 24 : $nkeys;
-  my $xkeys = $nkeys % $nrows;
-  my $ncols = $nkeys <= $nrows ? 1 :
-                        $xkeys ? int(($nkeys - $xkeys)/$nrows) + 1 : int($nkeys/$nrows);
+# create check buttons with all possible keys, use colums with
+# max of 24 rows (a grid)
+my $nrows = $nkeys > 24 ? 24 : $nkeys;
+my $xkeys = $nkeys % $nrows;
+my $ncols = $nkeys <= $nrows ? 1 :
+  $xkeys ? int(($nkeys - $xkeys)/$nrows) + 1 : int($nkeys/$nrows);
 
-  my $row   = 0;
-  my $col   = 0;
-  my $count = 0;
-  foreach my $k (@key_array) {
-    my $cb = $f2->Checkbutton(
-			      -text => $k,
-			      -indicatoron => 0,
-			      -command => [ \&handle_key,
-					    $k,
-			 		    $count,
-					  ],
-			     )->grid(-row => $row, -column => $col);
-    # save the button in the hash
-    $cb{$count} = $cb;
+my $row   = 0;
+my $col   = 0;
+my $count = 0;
+foreach my $k (@key_array) {
+  my $cb = $f2->Checkbutton(
+			    -text => $k,
+			    -indicatoron => 0,
+			    -command => [ \&handle_key,
+					  $k,
+					  $count,
+					],
+			   )->grid(-row => $row, -column => $col);
+  # save the button in the hash
+  $cb{$count} = $cb;
 
-    # increment and test
-    ++$count;
-    ++$row;
-    if ($row > $nrows - 1) {
-      # time to increment
-      $row = 0;
-      ++$col;
-    }
-    say "DEBUG: row = $row; col = $col"
-      if $debug;
+  # increment and test
+  ++$count;
+  ++$row;
+  if ($row > $nrows - 1) {
+    # time to increment
+    $row = 0;
+    ++$col;
   }
-  $f2->pack(-side => 'right');
-
-  # the event loop
-  MainLoop();
-
-  # present results
-  say "Results:";
-
+  say "DEBUG: row = $row; col = $col"
+    if $debug;
 }
-#=========================
-# for testing without a GUI
-elsif (0) {
-  #print Dumper(\@key_array);
-  #print Dumper(\%key_array);
+$f2->pack(-side => 'right');
 
-  say "All $nkeys possible keys:";
-  foreach my $k (@key_array) {
-    say "  $k";
-  }
-  say "\nSecret key:";
-  say "  $secret_key";
-  say "Secret key index: $sidx";
-}
-# end testing without a GUI
-#=========================
+# the event loop
+MainLoop();
+
+# present results
+say "Results:";
 
 #### subroutines ####
 sub handle_key {
@@ -241,3 +223,19 @@ sub generate_key_array {
   return @key_array;
 
 } # generate_key_array
+
+__END__
+#=========================
+# code for testing without a GUI
+#print Dumper(\@key_array);
+#print Dumper(\%key_array);
+
+say "All $nkeys possible keys:";
+foreach my $k (@key_array) {
+  say "  $k";
+}
+say "\nSecret key:";
+say "  $secret_key";
+say "Secret key index: $sidx";
+# end testing without a GUI
+#=========================
