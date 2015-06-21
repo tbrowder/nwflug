@@ -1,0 +1,50 @@
+Tools of the Trade
+An Engineer's Toolbox
+
+intro
+
+treat computer as a tool box
+
+  languages and applications as tools
+
+  collect and delete tools as you progress
+
+  cross platform issues
+
+  three main domains
+
+scientific method
+
+  contrast with projects
+
+projects
+
+  work flow compare with STEMM projects
+
+    matter of scale not trivial, big data
+
+    compare tools
+
+then, now, and future
+
+  slide rules, calculators, mainframes, typing pools, graphics
+  departments
+
+  PCs, cloud, LaTeX, Inkscape, SciLab, Perl, Internet, Open Source,
+  information explosion
+
+  Wolfram Alpha
+
+your journey
+
+  find your passion
+
+  stand on the shoulders of giants
+
+  open source projects
+
+  learning and sharing knowledge are life-long endeavors
+
+handout: resources, notes
+
+demos: my thesis, CRC Tables, Mark's, various tables, slide rule
