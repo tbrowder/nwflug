@@ -120,13 +120,13 @@ my $nkeys = scalar @key_array;
 my $nhalf = int($nkeys / 2);
 
 # generate the secret key (and the actual random index number)
-my ($secret_key, $sidx) = generate_secret_key(\@key_array);
+my ($secret_key, $sidx, $seed) = generate_secret_key(\@key_array);
 
 # some global variables
 my $solved  = 0;
 my $ntries  = 0;
 my %cb      = ();
-my $ntb;
+my ($ntb, $ntb2);
 my $basecolor = '#d9d9d9'; # the default button background color
 
 # use GUI =====================
@@ -142,6 +142,8 @@ my $f2 = $mw->Frame();
 
 # key info
 my $text_1 =<< "HERE";
+Given key length N, there are 2^N possible N-bit keys.
+
 Select keys until you guess the secret key.
 
 Unsuccessful attempts prior to finding the key will turn yellow.
@@ -165,6 +167,11 @@ $f1->Button(
 	   )->pack(-side => 'top');
 
 $ntb = $f1->Button(
+		   -text => "Random number generator seed:\n$seed",
+		   -relief => 'flat',
+		  )->pack(-side => 'top');
+
+$ntb2 = $f1->Button(
 		   -text => "Keys tried: $ntries\nKey index: ?",
 		   -relief => 'flat',
 		  )->pack(-side => 'top');
@@ -233,12 +240,17 @@ sub reset_case {
   $solved = 0;
 
   # reset problem with new secret key
-  ($secret_key, $sidx) = generate_secret_key(\@key_array);
+  ($secret_key, $sidx, $seed) = generate_secret_key(\@key_array);
+
+  $ntb->configure(
+		  -text => "Random number generator seed:\n$seed",
+		   -background => $basecolor,
+		 );
 
   # reset the key array display
-  $ntb->configure(
-		  -text => "Keys tried: $ntries\nKey index: ?",
-		  -background => $basecolor,
+  $ntb2->configure(
+		   -text => "Keys tried: $ntries\nKey index: ?",
+		   -background => $basecolor,
 		 );
   while (my ($k, $cb) = each %cb) {
     $cb->configure(
@@ -278,9 +290,9 @@ sub handle_key {
     $scb->configure(-state => 'disabled');
 
     # status window
-    $ntb->configure(
-		    -text => "Keys tried: $ntries\nKey index: $sidx",
-		    -background => 'green',
+    $ntb2->configure(
+		     -text => "Keys tried: $ntries\nKey index: $sidx",
+		     -background => 'green',
 		   );
     $solved = 1;
   }
@@ -290,24 +302,27 @@ sub handle_key {
     $scb->configure(-selectcolor => 'gray');
     $scb->configure(-disabledforeground => 'yellow');
     $scb->configure(-state => 'disabled');
-    $ntb->configure(-text => "Keys tried: $ntries\nKey index: ?");
+
+    # status window
+    $ntb2->configure(-text => "Keys tried: $ntries\nKey index: ?");
   }
 
 } # handle_key
 
 sub generate_secret_key {
   my $aref  = shift @_;
+
   my $nkeys = scalar @{$aref};
 
   # get a random integer     [0..$nkeys-1]
   #   mathematically same as [0..$nkeys)
   use Math::Random::MT;
-  # we want a new seed every time
-  my $rng = Math::Random::MT->new();    # random seed by based on gettimeofday
+  # we want a new seed every time for a new session
+  my $rng = Math::Random::MT->new(); # random seed by based on gettimeofday
   # the seed actually used above:
   my $seed = $rng->get_seed();
   my $secret_key_idx = int($rng->rand($nkeys)); # [0..$nkeys)
-  return ($aref->[$secret_key_idx], $secret_key_idx);
+  return ($aref->[$secret_key_idx], $secret_key_idx, $seed);
 
 =pod
 
@@ -315,7 +330,6 @@ sub generate_secret_key {
   my $rng = Math::Random::MT->new($seed); # seeded by unsigned 32-bit integer
 
 =cut
-
 
 
 } # generate_secret_key
