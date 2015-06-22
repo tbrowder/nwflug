@@ -18,6 +18,8 @@ user: unique-integer
     keylen: integer
     maxkeys: integer
     numtries: integer
+    keyindex: integer
+    random_seed: integer
  endcase:
 enduser:
 
