@@ -99,7 +99,7 @@ if (!$analyze) {
       ++$err;
       say "ERROR:  ID must be an integer.";
     }
-    elsif ($id < 0 || $id > $POSIX::INT_MAX - 1) {
+    elsif ($id < 0 || $id > $max_int_minus_1) {
       ++$err;
       say "ERROR:  ID must be an integer >= 0 and < $max_int_minus_1.";
     }
@@ -127,6 +127,7 @@ my $solved  = 0;
 my $ntries  = 0;
 my %cb      = ();
 my $ntb;
+my $basecolor = '#d9d9d9'; # the default button background color
 
 # use GUI =====================
 
@@ -156,18 +157,23 @@ my $tb = $f1->Text(
 		  )->pack(-side => 'top');
 $tb->insert('end', $text_1);
 $tb->configure(-state => 'disabled');
+
+#
 $f1->Button(
 	    -text => "Number possible keys: $nkeys\nAverage tries to solve: $nhalf",
+	    -relief => 'flat',
 	   )->pack(-side => 'top');
 
 $ntb = $f1->Button(
-		   -text => "Keys tried: $ntries",
+		   -text => "Keys tried: $ntries\nKey index: ?",
+		   -relief => 'flat',
 		  )->pack(-side => 'top');
+
 # reset button
 $f1->Button(
 	    -text => 'Reset',
 	    -command => \&reset_case,
-	   )->pack(-side => 'bottom');
+	   )->pack(-side => 'top');
 
 # results and exit
 $f1->Button(
@@ -222,14 +228,23 @@ say "Results:";
 sub reset_case {
   # update case number
 
+  # reset other variables
+  $ntries = 0;
+  $solved = 0;
+
   # reset problem with new secret key
   ($secret_key, $sidx) = generate_secret_key(\@key_array);
 
   # reset the key array display
+  $ntb->configure(
+		  -text => "Keys tried: $ntries\nKey index: ?",
+		  -background => $basecolor,
+		 );
   while (my ($k, $cb) = each %cb) {
     $cb->configure(
-		   -state => 'enabled',
+		   -state => 'active',
 		  );
+    $cb->deselect();
   }
 
 
@@ -261,7 +276,12 @@ sub handle_key {
     $scb->configure(-selectcolor => 'gray');
     $scb->configure(-disabledforeground => 'green');
     $scb->configure(-state => 'disabled');
-    $ntb->configure(-text => "Keys tried: $ntries");
+
+    # status window
+    $ntb->configure(
+		    -text => "Keys tried: $ntries\nKey index: $sidx",
+		    -background => 'green',
+		   );
     $solved = 1;
   }
   else {
@@ -270,7 +290,7 @@ sub handle_key {
     $scb->configure(-selectcolor => 'gray');
     $scb->configure(-disabledforeground => 'yellow');
     $scb->configure(-state => 'disabled');
-    $ntb->configure(-text => "Keys tried: $ntries");
+    $ntb->configure(-text => "Keys tried: $ntries\nKey index: ?");
   }
 
 } # handle_key
