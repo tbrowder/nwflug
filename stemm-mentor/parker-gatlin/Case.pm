@@ -1,6 +1,7 @@
 package Case;
 
-use Moose
+use Moose;
+use namespace::autoclean;
 
 # this class will be used to hold a user's case entry in the user data
 # and results file
@@ -43,5 +44,20 @@ has 'random_seed' => (
     isa => 'Int',
 );
 
-no Moose;
+sub write {
+  my $self = shift @_;
+  my $fp   = shift @_;
+  say $fp '  case: ' . $self->id();
+  say $fp '    date: ' . $self->date();
+  say $fp '    keylen: ' . $self->numtries();
+  say $fp '    maxkeys: ' . $self->maxkeys();
+  say $fp '    random_seed: ' . $self->random_seed();
+  say $fp '    keyindex: ' . $self->keyindex();
+  say $fp '    numtries: ' . $self->numtries();
+
+  # don't forget to end it
+  say $fp '  endcase:';
+
+}
+
 __PACKAGE__->meta->make_immutable;
