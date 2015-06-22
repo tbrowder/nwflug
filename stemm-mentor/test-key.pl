@@ -12,10 +12,15 @@ use POSIX;
 my $p = basename $0;
 if (!@ARGV) {
   print <<"HERE";
-Usage: $p keylen [-debug]
+Usage: $p <keylen. -id=<ID> | -analyze [-debug]
 
-where 'keylen' is the desired length of an N-bit
-  key to test.
+where
+
+  <keylen>   - integer: desired length of an N-bit key to test
+
+  -id=X      - X is a unique ID assigned by the tester
+
+  -analyze   - process existing data for study
 
 HERE
 
@@ -23,6 +28,8 @@ HERE
 }
 my $debug  = 0;
 my $keylen = undef;
+my $id     = undef;
+
 foreach my $arg (@ARGV) {
   if ($arg =~ m{\A [-]?d(?:ebug)? \z}xi) {
     $debug = 1;
@@ -31,9 +38,11 @@ foreach my $arg (@ARGV) {
     $keylen = $arg;
   }
   else {
-    die "FATAL:  Unknow option '$arg'.\n";
+    die "FATAL:  Unknown option '$arg'.\n";
   }
 }
+
+=cut
 
 # place limits on key length
 my $max_keylen =  8; #  256
@@ -60,7 +69,6 @@ my ($secret_key, $sidx) = generate_secret_key(\@key_array);
 # some global variables
 my $solved  = 0;
 my $ntries  = 0;
-my %choices = ();
 my %cb      = ();
 my $ntb;
 
@@ -74,7 +82,6 @@ $mw->title("Secret Key");
 # at least two frames
 my $f1 = $mw->Frame();
 my $f2 = $mw->Frame();
-
 
 # key info
 my $text_1 =<< "HERE";
@@ -150,7 +157,18 @@ MainLoop();
 # present results
 say "Results:";
 
-#### subroutines ####
+#### subroutines ################################################
+sub reset_case {
+  # update case number
+
+} # reset_case
+
+sub read_data_file {
+} # read_data_file
+
+sub write_data_file {
+} # write_data_file
+
 sub handle_key {
   my $sel_key = shift @_;
   my $count   = shift @_;
