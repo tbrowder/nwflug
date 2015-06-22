@@ -8,6 +8,7 @@ use File::Basename;
 use Tk;
 use Data::Dumper;
 use POSIX;
+use File::Copy;
 
 # place limits on key length
 my $max_keylen =  8; #  256
@@ -17,6 +18,9 @@ my $max_keylen =  8; #  256
 # limit on ID
 my $max_int = POSIX::INT_MAX;
 my $max_int_minus_1 = $max_int - 1;
+
+my $s = get_timestamp(1);
+say $s; exit;
 
 my $p = basename $0;
 if (!@ARGV) {
@@ -111,6 +115,10 @@ if (!$analyze) {
   }
 }
 
+# global variables ========================
+my $datafile = 'test-key-data.txt';
+my $datadir  = './test-key-data-dir';
+
 # generate the key array
 my @key_array = generate_key_array($keylen);
 my %key_array;
@@ -122,7 +130,6 @@ my $nhalf = int($nkeys / 2);
 # generate the secret key (and the actual random index number)
 my ($secret_key, $sidx, $seed) = generate_secret_key(\@key_array);
 
-# some global variables
 my $solved  = 0;
 my $ntries  = 0;
 my %cb      = ();
@@ -229,7 +236,7 @@ $f2->pack(-side => 'right');
 MainLoop();
 
 # present results
-say "Results:";
+say "Normal end.";
 
 #### subroutines ################################################
 sub reset_case {
@@ -263,9 +270,48 @@ sub reset_case {
 } # reset_case
 
 sub read_data_file {
+  my $href = shift @_;
+
+  if (! -d $datadir) {
+    mkdir $datadir;
+  }
+
+  my $fname = "${datadir}/${datafile}";
+  if (! -f $fname) {
+    return;
+  }
+  else {
+    open my $fp, '<', $fname
+      or die "$fname: $!";
+    parse_datafile($fp, $href)
+  }
+
 } # read_data_file
 
 sub write_data_file {
+  my $href = shift @_;
+
+  if (! -d $datadir) {
+    mkdir $datadir;
+  }
+  my $fname = "${datadir}/${datafile}";
+  my $ts = get_timestamp();
+
+  my $fname_bak = "${fname}.${ts}";
+  if (-e $fname_bak) {
+    die "FATAL:  Unexpected duplicate backup file name '$fname_bak'.";
+  }
+
+  open my $fp, '>', $fname_bak
+      or die "$fname_bak: $!";
+  # dump contents of hashref
+  # ...
+  close $fp;
+
+
+  # copy the file to the unadorned name (overwrite existing)
+  copyfile($fname_bak, $fname);
+
 } # write_data_file
 
 sub handle_key {
@@ -347,6 +393,12 @@ sub generate_key_array {
   return @key_array;
 
 } # generate_key_array
+
+sub get_timestamp {
+  # get a time string (NO spaces) to add onto a saved file
+  my ($sec,$min,$hour,$mday,$mon,$year) = localtime(time);
+  return sprintf("%04d-%02d-%02d-%02d%02d%02d", $year+1900, $mon + 1, $mday, $hour, $min, $sec);
+} # get_timestamp
 
 __END__
 #=========================
