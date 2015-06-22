@@ -11,9 +11,9 @@ use Case;
 
 # data format
 
-user: unique-integer
+user: <id> # unique-integer
  name: <optional>
-  case: unique-integer-for-user
+  case: <id> # unique-integer-for-user
     date: yyyy-dd-mm-hh:mm:ss.ss
     keylen: integer
     maxkeys: integer
@@ -24,5 +24,23 @@ user: unique-integer
 enduser:
 
 =cut
+
+has 'id' => (
+    is  => 'rw',
+    isa => 'Int',
+);
+
+has 'name' => (
+    is  => 'rw',
+    isa => 'Str',
+);
+
+has 'case' => (
+    is  => 'rw',
+    isa => 'HashRef',
+);
+
+no Moose;
+__PACKAGE__->meta->make_immutable;
 
 

@@ -19,13 +19,10 @@ my $max_keylen =  8; #  256
 my $max_int = POSIX::INT_MAX;
 my $max_int_minus_1 = $max_int - 1;
 
-my $s = get_timestamp(1);
-say $s; exit;
-
 my $p = basename $0;
 if (!@ARGV) {
   print <<"HERE";
-Usage: $p <keylen> -id=<ID> | -analyze [-debug]
+Usage: $p <keylen> id=<ID> | analyze [debug]
 
 where
 
@@ -118,6 +115,10 @@ if (!$analyze) {
 # global variables ========================
 my $datafile = 'test-key-data.txt';
 my $datadir  = './test-key-data-dir';
+my %users = ();
+
+# read any data
+read_data_file(\%users);
 
 # generate the key array
 my @key_array = generate_key_array($keylen);
@@ -235,11 +236,17 @@ $f2->pack(-side => 'right');
 # the event loop
 MainLoop();
 
+# after bailing out, write data to file
+write_data_file(\%users);
+
 # present results
 say "Normal end.";
 
 #### subroutines ################################################
 sub reset_case {
+  # save data state
+  write_data_file(\%users);
+
   # update case number
 
   # reset other variables
@@ -270,7 +277,7 @@ sub reset_case {
 } # reset_case
 
 sub read_data_file {
-  my $href = shift @_;
+  my $href = shift @_; # hash of users and their cases, if any
 
   if (! -d $datadir) {
     mkdir $datadir;
@@ -283,7 +290,7 @@ sub read_data_file {
   else {
     open my $fp, '<', $fname
       or die "$fname: $!";
-    parse_datafile($fp, $href)
+    parse_data_file($fp, $href)
   }
 
 } # read_data_file
@@ -310,7 +317,7 @@ sub write_data_file {
 
 
   # copy the file to the unadorned name (overwrite existing)
-  copyfile($fname_bak, $fname);
+  copy($fname_bak, $fname);
 
 } # write_data_file
 
@@ -399,6 +406,9 @@ sub get_timestamp {
   my ($sec,$min,$hour,$mday,$mon,$year) = localtime(time);
   return sprintf("%04d-%02d-%02d-%02d%02d%02d", $year+1900, $mon + 1, $mday, $hour, $min, $sec);
 } # get_timestamp
+
+sub parse_data_file {
+} # parse_data_file
 
 __END__
 #=========================
