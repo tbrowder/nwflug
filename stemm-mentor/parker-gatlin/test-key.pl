@@ -10,6 +10,9 @@ use Data::Dumper;
 use POSIX;
 use File::Copy;
 
+use lib '.';
+use User;
+
 # place limits on key length
 my $max_keylen =  8; #  256
 #my $max_keylen =  9; #  512
@@ -119,6 +122,18 @@ my %users = ();
 
 # read any data
 read_data_file(\%users);
+
+my $curr_user = 0;
+if (exists $users{$id}) {
+  $curr_user = $users{$id};
+}
+else {
+  $curr_user = User->new(id => $id);
+  $users{$id} = $curr_user;
+}
+my $curr_casenum = $curr_user->get_next_casenum();
+my $curr_case = Case->new(id => $curr_casenum);
+$curr_user->cases->{$curr_casenum} = $curr_case;
 
 # generate the key array
 my @key_array = generate_key_array($keylen);
@@ -245,9 +260,19 @@ say "Normal end.";
 #### subroutines ################################################
 sub reset_case {
   # save data state
+  $curr_case->date(get_timestamp());
+  $curr_case->keylen($keylen);
+  $curr_case->maxkeys($nkeys);
+  $curr_case->random_seed($seed);
+  $curr_case->keyindex($sidx);
+  $curr_case->numtries($ntries);
+  # save the data
   write_data_file(\%users);
 
-  # update case number
+  # update case number and get a new case
+  $curr_casenum = $curr_user->get_next_casenum();
+  $curr_case = Case->new(id => $curr_casenum);
+  $curr_user->cases->{$curr_casenum} = $curr_case;
 
   # reset other variables
   $ntries = 0;
@@ -309,10 +334,20 @@ sub write_data_file {
     die "FATAL:  Unexpected duplicate backup file name '$fname_bak'.";
   }
 
+  my %h = %{$href};
+  my @k = (sort { $a <=> $b } keys %h);
+
+  # return if nothing exists to write
+  return if !@k;
+
   open my $fp, '>', $fname_bak
       or die "$fname_bak: $!";
   # dump contents of hashref
   # ...
+  foreach my $k (@k) {
+    my $u = $h{$k};
+    $u->write($fp);
+  }
   close $fp;
 
 
@@ -348,6 +383,17 @@ sub handle_key {
 		     -background => 'green',
 		   );
     $solved = 1;
+
+    # save data state
+    $curr_case->date(get_timestamp());
+    $curr_case->keylen($keylen);
+    $curr_case->maxkeys($nkeys);
+    $curr_case->random_seed($seed);
+    $curr_case->keyindex($sidx);
+    $curr_case->numtries($ntries);
+    # save the data
+    write_data_file(\%users);
+
   }
   else {
     ++$ntries;
@@ -404,7 +450,7 @@ sub generate_key_array {
 sub get_timestamp {
   # get a time string (NO spaces) to add onto a saved file
   my ($sec,$min,$hour,$mday,$mon,$year) = localtime(time);
-  return sprintf("%04d-%02d-%02d-%02d%02d%02d", $year+1900, $mon + 1, $mday, $hour, $min, $sec);
+  return sprintf("%04d-%02d-%02d-%02dh%02dm%02ds", $year+1900, $mon + 1, $mday, $hour, $min, $sec);
 } # get_timestamp
 
 sub parse_data_file {
