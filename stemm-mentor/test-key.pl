@@ -9,29 +9,56 @@ use Tk;
 use Data::Dumper;
 use POSIX;
 
+# place limits on key length
+my $max_keylen =  8; #  256
+#my $max_keylen =  9; #  512
+#my $max_keylen = 10; # 1024
+#my $max_keylen = 11; # 2048
+# limit on ID
+my $max_int = POSIX::INT_MAX;
+my $max_int_minus_1 = $max_int - 1;
+
 my $p = basename $0;
 if (!@ARGV) {
   print <<"HERE";
-Usage: $p <keylen. -id=<ID> | -analyze [-debug]
+Usage: $p <keylen> -id=<ID> | -analyze [-debug]
 
 where
 
   <keylen>   - integer: desired length of an N-bit key to test
 
-  -id=X      - X is a unique ID assigned by the tester
+  id=X       - X is a unique integer ID assigned by the tester
 
-  -analyze   - process existing data for study
+  analyze    - process existing data for study
+
+Limits:
+
+  Maximum key length: $max_keylen
+
+  Mimimum ID: 0
+
+  Maximum ID: $max_int_minus_1
 
 HERE
 
   exit;
 }
-my $debug  = 0;
-my $keylen = undef;
-my $id     = undef;
 
+my $debug   = 0;
+my $keylen  = undef;
+my $id      = undef;
+my $analyze = 0;
 foreach my $arg (@ARGV) {
-  if ($arg =~ m{\A [-]?d(?:ebug)? \z}xi) {
+  my $val = undef;
+  my $idx = index $arg, '=';
+  if ($idx >= 0) {
+    $val = substr $arg, $idx+1;
+    $arg = substr $arg, 0, $idx;
+  }
+  if ($arg eq 'id' && defined $val) {
+    $id = $val;
+  }
+  elsif ($arg =~ m{\A [-]?d(?:ebug)? \z}xi) {
     $debug = 1;
   }
   elsif (!defined $keylen) {
@@ -42,18 +69,47 @@ foreach my $arg (@ARGV) {
   }
 }
 
-=cut
+die "FATAL:  You must select 'analyze' OR '<keylen>' and 'id=X'.\n"
+  if (!$analyze && !defined $keylen && !defined $id);
 
-# place limits on key length
-my $max_keylen =  8; #  256
-#my $max_keylen =  9; #  512
-#my $max_keylen = 10; # 1024
-#my $max_keylen = 11; # 2048
+if (!$analyze) {
+  my $err = 0;
 
-die "Key length must be an integer.\n"
-  if !isdigit($keylen);
-die "Key length must be a positve integer > 0 and <= $max_keylen.\n"
-  if ($keylen < 1 || $keylen > $max_keylen);
+  if (!defined $keylen) {
+    ++$err;
+    say "ERROR:  You have not entered a value for <keylen>.";
+  }
+  else {
+    if (!isdigit($keylen)) {
+      ++$err;
+      say "ERROR: Key length must be an integer.";
+    }
+    elsif ($keylen < 1 || $keylen > $max_keylen) {
+      ++$err;
+      say "ERROR: Key length must be a positve integer > 0 and <= $max_keylen.";
+    }
+  }
+
+  if (!defined $id) {
+    ++$err;
+    say "ERROR:  You have not entered a value for 'id=X'.";
+  }
+  else {
+    if (!isdigit($id)) {
+      ++$err;
+      say "ERROR:  ID must be an integer.";
+    }
+    elsif ($id < 0 || $id > $POSIX::INT_MAX - 1) {
+      ++$err;
+      say "ERROR:  ID must be an integer >= 0 and < $max_int_minus_1.";
+    }
+  }
+
+  if ($err) {
+    my $s = $err > 1 ? 's' : '';
+    die "FATAL error$s.\n";
+  }
+}
 
 # generate the key array
 my @key_array = generate_key_array($keylen);
@@ -107,6 +163,11 @@ $f1->Button(
 $ntb = $f1->Button(
 		   -text => "Keys tried: $ntries",
 		  )->pack(-side => 'top');
+# reset button
+$f1->Button(
+	    -text => 'Reset',
+	    -command => \&reset_case,
+	   )->pack(-side => 'bottom');
 
 # results and exit
 $f1->Button(
@@ -160,6 +221,17 @@ say "Results:";
 #### subroutines ################################################
 sub reset_case {
   # update case number
+
+  # reset problem with new secret key
+  ($secret_key, $sidx) = generate_secret_key(\@key_array);
+
+  # reset the key array display
+  while (my ($k, $cb) = each %cb) {
+    $cb->configure(
+		   -state => 'enabled',
+		  );
+  }
+
 
 } # reset_case
 
