@@ -133,6 +133,7 @@ else {
 }
 my $curr_casenum = $curr_user->get_next_casenum();
 my $curr_case = Case->new(id => $curr_casenum);
+$curr_case->date(get_timestamp());
 $curr_user->cases->{$curr_casenum} = $curr_case;
 
 # generate the key array
@@ -272,6 +273,7 @@ sub reset_case {
   # update case number and get a new case
   $curr_casenum = $curr_user->get_next_casenum();
   $curr_case = Case->new(id => $curr_casenum);
+  $curr_case->date(get_timestamp());
   $curr_user->cases->{$curr_casenum} = $curr_case;
 
   # reset other variables
@@ -349,7 +351,6 @@ sub write_data_file {
     $u->write($fp);
   }
   close $fp;
-
 
   # copy the file to the unadorned name (overwrite existing)
   copy($fname_bak, $fname);
