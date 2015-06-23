@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-use v5.12;
+use v5.10; # features 'say' and 'state'
 use strict;
 use warnings;
 
@@ -11,7 +11,9 @@ use POSIX;
 use File::Copy;
 
 use lib '.';
-use User;
+
+# local modules
+use User; # which uses 'Case'
 
 # place limits on key length
 my $max_keylen =  8; #  256
@@ -23,28 +25,20 @@ my $max_int = POSIX::INT_MAX;
 my $max_int_minus_1 = $max_int - 1;
 
 my $p = basename $0;
+my $usage1  = "$p <keylen> id=<ID>";
+my $usage2  = "$p analyze[=<output file>]";
+my $outfile = 'test-key.xls';
 if (!@ARGV) {
   print <<"HERE";
-Usage: $p <keylen> id=<ID> | analyze [debug]
 
-where
+  $usage1
 
-  <keylen>   - integer: desired length of an N-bit key to test
+    OR
 
-  id=X       - X is a unique integer ID assigned by the tester
+  $usage2
 
-  analyze    - process existing data for study
-
-Limits:
-
-  Maximum key length: $max_keylen
-
-  Mimimum ID: 0
-
-  Maximum ID: $max_int_minus_1
-
+Use option 'help' or 'h' for more information.
 HERE
-
   exit;
 }
 
@@ -59,11 +53,20 @@ foreach my $arg (@ARGV) {
     $val = substr $arg, $idx+1;
     $arg = substr $arg, 0, $idx;
   }
+
   if ($arg eq 'id' && defined $val) {
     $id = $val;
   }
+  elsif ($arg =~ m{\A [-]?a(?:nalyze)? \z}xi) {
+    $analyze = 1;
+    $outfile = $val
+      if defined $val;
+  }
   elsif ($arg =~ m{\A [-]?d(?:ebug)? \z}xi) {
     $debug = 1;
+  }
+  elsif ($arg =~ m{\A [-]?h(?:help)? \z}xi) {
+    help(); # exits from there
   }
   elsif (!defined $keylen) {
     $keylen = $arg;
@@ -76,9 +79,8 @@ foreach my $arg (@ARGV) {
 die "FATAL:  You must select 'analyze' OR '<keylen>' and 'id=X'.\n"
   if (!$analyze && !defined $keylen && !defined $id);
 
+my $err = 0;
 if (!$analyze) {
-  my $err = 0;
-
   if (!defined $keylen) {
     ++$err;
     say "ERROR:  You have not entered a value for <keylen>.";
@@ -108,20 +110,38 @@ if (!$analyze) {
       say "ERROR:  ID must be an integer >= 0 and < $max_int_minus_1.";
     }
   }
-
-  if ($err) {
-    my $s = $err > 1 ? 's' : '';
-    die "FATAL error$s.\n";
+}
+else {
+  # analyze option
+  if (-f $outfile) {
+    ++$err;
+    say "ERROR:  Output file '$outfile' exists.\n" .
+        "        You must move it away or delete it.";
   }
+}
+if ($err) {
+  my $s = $err > 1 ? 's' : '';
+  die "FATAL error$s.\n";
 }
 
 # global variables ========================
 my $datafile = 'test-key-data.txt';
 my $datadir  = './test-key-data-dir';
+
 my %users = ();
 
 # read any data
 read_data_file(\%users);
+
+if ($analyze) {
+  # process
+  analyze_data(\%users, $outfile);
+
+  say "Normal end.";
+  say "See output file: $outfile";
+  exit;
+}
+
 
 #print Dumper(\%users); die "debug exit";
 
@@ -525,6 +545,42 @@ sub parse_data_file {
     }
   }
 } # parse_data_file
+
+sub help {
+  print <<"HERE";
+
+  $usage1
+
+    OR
+
+  $usage2
+
+where
+
+  <keylen>   - integer: desired length of an N-bit key to test
+  id=X       - X is a unique integer ID assigned by the tester
+
+  analyze    - process existing data for study (output file: '$outfile')
+  analyze=X  - process existing data for study (output file: 'X')
+
+Note:  A user-named output file must have no spaces in its name.
+
+Limits:
+
+  Maximum key length: $max_keylen
+  Mimimum ID: 0
+  Maximum ID: $max_int_minus_1
+
+HERE
+
+  exit;
+} # help
+
+sub analyze_data {
+  my $href  = shift @_;
+  my $fname = shift @_;
+
+} # analyze_data
 
 __END__
 #=========================
