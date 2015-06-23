@@ -454,6 +454,65 @@ sub get_timestamp {
 } # get_timestamp
 
 sub parse_data_file {
+  my $fp   = shift @_;
+  my $href = shift @_;
+
+  my $curr_user = 0;
+  my $curr_case = 0;
+
+  while (defined(my $line = <$fp>)) {
+    chomp $line;
+    my $idx = index $line, ':';
+    if ($idx >= 0) {
+      my $k = substr $line, 0, $idx;
+      my $val = substr $line, $idx+1;
+      $val =~ s{\A \s*}{}x;
+      $val =~ s{\s* \z}{}x;
+      # User attributes
+      if ($k eq 'user') {
+	$curr_user = User->new(id => $val);
+	$href->{$val} = $curr_user;
+      }
+      elsif ($k eq 'name') {
+	$curr_user->name($val);
+      }
+      elsif ($k eq 'next_casenumber') {
+	$curr_user->_next_caseneum($val);
+      }
+      elsif ($k eq 'case') {
+	$curr_case = Case->new(id => $val);
+	$curr_user->cases->{$val} = $curr_case;
+      }
+      # Case attributes
+      elsif ($k eq 'date') {
+	$curr_case->date($val);
+      }
+
+      elsif ($k eq 'keylen') {
+	$curr_case->keylen($val);
+      }
+      elsif ($k eq 'maxkeys') {
+	$curr_case->maxkeys($val);
+      }
+      elsif ($k eq 'random_seed') {
+	$curr_case->random_seed($val);
+      }
+      elsif ($k eq 'keyindex') {
+	$curr_case->keyindex($val);
+      }
+      elsif ($k eq 'numtries') {
+	$curr_case->numtries($val);
+      }
+      elsif ($k eq 'enduser') {
+	die "FATAL: \$curr_user = 0"
+	  if !$curr_user;
+      }
+      elsif ($k eq 'endcase') {
+	die "FATAL: \$curr_case = 0"
+	  if !$curr_case;
+      }
+    }
+  }
 } # parse_data_file
 
 __END__
