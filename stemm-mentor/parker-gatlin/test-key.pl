@@ -123,6 +123,8 @@ my %users = ();
 # read any data
 read_data_file(\%users);
 
+#print Dumper(\%users); die "debug exit";
+
 my $curr_user = 0;
 if (exists $users{$id}) {
   $curr_user = $users{$id};
@@ -317,7 +319,8 @@ sub read_data_file {
   else {
     open my $fp, '<', $fname
       or die "$fname: $!";
-    parse_data_file($fp, $href)
+    parse_data_file($fp, $href);
+    close $fp;
   }
 
 } # read_data_file
@@ -451,7 +454,7 @@ sub generate_key_array {
 sub get_timestamp {
   # get a time string (NO spaces) to add onto a saved file
   my ($sec,$min,$hour,$mday,$mon,$year) = localtime(time);
-  return sprintf("%04d-%02d-%02d-%02dh%02dm%02ds", $year+1900, $mon + 1, $mday, $hour, $min, $sec);
+  return sprintf("%04d-%02d-%02d.%02dh%02dm%02ds", $year+1900, $mon + 1, $mday, $hour, $min, $sec);
 } # get_timestamp
 
 sub parse_data_file {
@@ -466,7 +469,12 @@ sub parse_data_file {
     my $idx = index $line, ':';
     if ($idx >= 0) {
       my $k = substr $line, 0, $idx;
+      # needs trimming
+      $k =~ s{\A \s*}{}x;
+      $k =~ s{\s* \z}{}x;
+
       my $val = substr $line, $idx+1;
+      # needs trimming
       $val =~ s{\A \s*}{}x;
       $val =~ s{\s* \z}{}x;
       # User attributes
@@ -478,7 +486,7 @@ sub parse_data_file {
 	$curr_user->name($val);
       }
       elsif ($k eq 'next_casenumber') {
-	$curr_user->_next_caseneum($val);
+	$curr_user->_next_casenum($val);
       }
       elsif ($k eq 'case') {
 	$curr_case = Case->new(id => $val);
@@ -488,7 +496,6 @@ sub parse_data_file {
       elsif ($k eq 'date') {
 	$curr_case->date($val);
       }
-
       elsif ($k eq 'keylen') {
 	$curr_case->keylen($val);
       }
@@ -512,6 +519,9 @@ sub parse_data_file {
 	die "FATAL: \$curr_case = 0"
 	  if !$curr_case;
       }
+    }
+    if ($debug) {
+      print STDERR "DEBUG: line = '$line'\n";
     }
   }
 } # parse_data_file
