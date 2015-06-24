@@ -19,6 +19,7 @@ use User; # which uses 'Case'
 my $max_keylen =  8; #  256
 #my $max_keylen =  9; #  512
 #my $max_keylen = 10; # 1024
+
 #my $max_keylen = 11; # 2048
 # limit on ID
 my $max_int = POSIX::INT_MAX;
