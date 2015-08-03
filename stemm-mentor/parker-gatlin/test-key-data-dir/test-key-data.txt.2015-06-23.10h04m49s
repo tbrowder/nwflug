@@ -1,0 +1,28 @@
+user: 0
+  name: 
+  next_casenumber: 3
+  case: 0
+    date: 2015-06-23.09h53m32s
+    keylen: 1
+    maxkeys: 4
+    random_seed: 356392972
+    keyindex: 1
+    numtries: 1
+  endcase:
+  case: 1
+    date: 2015-06-23.10h04m31s
+    keylen: 2
+    maxkeys: 4
+    random_seed: 1807567562
+    keyindex: 3
+    numtries: 2
+  endcase:
+  case: 2
+    date: 2015-06-23.10h04m49s
+    keylen: 1
+    maxkeys: 4
+    random_seed: 880679211
+    keyindex: 2
+    numtries: 1
+  endcase:
+enduser:

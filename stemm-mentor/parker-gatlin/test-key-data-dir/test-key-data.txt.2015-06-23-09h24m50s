@@ -1,0 +1,12 @@
+user: 0
+  name: 
+  next_casenumber: 1
+  case: 0
+    date: 2015-06-23-09h24m50s
+    keylen: 1
+    maxkeys: 4
+    random_seed: 2012663487
+    keyindex: 2
+    numtries: 1
+  endcase:
+enduser:
