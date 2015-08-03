@@ -2,11 +2,15 @@ See demo git dir in:
 
   /home/tbrowde/tmp
 
-Show commits and messages:
+Show commits and messages (no file name):
 
   $ git log
 
-Show diffs:
+Show commits, messages, and diffs (shows file name):
 
   $ git log -p
+
+Show commits, messages, and file name:
+
+  $ git log --raw
 
