@@ -1,0 +1,12 @@
+See demo git dir in:
+
+  /home/tbrowde/tmp
+
+Show commits and messages:
+
+  $ git log
+
+Show diffs:
+
+  $ git log -p
+
