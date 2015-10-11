@@ -1,0 +1,124 @@
+----
+presentation_topic: Linux
+presentation_title: Testing Linux Distros
+presentation_place: Niceville, Florida
+presentation_date: 2015-10-05
+----
+= Testing Linux Distros
+== Several methods
+* Virtual Box
+* Live CD/DVD
+* Bootable USB drive
+* Spare computer (native install; dual or single boot)
+
+We'll use Virtual Box for this presentation
+
+----
+== Fig. 1: The VirtualBox site
+=== Note: 
+* the "Downloads" link
+* the "End-user docs" link
+* the "News Flash" section
+
+{image: vbox-site.png}
+----
+== Fig. 2: After selecting "Downloads"
+{image: vbox-dloads.png}
+----
+== Fig. 3: Don't forget the "Extension Pack" (for USB 2/3; not distributable)
+{image: vbox-dloads-2.png}
+----
+== Upgrading or installing
+
+When upgrading or installing, you lose network access temporarily.
+You may have to uninstall an old version when upgrading.
+----
+== Selecting the Linux distro
+=== Considerations (* recommended)
+* amount of RAM (* 2 GB+)
+* 32- or 64-bit (* 64-bit)
+* 64-bit guest on 32-bit host? (NOT recommended)
+* type network interface (remote access needed?)
+----
+= Installing the Linux guest...
+----
+== Fig. 4: Creating a new Virtual Machine (VM)
+{image: vbox-01.png}
+----
+== Fig. 5: Naming the VM
+{image: vbox-02.png}
+----
+== Fig. 6: Choose RAM allocation
+{image: vbox-03.png}
+----
+== Fig. 7: May need at least 1.5 Gb
+{image: vbox-05.png}
+----
+== Fig. 8: Select "Next"
+{image: vbox-06.png}
+----
+== Fig. 9: Creating a virtual hard disk
+{image: vbox-07.png}
+----
+== Fig. 10: Use the default disk type (VDI)
+{image: vbox-08.png}
+----
+== Fig. 11: Select "Next"
+{image: vbox-09.png}
+----
+== Fig. 12: Choose "Dynamically allocated"
+{image: vbox-10.png}
+----
+== Fig. 13: Normally accept the default name
+{image: vbox-11.png}
+----
+== Fig. 14: Be generous selecting disk size
+Then select "Create"
+{image: vbox-12.png}
+----
+== Fig. 15: The new VM appears in the list
+{image: vbox-13.png}
+----
+== Fig. 16: More VM settings to be made
+{image: vbox-14.png}
+----
+== Fig. 17: System options
+{image: vbox-15.png}
+----
+== Fig. 18: Display options
+I normally choose 24 Mb
+{image: vbox-16.png}
+----
+== Fig. 19: Attach the installation CD/DVD
+{image: vbox-17.png}
+----
+== Fig. 20: Navigate to the location
+{image: vbox-18.png}
+----
+== Fig. 21: Select the desired CD/DVD
+{image: vbox-19.png}
+----
+== Fig. 22: Check the desired CD/DVD shows as attached
+{image: vbox-20.png}
+----
+== Fig. 23: Now start the VM
+{image: vbox-21.png}
+----
+== Oops!
+I made a typo on the guest name.  We can rename the host easily,
+but we have to remove the disk and create a new one to rename it,
+which is too complicated for me.  
+
+The easiest thing to do is to start all over again and use the correct
+spelling OR accept the misspelled hard disk name.
+----
+== After installation
+After starting and finishing the installation, you'll want to install
+"Guest Additions" to have the windowing and other features work well.
+
+Please experiment and read the excellent documentation--there's much
+more that can be done to tweak a host but this should get you started.
+
+----
+== The end
+That's all, folks!
