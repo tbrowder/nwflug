@@ -2,6 +2,8 @@ See demo git dir in:
 
   /home/tbrowde/tmp
 
+Originally added .gitignore and t.txt.
+
 Show commits and messages (no file name):
 
   $ git log
