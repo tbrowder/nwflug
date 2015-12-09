@@ -34,26 +34,21 @@ We'll use Virtual Box for this presentation
 
 =head1 Fig. 1: The VirtualBox site
 
-Note:
+=begin html
 
-=over
+<table><tr>
+<td>
+<p>Note:</p>
+<ul>
+<li>the "Downloads" link</li>
+<li>the "End-user docs" link</li>
+<li>the "News Flash" section</li>
+</ul>
+</td>
+<td><img src='vbox-site.png'/></td>
+</tr></table>
 
-=item * 
-
-the "Downloads" link
-
-=item * 
-
-the "End-user docs" link
-
-=item * 
-
-the "News Flash" section
-
-=back
-
-G<vbox-site.png>
-
+=end html
 
 =head1 Fig. 2: After selecting "Downloads"
 
@@ -97,10 +92,14 @@ type network interface (remote access needed?)
 
 =head1 Installing the Linux guest...
 
-Fig. 4: Creating a new Virtual Machine (VM)
+=begin html
 
-G<vbox-01.png>
+<table><tr>
+<td>Fig. 4: Creating a new Virtual Machine (VM)</td>
+<td><img src='vbox-01.png'/></td>
+</tr></table>
 
+=end html
 
 =head1 Fig. 5: Naming the VM
 
