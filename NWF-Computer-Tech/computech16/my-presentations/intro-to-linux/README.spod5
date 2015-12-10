@@ -9,8 +9,8 @@ which includes executable:
 
 Using a bash script to run it.
 
-Making images 40px seems to be okay.  Need to allow for an image on
-the right, but not yet available, so we use a raw html two-column
+Making images 400px high seems to be okay.  Need to allow for an image
+on the right, but not yet available, so we use a raw html two-column
 table.
 
 From the pod2s5 man page:
