@@ -1,12 +1,13 @@
-# --theme (default, flower, i18n, pixel, yatil)
+#!/bin/bash
 
 TITLE='Introduction to Linux'
 DEST=html
 
+# use 50 min as base time
 TIME='--attribute duration=50'
 
-#THEME='--attribute theme=volnitsky'
 THEME=
+#THEME='--attribute theme=volnitsky'
 
 # run it
 asciidoc --backend slidy $TIME $THEME $1
