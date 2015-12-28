@@ -1,3 +1,27 @@
+AsciiDoc and Slidy (w3c)
+========================
+
+Now using AsciiDoc and Slidy:
+----------------------------
+
+  http://asciidoc.org
+
+Produce the slide in AD markup and run:
+
+  $ asciidoc --backend slidy <slide.txt> 
+
+And AsciiDoctor and Deck.js:
+---------------------------
+
+  http://asciidoctor.org
+
+Produce the slide in AD markup and run:
+
+
+
+S5 (spod5)
+==========
+
 Now using modules:
 
   Pod::S5
