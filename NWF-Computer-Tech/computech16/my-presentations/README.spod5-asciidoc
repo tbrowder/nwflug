@@ -8,7 +8,7 @@ Now using AsciiDoc and Slidy:
 
 Produce the slide in AD markup and run:
 
-  $ asciidoc --backend slidy <slide.txt> 
+  $ asciidoc --backend slidy <slide.txt>
 
 And AsciiDoctor and Deck.js:
 ---------------------------
