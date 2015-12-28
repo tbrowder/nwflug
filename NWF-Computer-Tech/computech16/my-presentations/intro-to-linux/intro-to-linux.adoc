@@ -98,7 +98,7 @@ image::./html/vbox-11.png[]
 .Then select "Create"
 image::./html/vbox-12.png[]
 
-==The new VM appears in the list
+== The new VM appears in the list
 
 image::./html/vbox-13.png[]
 
