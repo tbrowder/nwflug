@@ -1,8 +1,23 @@
-AsciiDoc and Slidy (w3c)
-========================
+AsciiDoc
+========
 
-Now using AsciiDoc and Slidy:
-----------------------------
+Preferred:
+=========
+
+Use AsciiDoctor and Deck.js:
+---------------------------
+
+  http://asciidoctor.org/docs/install-and-use-deckjs-backend/
+
+Produce the slide in AD markup and run:
+
+  $ asciidoctor -T /path/to/asciidoctor-deck.js/templates/haml <slide.txt>
+
+Other
+=====
+
+Use AsciiDoc and Slidy:
+----------------------
 
   http://asciidoc.org
 
@@ -10,14 +25,14 @@ Produce the slide in AD markup and run:
 
   $ asciidoc --backend slidy <slide.txt>
 
-And AsciiDoctor and Deck.js:
----------------------------
+Use AsciiDoctor and Reveal.js:
+-----------------------------
 
-  http://asciidoctor.org
+  http://asciidoctor.org/docs/install-and-use-revealjs-backend/
 
 Produce the slide in AD markup and run:
 
-
+  $ asciidoctor -T /path/to/asciidoctor-reveal.js/templates/slim <slide.txt>
 
 S5 (spod5)
 ==========
