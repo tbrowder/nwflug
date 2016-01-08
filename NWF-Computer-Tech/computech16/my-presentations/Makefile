@@ -47,8 +47,9 @@ clean:
 	for d in $(DIRS) ; \
 	do \
 	  (cd $$d ; rm -f *.dvi ; rm -f *.aux ; rm -f *.out ; \
-	            rm -f *.nav ; rm -f *.snm ; rm -f *.ps ; \
-	            rm -f *.bak ; rm -f *.vrb ; rm -f *.tex ) \
+	            rm -f *.nav ; rm -f *.snm ; rm -f *.ps ;  \
+	            rm -f *.bak ; rm -f *.vrb ; rm -f *.tex ; \
+	            rm -f *.toc ; rm -f *.html ) \
 	done
 ## all: output/slides-day1.pdf output/slides-day2.pdf
 ##
