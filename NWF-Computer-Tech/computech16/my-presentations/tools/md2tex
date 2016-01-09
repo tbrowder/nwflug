@@ -36,6 +36,7 @@ my $HEADER = <<'EOT';
 \title{[:title:]}
 \subtitle{[:subtitle:]}
 \author{[:author:]}
+\date{[:date:]}
 
 %\institute[Edument]{
 %  \textcopyright{} Edument AB
