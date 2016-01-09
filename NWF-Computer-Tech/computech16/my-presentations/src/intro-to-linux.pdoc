@@ -1,10 +1,14 @@
-= Introduction to Linux
+title: Introduction to Linux    
+subtitle: Computer Tech 2016
+author:   Tom Browder (tom.browder@gmail.com)
+date: 2016-01-30
 
-== Testing Linux Distros
+# Introduction to Linux
+
+## Testing Linux Distros
 
 Several methods
 
-[role="incremental"]
 - Virtual Box
 
 - Live CD/DVD
@@ -13,10 +17,9 @@ Several methods
 
 - Spare computer (native install; dual or single boot)
 
-[role="incremental"]
 We'll use Virtual Box for this presentation
 
-== The VirtualBox site
+## The VirtualBox site
 
 Note:
 
@@ -24,26 +27,26 @@ Note:
 - the "End-user docs" link
 - the "News Flash" section
 
-.The website
-image::./html/vbox-site.png[]
+The website
+![50%](./pics/vbox-site.png)
 
-== After selecting "Downloads"
+## After selecting "Downloads"
 
-image::./html/vbox-dloads.png[]
-
-
-== Don't forget the "Extension Pack" (for USB 2/3; not distributable)
-
-image::./html/vbox-dloads-2.png[]
+![50%](./pics/vbox-dloads.png)
 
 
-== Upgrading or installing
+## Don't forget the "Extension Pack" (for USB 2/3; not distributable)
+
+![50%](./pics/vbox-dloads-2.png)
+
+
+## Upgrading or installing
 
 When upgrading or installing, you lose network access temporarily.
 You may have to uninstall an old version when upgrading.
 
 
-== Selecting the Linux distro
+## Selecting the Linux distro
 
 Considerations (* recommended)
 
@@ -52,90 +55,90 @@ Considerations (* recommended)
 - 64-bit guest on 32-bit host? (NOT recommended)
 - type network interface (remote access needed?)
 
-== Installing the Linux guest...
+## Installing the Linux guest...
 
 .Creating a new Virtual Machine (VM)
-image::./html/vbox-01.png[]
+![50%](./pics/vbox-01.png)
 
-== Naming the VM
+## Naming the VM
 
-image::./html/vbox-02.png[]
+![50%](./pics/vbox-02.png)
 
-== Choose RAM allocation
+## Choose RAM allocation
 
-image::./html/vbox-03.png[]
+![50%](./pics/vbox-03.png)
 
-== May need at least 1.5 Gb
+## May need at least 1.5 Gb
 
-image::./html/vbox-05.png[]
+![50%](./pics/vbox-05.png)
 
-== Select "Next"
+## Select "Next"
 
-image::./html/vbox-06.png[]
+![50%](./pics/vbox-06.png)
 
-== Creating a virtual hard disk
+## Creating a virtual hard disk
 
-image::./html/vbox-07.png[]
+![50%](./pics/vbox-07.png)
 
-== Use the default disk type (VDI)
+## Use the default disk type (VDI)
 
-image::./html/vbox-08.png[]
+![50%](./pics/vbox-08.png)
 
-== Select "Next"
+## Select "Next"
 
-image::./html/vbox-09.png[]
+![50%](./pics/vbox-09.png)
 
-== Choose "Dynamically allocated"
+## Choose "Dynamically allocated"
 
-image::./html/vbox-10.png[]
+![50%](./pics/vbox-10.png)
 
-== Normally accept the default name
+## Normally accept the default name
 
-image::./html/vbox-11.png[]
+![50%](./pics/vbox-11.png)
 
-== Be generous selecting disk size
+## Be generous selecting disk size
 
 .Then select "Create"
-image::./html/vbox-12.png[]
+![50%](./pics/vbox-12.png)
 
-== The new VM appears in the list
+## The new VM appears in the list
 
-image::./html/vbox-13.png[]
+![50%](./pics/vbox-13.png)
 
-== More VM settings to be made
+## More VM settings to be made
 
-image::./html/vbox-14.png[]
+![50%](./pics/vbox-14.png)
 
-== System options
+## System options
 
-image::./html/vbox-15.png[]
+![50%](./pics/vbox-15.png)
 
-== Display options
+## Display options
 
 .I normally choose 24 Mb
-image::./html/vbox-16.png[]
+![50%](./pics/vbox-16.png)
 
-== Attach the installation CD/DVD
+## Attach the installation CD/DVD
 
-image::./html/vbox-17.png[]
+![50%](./pics/vbox-17.png)
 
-== Navigate to the location
+## Navigate to the location
 
-image::./html/vbox-18.png[]
+![50%](./pics/vbox-18.png)
 
-== Select the desired CD/DVD
+## Select the desired CD/DVD
 
-image::./html/vbox-19.png[]
+![50%](./pics/vbox-19.png)
 
-== Check the desired CD/DVD shows as attached
+## Check the desired CD/DVD shows as attached
 
-image::./html/vbox-20.png[]
+![50%](./pics/vbox-20.png)
 
-== Now start the VM
+## Now start the VM
 
-image::./html/vbox-21.png[]
+![50%](./pics/vbox-21.png)
 
-== Oops!
+## Oops!
 
 I made a typo on the guest name.  We can rename the host easily,
 but we have to remove the disk and create a new one to rename it,
@@ -144,7 +147,7 @@ which is too complicated for me.
 The easiest thing to do is to start all over again and use the correct
 spelling OR accept the misspelled hard disk name.
 
-== After installation
+## After installation
 
 After starting and finishing the installation, you'll want to install
 "Guest Additions" to have the windowing and other features work well.
@@ -152,6 +155,6 @@ After starting and finishing the installation, you'll want to install
 Please experiment and read the excellent documentation--there's much
 more that can be done to tweak a host but this should get you started.
 
-== The end
+## The end
 
 That's all, folks!
