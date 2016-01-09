@@ -9,3 +9,16 @@ my-presentations/intro-to-linux/deck.js
 my-presentations/intro-to-linux/reveal.js
 my-presentations/intro-to-perl6/deck.js
 my-presentations/intro-to-perl6/reveal.js
+
+*.pdf
+*.html
+*.aux
+*.dvi
+*.log
+*.nav
+*.out
+*.tex
+*.bak
+*.vrb
+*.snm
+*.toc
