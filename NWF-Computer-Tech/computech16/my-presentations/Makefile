@@ -11,80 +11,25 @@ PERL = perl
 PANDOC = pandoc
 PDFLATEX = pdflatex
 
-DIRS = intro-to-linux free-win-progs intro-to-perl6 nwflug-2016-01-04
+DIRS = intro-to-linux free-win-progs intro-to-perl6 nwflug-2016-01-04 otp
 
-PROGS  =
-#PROGS += intro-to-linux
-#PROGS += free-win-progs
-#PROGS += intro-to-perl6
-PROGS += nwflug-2016-01-04/agenda.pdf
+TALKS  =
+#TALKS += intro-to-linux
+#TALKS += free-win-progs
+#TALKS += intro-to-perl6
+TALKS += agenda
+TALKS += example
 
-all: $(PROGS)
+all: $(TALKS)
 
-nwflug-2016-01-04/agenda.pdf: nwflug-2016-01-04/agenda.tex
-	$(PDFLATEX) -output-directory=nwflug-2016-01-04 nwflug-2016-01-04/agenda.tex
-
-
-#nwflug-2016-01-04/agenda.pdf: nwflug-2016-01-04/agenda.tex
-#	$(LATEX) -output-directory=nwflug-2016-01-04 nwflug-2016-01-04/agenda.tex
-#	$(DVIPS)  nwflug-2016-01-04/agenda.dvi -o nwflug-2016-01-04/agenda.ps
-#	$(PS2PDF) nwflug-2016-01-04/agenda.ps     nwflug-2016-01-04/agenda.pdf
-
-nwflug-2016-01-04/agenda.tex: nwflug-2016-01-04/agenda.pdoc $(MD2TEX)
-	$(PERL) $(MD2TEX) nwflug-2016-01-04/agenda.pdoc  nwflug-2016-01-04/agenda.tex
-	$(PERL) -pi.bak -e "s/\(FIXUP\)//g"              nwflug-2016-01-04/agenda.tex
-	$(PERL) -i.bak $(BREAK)                          nwflug-2016-01-04/agenda.tex
-
-
-#intro-to-linux: intro-to-linux/intro-to-linux.pdoc
-
-#free-win-progs:
-
-#intro-to-perl6:
-
+otp/%.pdf: src/%.pdoc pics/* $(MD2TEX)
+	$(PERL) $(MD2TEX) src/%.pdoc  src/%.tex
+	$(PERL) -pi.bak -e "s/\(FIXUP\)//g" src/%.tex
+	$(PERL) -i.bak $(BREAK)             src/%.tex
+	$(PDFLATEX) -output-directory=otp   src/%.tex
 
 clean:
-	for d in $(DIRS) ; \
-	do \
-	  (cd $$d ; rm -f *.dvi ; rm -f *.aux ; rm -f *.out ; \
+	(cd otp; rm -f *.dvi ; rm -f *.aux ; rm -f *.out ; \
 	            rm -f *.nav ; rm -f *.snm ; rm -f *.ps ;  \
 	            rm -f *.bak ; rm -f *.vrb ; rm -f *.tex ; \
 	            rm -f *.toc ; rm -f *.html ) \
-	done
-## all: output/slides-day1.pdf output/slides-day2.pdf
-##
-## exercises : output/exercises.pdf
-## handouts: output/handouts.pdf
-##
-## output/slides-day1.pdf : output/slides-day1.tex eps/*
-## 	$(LATEX) -output-directory=output output/slides-day1.tex
-## 	$(DVIPS) output/slides-day1.dvi -o output/slides-day1.ps
-## 	$(PS2PDF) output/slides-day1.ps output/slides-day1.pdf
-##
-## output/slides-day1.tex : src/slides-day1.md $(MD2TEX)
-## 	$(PERL) $(MD2TEX) src/slides-day1.md output/slides-day1.tex
-## 	$(PERL) -pi.bak -e "s/\(FIXUP\)//g" output/slides-day1.tex
-## 	$(PERL) -i.bak $(BREAK) output/slides-day1.tex
-##
-## output/slides-day2.pdf : output/slides-day2.tex eps/*
-## 	$(LATEX) -output-directory=output output/slides-day2.tex
-## 	$(DVIPS) output/slides-day2.dvi -o output/slides-day2.ps
-## 	$(PS2PDF) output/slides-day2.ps output/slides-day2.pdf
-##
-## output/slides-day2.tex : src/slides-day2.md $(MD2TEX)
-## 	$(PERL) $(MD2TEX) src/slides-day2.md output/slides-day2.tex
-## 	$(PERL) -pi.bak -e "s/\(FIXUP\)//g" output/slides-day2.tex
-## 	$(PERL) -i.bak $(BREAK) output/slides-day2.tex
-##
-## output/exercises.pdf : src/exercises.md src/template-exercises.tex
-## 	$(PANDOC) src/exercises.md -f markdown -t latex > output/exercises-body.tex
-## 	$(PERL) -pi.bak -e 's/\\section/\\section*/' output/exercises-body.tex
-## 	$(PERL) -pi.bak -e 's/\\subsection/\\subsection*/' output/exercises-body.tex
-## 	$(PERL) $(INSERT) output/exercises-body.tex > output/exercises.tex
-## 	$(LATEX) -output-directory=output output/exercises.tex
-## 	$(DVIPS) output/exercises.dvi -o output/exercises.ps
-## 	$(PS2PDF) output/exercises.ps output/exercises.pdf
-##
-## output/handouts.pdf : src/handouts.tex output/slides-day1.pdf output/slides-day2.pdf
-## 	$(LATEX) -output-directory=output -output-format=pdf src/handouts.tex
-
