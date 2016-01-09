@@ -22,21 +22,12 @@ TALKS += intro-to-perl6
 
 PDFS = $(patsubst %, otp/%.pdf, $(TALKS))
 
-trash  = $(patsubst %, otp/%.log, $(TALKS))
-trash += $(patsubst %, otp/%.aux, $(TALKS))
-trash += $(patsubst %, otp/%.dvi, $(TALKS))
-trash += $(patsubst %, otp/%.snm, $(TALKS))
-trash += $(patsubst %, otp/%.out, $(TALKS))
-trash += $(patsubst %, otp/%.nav, $(TALKS))
-trash += $(patsubst %, otp/%.vrb, $(TALKS))
-trash += $(patsubst %, otp/%.toc, $(TALKS))
-
 all: $(PDFS)
 
 otp/%.pdf : src/%.tex
 	$(PDFLATEX) -output-directory=otp $<
 	-rm $(trash)
-	-rm src/*.bak
+	-rm src/*.bak src/*~
 
 src/%.tex : src/%.pdoc $(MD2TEX)
 	$(PERL) $(MD2TEX) $< $@
@@ -57,3 +48,12 @@ clean:
 realclean: clean
 	(cd otp; rm -f *.log ; rm -f *.pdf )
 
+
+trash  = $(patsubst %, otp/%.log, $(TALKS))
+trash += $(patsubst %, otp/%.aux, $(TALKS))
+trash += $(patsubst %, otp/%.dvi, $(TALKS))
+trash += $(patsubst %, otp/%.snm, $(TALKS))
+trash += $(patsubst %, otp/%.out, $(TALKS))
+trash += $(patsubst %, otp/%.nav, $(TALKS))
+trash += $(patsubst %, otp/%.vrb, $(TALKS))
+trash += $(patsubst %, otp/%.toc, $(TALKS))
