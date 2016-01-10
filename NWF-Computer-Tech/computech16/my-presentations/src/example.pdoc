@@ -17,9 +17,9 @@ date: 2016-01-30
 
 ## Example links
 
-See this link: <**<https://nwflug.org>**>
+See this link (bold): <**<https://nwflug.org>**>
 
-The same link: <*<https://nwflug.org>*>
+The same link (italic): <*<https://nwflug.org>*>
 
 <!--
 This is an [inline link](https://usafa-1965.org), and here's [one with
