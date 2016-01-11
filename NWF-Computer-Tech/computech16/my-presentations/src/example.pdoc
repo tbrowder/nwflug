@@ -5,6 +5,14 @@ date: 2016-01-30
 
 <!-- date is as of the generation date -->
 
+## Lists
+
+- one
+
+- two
+
+	- three
+
 ## Example word attributes
 
 - *italic*
