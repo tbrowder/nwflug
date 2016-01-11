@@ -11,11 +11,10 @@ PERL     = perl
 PANDOC   = pandoc
 PDFLATEX = pdflatex
 
-DIRS = intro-to-linux free-win-progs intro-to-perl6 nwflug-2016-01-04 otp
-
 TALKS  =
-TALKS += agenda-2016-01-04
+#TALKS += agenda-2016-01-04
 TALKS += example
+#TALKS += example2
 TALKS += intro-to-linux
 TALKS += free-win-progs
 TALKS += intro-to-perl6
