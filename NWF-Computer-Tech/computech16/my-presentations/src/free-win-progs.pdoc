@@ -1,18 +1,28 @@
-title: Free Windows Programs (Apps)
+title: Free Software Downloads
 subtitle: Computer Tech 2016
 author: Tom Browder [tom.browder@gmail.com]
 date: 2016-01-30
 
-# Free and Open Source Software (FOSS) for Windows
+## Windows Programs (Apps)
 
-# Background
+- Free and Open Source Software (FOSS) for Windows
+
+- From the schedule:
+
+-- Get free, legal software for MS Windows and Mac: download and install
+compatible substitutes for Office, Access, Photo Shop, Quicken, and others.
+Handout w/links.
+
+## Objectives
+
+## Background
 
 - I'm a recently-retired engineer with ManTech International
   Corporation (**mantech.com**)
   
 - I've been using Unix/Linux and FOSS professionally for over 22 years
 
-# Kudos
+## Kudos
 
 Many people are responsible for our current technology, but these are
 particularly noteworthy in the FOSS arena:
@@ -27,7 +37,7 @@ particularly noteworthy in the FOSS arena:
 
 	- **Linus Torvalds** (originator of the Linux kernel)
 
-# Why do we recommend and use FOSS?
+## Why do we recommend and use FOSS?
 
 - Source is available for inspection
 
@@ -43,14 +53,14 @@ particularly noteworthy in the FOSS arena:
 
 	- Fun, pride, sel-interest, altruism, competition
 
-	- Sume are paid by companies with a vested interest in a
+	- Some are paid by companies with a vested interest in a
 	  particular FOSS project
 
 - Why do companies give it away?
 
 	- Sell support services
 
-# Topics to be covered
+## Topics to be covered
 
 - Windows versus Linux
 
@@ -62,7 +72,7 @@ particularly noteworthy in the FOSS arena:
 
 - Tour of free programs and resources
 
-# Windows vs. Linux
+## Windows vs. Linux
 
 - Windows:
 
@@ -98,7 +108,7 @@ particularly noteworthy in the FOSS arena:
 
 	- Getting help
 
-# Internet considerations
+## Internet considerations
 
 - Like the Biblical Tree of Knowledge
 
@@ -112,7 +122,7 @@ particularly noteworthy in the FOSS arena:
 
 - You **must** be on the alert
 
-# Security concerns
+## Security concerns
 
 - Browser security
 
@@ -128,7 +138,7 @@ particularly noteworthy in the FOSS arena:
 
 	- Familiar home pages can be hijacked
 
-# Browser security
+## Browser security
 
 - Chrome (or Firefox)
 
@@ -142,7 +152,7 @@ particularly noteworthy in the FOSS arena:
 
 	- Provides encrypted communications between you and recipient
 
-# Authentication
+## Authentication
 
 - Use check sums to check downloaded files
 
@@ -152,7 +162,7 @@ particularly noteworthy in the FOSS arena:
 
 	- GNU Privacy Guard (GPG)
 
-# Preparation for using FOSS
+## Preparation for using FOSS
 
 - Install a zip program
 
@@ -162,11 +172,11 @@ particularly noteworthy in the FOSS arena:
 
 - Install a public key program
 
-# Tour of free programs and resources
+## Tour of free programs and resources
 
 Use my free handout available online at **computertechnwf.org**.
 
-# Summary
+## Summary
 
 - Today we have looked at a few of the thousands of free programs
   available for Windows

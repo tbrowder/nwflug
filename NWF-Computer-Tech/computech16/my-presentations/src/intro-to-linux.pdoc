@@ -1,15 +1,23 @@
-title: Introduction to Linux    
+title: VirtualBox   
 subtitle: Computer Tech 2016
 author:   Tom Browder (tom.browder@gmail.com)
 date: 2016-01-30
 
-# Introduction to Linux
+## Introduction to Linux
+
+- Using VirtualBox for Windows
+
+- From the schedule:
+
+    1. Demo install of **Oracle's Virtual Box**.
+    2. Install a Virtual Machine Image of **Ubuntu**.
+    3. Take tour of **Ubuntu**'s features.
 
 ## Testing Linux Distros
 
 Several methods
 
-- Virtual Box
+- VirtualBox
 
 - Live CD/DVD
 
@@ -17,7 +25,7 @@ Several methods
 
 - Spare computer (native install; dual or single boot)
 
-We'll use Virtual Box for this presentation
+We'll use VirtualBox for this presentation
 
 ## The VirtualBox site
 

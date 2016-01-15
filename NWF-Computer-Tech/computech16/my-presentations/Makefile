@@ -13,7 +13,7 @@ PDFLATEX = pdflatex
 
 TALKS  =
 #TALKS += agenda-2016-01-04
-TALKS += example
+#TALKS += example
 #TALKS += example2
 TALKS += intro-to-linux
 TALKS += free-win-progs
@@ -21,7 +21,13 @@ TALKS += intro-to-perl6
 
 PDFS = $(patsubst %, otp/%.pdf, $(TALKS))
 
-all: $(PDFS)
+all: $(PDFS) list-presentations
+
+list-presentations:
+	@echo Presentations:
+	@echo -------------
+	@-ls -1 otp/[fi]*pdf
+	@echo
 
 otp/%.pdf : src/%.tex
 	$(PDFLATEX) -output-directory=otp $<
