@@ -32,7 +32,6 @@ list-presentations:
 otp/%.pdf : src/%.tex
 	$(PDFLATEX) -output-directory=otp $<
 	-rm $(trash)
-	-rm src/*.bak src/*~
 
 src/%.tex : src/%.pdoc $(MD2TEX)
 	$(PERL) $(MD2TEX) $< $@
@@ -62,3 +61,4 @@ trash += $(patsubst %, otp/%.out, $(TALKS))
 trash += $(patsubst %, otp/%.nav, $(TALKS))
 trash += $(patsubst %, otp/%.vrb, $(TALKS))
 trash += $(patsubst %, otp/%.toc, $(TALKS))
+trash += src/*.bak src/*~
