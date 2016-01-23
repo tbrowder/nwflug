@@ -36,6 +36,7 @@ my $HEADER = <<'EOT';
 \title{[:title:]}
 \subtitle{[:subtitle:]}
 \author{[:author:]}
+\institute{[:institute:]}
 \date{[:date:]}
 
 %\institute[Edument]{
@@ -124,7 +125,6 @@ sub sections_to_frames {
 \\begin{frame}
   \\frametitle{$1}
 
-\\centering
 \\begin{Huge}$1\\end{Huge}$2\\end{frame}/gms;
 
     return $string;
@@ -143,7 +143,7 @@ sub subsections_to_frames {
 \\begin{frame}$fragile
   \\frametitle{$title}
 
-\\centering$content\\end{frame}
+   $content\\end{frame}
 
 "/egms;
 
