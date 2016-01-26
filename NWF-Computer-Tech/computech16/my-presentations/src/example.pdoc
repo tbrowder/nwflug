@@ -1,7 +1,10 @@
 title:    Some Presentation
 subtitle: Computer Tech 2016
 author:   Tom Browder (tom.browder@gmail.com)
+institution: whatever
 date: 2016-01-30
+
+<!-- a comment -->
 
 <!-- date is as of the generation date -->
 

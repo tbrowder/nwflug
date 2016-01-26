@@ -1,7 +1,7 @@
 title: Free Software Downloads
 subtitle: Computer Tech 2016
 author: Tom Browder [tom.browder@gmail.com]
-institute: Northwest Florida Linux Group (nwflug.org)
+institute: Northwest Florida Linux Group [nwflug.org]
 date: 2016-01-30
 
 ## Windows Programs (Apps)
@@ -14,12 +14,32 @@ date: 2016-01-30
 compatible substitutes for Office, Access, Photo Shop, Quicken, and others.
 Handout w/links.
 
+<!--
+a comment
+-->
+
 ## Objectives
+
+Become familiar with FOSS
+
+- Motivation
+
+- Resources
+
+- Advantages
+
+- Scope
+
+- Sources
+
+- Installation
+
+- Cautions
 
 ## Background
 
 - I'm a recently-retired engineer with ManTech International
-  Corporation (**mantech.com**)
+  Corporation (**<http://mantech.com>**)
   
 - I've been using Unix/Linux and FOSS professionally for over 22 years
 
@@ -52,13 +72,15 @@ particularly noteworthy in the FOSS arena:
 
 - Why do developers work on FOSS?
 
-	- Fun, pride, sel-interest, altruism, competition
+	- Fun, pride, self-interest, altruism, competition
 
 	- Some are paid by companies with a vested interest in a
 	  particular FOSS project
 
 - Why do companies give it away?
 
+	- Constrained by licensing
+	
 	- Sell support services
 
 ## Topics to be covered
@@ -109,6 +131,8 @@ particularly noteworthy in the FOSS arena:
 
 	- Getting help
 
+	- Command line use
+	
 ## Internet considerations
 
 - Like the Biblical Tree of Knowledge
@@ -143,7 +167,7 @@ particularly noteworthy in the FOSS arena:
 
 - Chrome (or Firefox)
 
-	- **Lastpass add-on (**lastpass.com)
+	- **Lastpass** add-on (**<https://lastpass.com>**)
 
 		- Strong passwords
 
@@ -175,7 +199,9 @@ particularly noteworthy in the FOSS arena:
 
 ## Tour of free programs and resources
 
-Use my free handout available online at **computertechnwf.org**.
+Use my free handout available online at **<https://computertechnwf.org>**.
+
+# Some brief looks
 
 ## Summary
 
