@@ -1,8 +1,5 @@
 title: Free Software Downloads
-subtitle: Computer Tech 2016
-author: Tom Browder [tom.browder@gmail.com]
-institute: Northwest Florida Linux Group [nwflug.org]
-date: 2016-01-30
+<!-- insert-file headers.md -->
 
 ## Windows Programs (Apps)
 
@@ -14,11 +11,10 @@ date: 2016-01-30
 compatible substitutes for Office, Access, Photo Shop, Quicken, and others.
 Handout w/links.
 
-<!--
-a comment
--->
+<!-- insert-file background.md -->
 
 <!-- insert-file common-1.md -->
+
 ## Objectives
 
 Become familiar with FOSS
@@ -36,13 +32,6 @@ Become familiar with FOSS
 - Installation
 
 - Cautions
-
-## Background
-
-- I'm a recently-retired engineer with ManTech International
-  Corporation (**<http://mantech.com>**)
-  
-- I've been using Unix/Linux and FOSS professionally for over 22 years
 
 ## Kudos
 
@@ -212,10 +201,7 @@ Use my free handout available online at **<https://computertechnwf.org>**.
 - There is something out there for nearly any interest.  I encourage
   to venture forth, have fun, and expand your knowledge and skills.
 
-- I am glad to help via e-mail (please mention Computer Tech 2016 in
-  the subject):
-
-	- [**tom.browder@gmail.com**]
+<!-- insert-file closer-help.md -->
 
 
 
