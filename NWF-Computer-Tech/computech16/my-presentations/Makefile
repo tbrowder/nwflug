@@ -22,6 +22,11 @@ TALKS += intro-to-linux
 TALKS += free-win-progs
 TALKS += intro-to-perl6
 
+COMMON +=
+COMMON += src/common*md
+COMMON += src/headers.md
+COMMON += src/background.md
+
 PDFS = $(patsubst %, otp/%.pdf, $(TALKS))
 pdocs = $(patsubst %, src/%.pdoc, $(TALKS))
 
@@ -38,7 +43,7 @@ list-presentations:
 	@-ls -1 otp/[fi]*pdf
 	@echo
 
-src/%.pdoc :: src/%.md src/common*.md src/make-pdoc-from-md.p6
+src/%.pdoc :: src/%.md $(COMMON) src/headers.md src/make-pdoc-from-md.p6
 	cd src ; ./make-pdoc-from-md.p6 -i=$(<)
 
 #echo "working file $(@)..."
