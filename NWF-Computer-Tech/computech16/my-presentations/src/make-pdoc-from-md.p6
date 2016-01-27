@@ -63,10 +63,12 @@ say "Working file '$infile'...";
     #say "DEBUG line: '$line'";
 
     my $ifil = '';
+    my $headers = False;
     # look for insertion files (<!-- insert-file <file name> -->
     if $line ~~ m/  ^ \s* '<!--' \s* 'insert-file' \s+ (<[\w\.\-]>+) \s* '-->' \s* $ / {
       say "DEBUG: found insertion line for file '$0'";
       $ifil = $0;
+      $headers = True if $ifil ~~ /headers/;
     }
     else {
       #say "DEBUG: no insertion line found";
@@ -77,13 +79,17 @@ say "Working file '$infile'...";
     # skip if non-existent
     next LINE if !$ifil.IO.f; # 'ell'
 
-    $fpo.say;
-    $fpo.say("<!-- inserting contents of file '$ifil' here: -->");
+    if !$headers {
+      $fpo.say;
+      $fpo.say("<!-- inserting contents of file '$ifil' here: -->");
+    }
     for $ifil.IO.lines -> $iline {
       $fpo.print("$iline\n");
     }
-    $fpo.say("<!-- end of inserting contents of file '$ifil' -->");
-    $fpo.say;
+    if !$headers {
+      $fpo.say("<!-- end of inserting contents of file '$ifil' -->");
+      $fpo.say;
+    }
 }
 
 for @fo {
