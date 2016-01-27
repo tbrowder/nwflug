@@ -1,6 +1,7 @@
 ~*
 **/html/ui
 **/html/pix
+**/src/*.pdoc
 /image-other-smaller.jpg
 /image-other-browse.jpg
 my-presentations/free-win-progs/deck.js
