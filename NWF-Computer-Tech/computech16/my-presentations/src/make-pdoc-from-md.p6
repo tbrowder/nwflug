@@ -66,18 +66,18 @@ say "Working file '$infile'...";
       $ifil = $0;
     }
     else {
-      say $fpo $line;
+      $fpo.print("$line\n");
       next LINE;
     }
 
     # skip if non-existent
     next LINE if !$line.IO.f; # 'ell'
 
-    say $fpo; # "\n";
+    $fpo.print("\n");
     for $line.IO.lines -> $iline {
-      say $fpo $iline; # "\n";
+      $fpo.print("$iline\n");
     }
-    say $fpo; # "\n";
+    $fpo.print("\n");
 }
 
 for @fo {
