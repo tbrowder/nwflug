@@ -23,9 +23,13 @@ TALKS += free-win-progs
 TALKS += intro-to-perl6
 
 PDFS = $(patsubst %, otp/%.pdf, $(TALKS))
+pdocs = $(patsubst %, src/%.pdoc, $(TALKS))
 
 .PHONY : all 
 all: $(PDFS) list-presentations
+
+.PHONY : pdoc
+pdoc: $(pdocs)
 
 .PHONY : list-presentations
 list-presentations:
