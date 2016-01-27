@@ -11,6 +11,9 @@ PERL     = perl
 PANDOC   = pandoc
 PDFLATEX = pdflatex
 
+CTECHYEAR     = 2016
+CTECHBASEDIR  = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr/mydomains/domains/primary-web-servers/web-sites/computertechnwf.org/public/$(CTECHYEAR)/sessions
+
 TALKS  =
 #TALKS += agenda-2016-01-04
 #TALKS += example
@@ -21,22 +24,38 @@ TALKS += intro-to-perl6
 
 PDFS = $(patsubst %, otp/%.pdf, $(TALKS))
 
+.PHONY : all 
 all: $(PDFS) list-presentations
 
+.PHONY : list-presentations
 list-presentations:
 	@echo Presentations:
 	@echo -------------
 	@-ls -1 otp/[fi]*pdf
 	@echo
 
-otp/%.pdf : src/%.tex
-	$(PDFLATEX) -output-directory=otp $<
-	-rm $(trash)
+src/%.pdoc :: src/%.md src/common*.md src/make-pdoc-from-md.p6
+	cd src ./make-pdoc-from-md.p6 -i=$(<)
 
-src/%.tex : src/%.pdoc $(MD2TEX)
+#echo "working file $(@)..."
+#touch $@
+
+
+fake-src/%.pdoc : src/%.pdoc
+	-cp $< $@
+
+fake-src/%.tex : fake-src/%.pdoc $(MD2TEX)
 	$(PERL) $(MD2TEX) $< $@
 	$(PERL) -pi.bak -e "s/\(FIXUP\)//g"   $@
 	$(PERL) -i.bak $(BREAK)               $@
+
+otp/%.pdf : fake-src/%.tex
+	$(PDFLATEX) -output-directory=otp $<
+	-rm $(trash)
+
+.PHONY: deliver
+deliver:
+	( cd otp ; cp *.pdf $(CTECHDIR) );
 
 .PHONY: clean
 clean:
