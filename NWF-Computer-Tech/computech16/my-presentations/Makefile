@@ -35,7 +35,7 @@ list-presentations:
 	@echo
 
 src/%.pdoc :: src/%.md src/common*.md src/make-pdoc-from-md.p6
-	cd src ./make-pdoc-from-md.p6 -i=$(<)
+	cd src ; ./make-pdoc-from-md.p6 -i=$(<)
 
 #echo "working file $(@)..."
 #touch $@
