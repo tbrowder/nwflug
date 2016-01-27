@@ -17,11 +17,14 @@ if !@*ARGS.elems {
 
 for @*ARGS -> $arg is copy { # 'is copy' allows modifying locally
   my $oarg = $arg; # save original for error handling
-  my $val  = Any;  # 'Any' instead of 'undef'
-  my $idx  = index $arg, '=';
-  if $idx.defined { # index is defined if an index is found
+  my $val  = '';  # 'Any' instead of 'undef'
+  my $idx  = index($arg, '=');
+  if $idx.defined && $idx >= 0 { # index is defined if an index is found
     $val = substr $arg, $idx+1; # use substr function
     $arg = substr $arg, 0, $idx;
+    #say "DEBUG: arg = '$arg'";
+    #say "DEBUG: val = '$val'";
+    #die "DEBUG exit";
   }
 
   if ($arg eq '-i' || $arg eq '--infile') {
@@ -55,29 +58,32 @@ say "Working file '$infile'...";
   
   # read the file and strip lines with certain dirs
   LINE:
-  for $fpi.lines -> $line {
-    $line.chomp;
+  for $fpi.lines -> $line { # note that lines are already chomped
     
-    #say "DEBUG line: $line";
+    #say "DEBUG line: '$line'";
 
     my $ifil = '';
-    # ignore certain dirs and files
-    if $line ~~ / ^ \s* \<\!\-\- \s+ insert\- (\w+) \s* $ / {
+    # look for insertion files (<!-- insert-file <file name> -->
+    if $line ~~ m/  ^ \s* '<!--' \s* 'insert-file' \s+ (<[\w\.\-]>+) \s* '-->' \s* $ / {
+      say "DEBUG: found insertion line for file '$0'";
       $ifil = $0;
     }
     else {
-      $fpo.print("$line\n");
+      #say "DEBUG: no insertion line found";
+      $fpo.say($line);
       next LINE;
     }
 
     # skip if non-existent
-    next LINE if !$line.IO.f; # 'ell'
+    next LINE if !$ifil.IO.f; # 'ell'
 
-    $fpo.print("\n");
-    for $line.IO.lines -> $iline {
+    $fpo.say;
+    $fpo.say("<!-- inserting contents of file '$ifil' here: -->");
+    for $ifil.IO.lines -> $iline {
       $fpo.print("$iline\n");
     }
-    $fpo.print("\n");
+    $fpo.say("<!-- end of inserting contents of file '$ifil' -->");
+    $fpo.say;
 }
 
 for @fo {
@@ -87,6 +93,12 @@ for @fo {
 #### subroutines ####
 sub long-help {
   say $usage;
+  say();
+  say q:heredoc/HERE/;
+    Used to include files by adding one or lines like this:
+  
+      <!-- insert-file <filename> -->
+  HERE
   exit;
 }
 
