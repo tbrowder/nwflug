@@ -18,6 +18,7 @@ Handout w/links.
 a comment
 -->
 
+<!-- insert-file common-1.md -->
 ## Objectives
 
 Become familiar with FOSS
