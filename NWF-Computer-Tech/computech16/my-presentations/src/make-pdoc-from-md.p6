@@ -25,7 +25,7 @@ for @*ARGS -> $arg is copy { # 'is copy' allows modifying locally
   }
 
   if ($arg eq '-i' || $arg eq '--infile') {
-    $infile = $val.basename;
+    $infile = $val.IO:path.basename;
   }
   elsif ($arg eq '-d' || $arg eq '--debug') {
     $debug = $val ?? $val !! 1;
