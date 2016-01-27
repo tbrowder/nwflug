@@ -68,7 +68,7 @@ say "Working file '$infile'...";
     if $line ~~ m/  ^ \s* '<!--' \s* 'insert-file' \s+ (<[\w\.\-]>+) \s* '-->' \s* $ / {
       say "DEBUG: found insertion line for file '$0'";
       $ifil = $0;
-      $headers = True if $ifil ~~ /headers/;
+      $headers = True if $ifil ~~ /headers|closer/;
     }
     else {
       #say "DEBUG: no insertion line found";
