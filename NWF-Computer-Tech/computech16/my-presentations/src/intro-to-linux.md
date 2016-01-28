@@ -1,8 +1,5 @@
 title: VirtualBox   
-subtitle: Computer Tech 2016
-author:   Tom Browder (tom.browder@gmail.com)
-institute: Northwest Florida Linux Group (nwflug.org)
-date: 2016-01-30
+<!-- insert-file headers.md -->
 
 ## Introduction to Linux
 
@@ -13,6 +10,10 @@ date: 2016-01-30
     1. Demo install of **Oracle's Virtual Box**.
     2. Install a Virtual Machine Image of **Ubuntu**.
     3. Take tour of **Ubuntu**'s features.
+
+<!-- insert-file background.md -->
+
+<!-- insert-file common-1.md -->
 
 ## Testing Linux Distros
 
@@ -164,6 +165,15 @@ After starting and finishing the installation, you'll want to install
 Please experiment and read the excellent documentation--there's much
 more that can be done to tweak a host but this should get you started.
 
-## The end
 
-That's all, folks!
+## Summary
+
+- Today we have taken a look at getting a usable Linux installation for learning.
+
+- If you find Linux useful, consider joining our local Linux user group.
+
+- There is something out there in Linux land for nearly any interest.
+  I encourage you to venture forth, have fun, and expand your
+  knowledge and skills.
+
+<!-- insert-file closer-help.md -->
