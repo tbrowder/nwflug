@@ -179,19 +179,43 @@ particularly noteworthy in the FOSS arena:
 
 ## Preparation for using FOSS
 
-- Install a zip program
+- Install a zip program (7Zip)
 
 - Install (if necessary) Windows Power Shell
 
-- Install a check sums program
+- Install a check sums program (Jacksum)
 
-- Install a public key program
+- Install a public key program (gpg)
 
 ## Tour of free programs and resources
 
 Use my free handout available online at **<https://computertechnwf.org>**.
 
 # Some brief looks
+
+## Inkscape
+
+Replacement for Corel Draw
+
+Here is one of my drawings: a circuit diagram. (**demo**)
+
+The same drawing converted to a bitmap:
+
+![30%](pics/loco-v5-circuits.png)
+
+## Gimp
+
+Replacement for Photoshop
+
+I use all the time for preparing images for my websites.  I crop all
+my images to a small square and then scale to 100x100 pixels to use as
+thumb nails.
+
+We look at one of my sites for an example.
+
+<**<https://psrr.info/pauls-reports.html#2015-03-28>**>
+
+Here is an example of how I do that. (**demo**)
 
 ## Summary
 
@@ -202,6 +226,3 @@ Use my free handout available online at **<https://computertechnwf.org>**.
   to venture forth, have fun, and expand your knowledge and skills.
 
 <!-- insert-file closer-help.md -->
-
-
-

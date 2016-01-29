@@ -67,103 +67,30 @@ Considerations (* recommended)
 
 ## Installing the Linux guest...
 
-.Creating a new Virtual Machine (VM)
-![50%](./pics/vbox-01.png)
+We have a VM already prepared for you here:
 
-## Naming the VM
+<**<>**>
 
-![50%](./pics/vbox-02.png)
+## Download and import it
 
-## Choose RAM allocation
-
-![50%](./pics/vbox-03.png)
-
-## May need at least 1.5 Gb
-
-![50%](./pics/vbox-05.png)
-
-## Select "Next"
-
-![50%](./pics/vbox-06.png)
-
-## Creating a virtual hard disk
-
-![50%](./pics/vbox-07.png)
-
-## Use the default disk type (VDI)
-
-![50%](./pics/vbox-08.png)
-
-## Select "Next"
-
-![50%](./pics/vbox-09.png)
-
-## Choose "Dynamically allocated"
-
-![50%](./pics/vbox-10.png)
-
-## Normally accept the default name
-
-![50%](./pics/vbox-11.png)
-
-## Be generous selecting disk size
-
-.Then select "Create"
-![50%](./pics/vbox-12.png)
-
-## The new VM appears in the list
-
-![50%](./pics/vbox-13.png)
-
-## More VM settings to be made
-
-![50%](./pics/vbox-14.png)
-
-## System options
-
-![50%](./pics/vbox-15.png)
-
-## Display options
-
-.I normally choose 24 Mb
-![50%](./pics/vbox-16.png)
-
-## Attach the installation CD/DVD
-
-![50%](./pics/vbox-17.png)
-
-## Navigate to the location
-
-![50%](./pics/vbox-18.png)
-
-## Select the desired CD/DVD
-
-![50%](./pics/vbox-19.png)
-
-## Check the desired CD/DVD shows as attached
-
-![50%](./pics/vbox-20.png)
+It will take a while to download!
 
 ## Now start the VM
 
 ![50%](./pics/vbox-21.png)
 
-## Oops!
+## A brief tour
 
-I made a typo on the guest name.  We can rename the host easily,
-but we have to remove the disk and create a new one to rename it,
-which is too complicated for me.  
+## Resources
 
-The easiest thing to do is to start all over again and use the correct
-spelling OR accept the misspelled hard disk name.
+Free Linux tutorial:
 
-## After installation
 
-After starting and finishing the installation, you'll want to install
-"Guest Additions" to have the windowing and other features work well.
+Linux for Dummies (book)
 
-Please experiment and read the excellent documentation--there's much
-more that can be done to tweak a host but this should get you started.
+Linux Bible (**demo**)
+
+<**<https://nwflug.org>**>
 
 
 ## Summary
