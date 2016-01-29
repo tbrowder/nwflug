@@ -18,6 +18,10 @@ TFREDIR = $(CTECHBASEDIR)/0900-free-software
 TLINDIR = $(CTECHBASEDIR)/1000-intro-linux
 TPERDIR = $(CTECHBASEDIR)/1100-intro-perl6
 
+TFREPRODS = otp/free-win-progs.pdf free-win-progs/browder-handout-computech16.pdf
+TLINPRODS = otp/intro-to-linux.pdf 
+TPERPRODS = otp/intro-to-perl6.pdf
+
 TALKS  =
 #TALKS += agenda-2016-01-04
 #TALKS += example
@@ -68,11 +72,9 @@ otp/%.pdf : fake-src/%.tex
 
 .PHONY: deliver
 deliver:
-	@( cd otp ; \
-	cp free-win-progs.pdf $(TFREDIR) ; \
-	cp intro-to-linux.pdf $(TLINDIR) ; \
-	cp intro-to-perl6.pdf $(TPERDIR) ; \
-	)
+	cp $(TFREPRODS) $(TFREDIR)
+	cp $(TLINPRODS) $(TLINDIR)
+	cp $(TPERPRODS) $(TPERDIR)
 	@echo "Website updated\n"
 
 .PHONY: clean
