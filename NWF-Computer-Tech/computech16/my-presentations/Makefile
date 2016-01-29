@@ -14,6 +14,10 @@ PDFLATEX = pdflatex
 CTECHYEAR     = 2016
 CTECHBASEDIR  = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr/mydomains/domains/primary-web-servers/web-sites/computertechnwf.org/public/$(CTECHYEAR)/sessions
 
+TFREDIR = $(CTECHBASEDIR)/0900-free-software
+TLINDIR = $(CTECHBASEDIR)/1000-intro-linux
+TPERDIR = $(CTECHBASEDIR)/1100-intro-perl6
+
 TALKS  =
 #TALKS += agenda-2016-01-04
 #TALKS += example
@@ -64,7 +68,11 @@ otp/%.pdf : fake-src/%.tex
 
 .PHONY: deliver
 deliver:
-	( cd otp ; cp *.pdf $(CTECHDIR) );
+	( cd otp ; \
+	cp free-win-progs.pdf $(TFREDIR) ; \
+	cp intro-to-linux.pdf $(TLINDIR) ; \
+	cp intro-to-perl6.pdf $(TPERDIR) ; \
+	)
 
 .PHONY: clean
 clean:
