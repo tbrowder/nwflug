@@ -35,7 +35,7 @@ PDFS = $(patsubst %, otp/%.pdf, $(TALKS))
 pdocs = $(patsubst %, src/%.pdoc, $(TALKS))
 
 .PHONY : all 
-all: $(PDFS) list-presentations
+all: $(PDFS) deliver list-presentations
 
 .PHONY : pdoc
 pdoc: $(pdocs)
@@ -68,11 +68,12 @@ otp/%.pdf : fake-src/%.tex
 
 .PHONY: deliver
 deliver:
-	( cd otp ; \
+	@( cd otp ; \
 	cp free-win-progs.pdf $(TFREDIR) ; \
 	cp intro-to-linux.pdf $(TLINDIR) ; \
 	cp intro-to-perl6.pdf $(TPERDIR) ; \
 	)
+	@echo "Website updated\n"
 
 .PHONY: clean
 clean:
