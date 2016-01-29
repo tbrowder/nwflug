@@ -18,9 +18,15 @@ TFREDIR = $(CTECHBASEDIR)/0900-free-software
 TLINDIR = $(CTECHBASEDIR)/1000-intro-linux
 TPERDIR = $(CTECHBASEDIR)/1100-intro-perl6
 
-TFREPRODS = otp/free-win-progs.pdf free-win-progs/browder-handout-computech16.pdf
-TLINPRODS = otp/intro-to-linux.pdf 
-TPERPRODS = otp/intro-to-perl6.pdf
+TFREPRODS  = otp/free-win-progs.pdf 
+TFREPRODS += common-handouts/toms-link-list.pdf
+TFREPRODS += free-win-progs/browder-handout-computech16.pdf
+
+TLINPRODS  = otp/intro-to-linux.pdf 
+TLINPRODS += common-handouts/toms-link-list.pdf
+
+TPERPRODS  = otp/intro-to-perl6.pdf
+TPERPRODS += common-handouts/toms-link-list.pdf
 
 TALKS  =
 #TALKS += agenda-2016-01-04
