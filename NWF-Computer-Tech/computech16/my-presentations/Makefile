@@ -12,11 +12,16 @@ PANDOC   = pandoc
 PDFLATEX = pdflatex
 
 CTECHYEAR     = 2016
-CTECHBASEDIR  = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr/mydomains/domains/primary-web-servers/web-sites/computertechnwf.org/public/$(CTECHYEAR)/sessions
+CDSADIR       = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr/mydomains/domains/primary-web-servers/web-sites/computertechnwf.org/public
+CTECHBASEDIR  = $(CDSADIR)/$(CTECHYEAR)/sessions
 
 TFREDIR = $(CTECHBASEDIR)/0900-free-software
 TLINDIR = $(CTECHBASEDIR)/1000-intro-linux
 TPERDIR = $(CTECHBASEDIR)/1100-intro-perl6
+SITEDIR = $(CDSADIR)/pdf
+
+SITEPRODS  = ../CompuTech-2016-Flyer.pdf
+SITEPRODS += ../CompuTech-2016-Schedule.pdf
 
 TFREPRODS  = otp/free-win-progs.pdf 
 TFREPRODS += common-handouts/toms-link-list.pdf
@@ -81,6 +86,7 @@ deliver:
 	cp $(TFREPRODS) $(TFREDIR)
 	cp $(TLINPRODS) $(TLINDIR)
 	cp $(TPERPRODS) $(TPERDIR)
+	cp $(SITEPRODS) $(SITEDIR)
 	@echo "Website updated\n"
 
 .PHONY: clean
