@@ -8,12 +8,26 @@ title: VirtualBox
 - From the schedule:
 
     1. Demo install of **Oracle's Virtual Box**.
-    2. Install a Virtual Machine Image of **Ubuntu**.
+    2. Install a Virtual Machine image of **Ubuntu**.
     3. Take tour of **Ubuntu**'s features.
 
 <!-- insert-file background.md -->
 
 <!-- insert-file common-1.md -->
+
+## Why GNU/Linux?
+
+- Powerful operating system (O/S or OS) that can be used in place of
+  Windows or Mac
+
+- Command-line-interface (CLI) that permits complex pipeline tasks and
+  GUI-less programming
+
+- Thousands of free software packages to suit nearly every interest
+
+- Especially valuable as a modern slide-rule or calculator for
+  scientists, mathematicians, engineers, and analytical professionals
+  in all fields
 
 ## Testing Linux distros (distributions)
 
@@ -78,7 +92,7 @@ At 4+ Gb it will take a while to download!
 
 ## Importing the VM (2)
 
-![38%](./pics/vbox-import-vm-1.png)
+![38%](./pics/vbox-import-vm-2.png)
 
 ## Importing the VM (3)
 
@@ -90,22 +104,65 @@ At 4+ Gb it will take a while to download!
 
 ## Importing the VM (5)
 
-![38%](./pics/vbox-import-vm-complete.png)
+Complete, now check settings
+
+![38%](./pics/vm-uploaded-ready)
 
 ## Importing the VM (6)
 
-![38%](./pics/vbox-import-vm-settings.png)
+![38%](./pics/vm-import-vm-settings.png)
 
 ## Now start the VM
 
-![38%](./pics/vbox-21.png)
+![38%](./pics/vm-start.png)
 
-## A very brief Linux tour
+## A very brief Linux tour (1)
 
 - Using the VM (**demo**)
 
-- Using my Debian 7 laptop (**demo**)
+    - Terminal window
 
+    - Package manager
+
+##  A very brief Linux tour (2)
+
+Some CLI fun using my Debian 7 laptop (**demo**)
+
+How many files are on my laptop?
+
+~~~
+$ time locate / > tt
+real	0m58.954s
+user	0m0.712s
+sys	0m1.876s
+$ wc tt
+ 1141036  1371237 89324910 tt
+~~~
+
+##  A very brief Linux tour (3)
+
+How many files are in my home directory?
+
+~~~
+$ time locate $HOME > t
+real	0m0.513s
+user	0m0.468s
+sys	0m0.044s
+$ wc t
+102133  108278 8084166 t
+~~~
+
+How many are PDF files (end in ".pdf")?
+
+~~~
+$ grep -i '\.pdf$' t > ttt
+$ wc ttt
+  475   533 30446 ttt
+~~~
+
+## My Christmas card process
+
+(**demo**)
 
 ## Resources
 
