@@ -76,6 +76,7 @@ fake-src/%.tex : fake-src/%.pdoc $(MD2TEX)
 	$(PERL) $(MD2TEX) $< $@
 	$(PERL) -pi.bak -e "s/\(FIXUP\)//g"   $@
 	$(PERL) -i.bak $(BREAK)               $@
+	-rm $(trash)
 
 otp/%.pdf : fake-src/%.tex
 	$(PDFLATEX) -output-directory=otp $<
@@ -113,3 +114,4 @@ trash += $(patsubst %, otp/%.nav, $(TALKS))
 trash += $(patsubst %, otp/%.vrb, $(TALKS))
 trash += $(patsubst %, otp/%.toc, $(TALKS))
 trash += src/*.bak src/*~
+trash += fake-src/*.bak
