@@ -61,7 +61,7 @@ The "Extension Pack" is not distributable
 
 ## Upgrading or installing
 
-After donwloading the main file, double-click on it and install it as
+After downloading the main file, double-click on it and install it as
 usual on Windows (or the equivalent on Mac).
 
 When upgrading or installing, you lose network access temporarily.
@@ -116,6 +116,14 @@ Complete, now check settings
 
 ![38%](./pics/vm-start.png)
 
+## VM goodies
+
+The VM has a few things added over the initial installation:
+
+- a simple Emacs customization file (**~/.emacs.d/init.el**)
+
+- Perl 6
+
 ## A very brief Linux tour (1)
 
 - Using the VM (**demo**)
@@ -124,6 +132,10 @@ Complete, now check settings
 
     - Package manager
 
+    - Emacs
+
+    - Perl 6
+    
 ##  A very brief Linux tour (2)
 
 Some CLI fun using my Debian 7 laptop (**demo**)
@@ -181,7 +193,8 @@ $ wc ttt
 - Today we have taken a look at getting a usable Linux installation
   for learning.
 
-- If you find Linux useful, consider joining our local Linux user group.
+- If you find Linux useful, consider joining our local Linux user
+  group.
 
 - There is something out there in Linux land for nearly any interest.
   I encourage you to venture forth, have fun, and expand your

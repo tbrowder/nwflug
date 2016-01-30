@@ -73,6 +73,8 @@ particularly noteworthy in the FOSS arena:
 	
 	- Sell support services
 
+- Doesn't it seem like socialism?
+
 ## Topics to be covered
 
 - Windows versus Linux
@@ -101,7 +103,7 @@ particularly noteworthy in the FOSS arena:
 
 	- Is pretty much the opposite of Windows in most respects
 
-	- Is unparalled for the scientist or engineers: a powerful,
+	- Is unparalleled for the scientist or engineers: a powerful,
 	  programmable calculator
 
 	- Is free
@@ -228,7 +230,7 @@ Replacement for Microsoft Office
 ## Summary
 
 - Today we have looked at a few of the thousands of free programs
-  available for Windows
+  available for Windows (and Mac and Linux).
 
 - There is something out there for nearly any interest.  I encourage
   to venture forth, have fun, and expand your knowledge and skills.

@@ -3,7 +3,7 @@
 
 ## My Computer Tech 2016 Sessions
 
-The sessions are interelated:
+The sessions are interrelated:
 
 - Free Software
 
