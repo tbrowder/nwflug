@@ -201,7 +201,7 @@ Here is one of my drawings: a circuit diagram. (**demo**)
 
 The same drawing converted to a bitmap:
 
-![30%](pics/loco-v5-circuits.png)
+![30%](./pics/loco-v5-circuits.png)
 
 ## Gimp
 
@@ -211,11 +211,19 @@ I use all the time for preparing images for my websites.  I crop all
 my images to a small square and then scale to 100x100 pixels to use as
 thumb nails.
 
-We look at one of my sites for an example.
+We look at one of my sites for an example (report 2014-08-23).
 
-<**<https://psrr.info/pauls-reports.html#2015-03-28>**>
+<**<https://psrr.info/pauls-reports.html>**>
 
 Here is an example of how I do that. (**demo**)
+
+## GnuCash
+
+Replacement for Quicken
+
+## Libreoffice
+
+Replacement for Microsoft Office
 
 ## Summary
 
