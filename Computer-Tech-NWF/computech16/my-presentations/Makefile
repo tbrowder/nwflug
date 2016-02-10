@@ -26,9 +26,11 @@ SITEPRODS += ../CompuTech-2016-Schedule.pdf
 TFREPRODS  = otp/free-win-progs.pdf 
 TFREPRODS += common-handouts/toms-link-list.pdf
 TFREPRODS += free-win-progs/browder-handout-computech16.pdf
+TFREPRODS += free-win-progs/Questions-answered-and-Notes.txt
 
 TLINPRODS  = otp/intro-to-linux.pdf 
 TLINPRODS += common-handouts/toms-link-list.pdf
+TLINPRODS += intro-to-linux/Questions-answered-and-Notes.txt
 
 TPERPRODS  = otp/intro-to-perl6.pdf
 TPERPRODS += common-handouts/toms-link-list.pdf
