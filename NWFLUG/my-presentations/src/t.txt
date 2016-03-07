@@ -1,0 +1,8 @@
+
+Replacement for Corel Draw
+
+Here is one of my drawings: a circuit diagram. (**demo**)
+
+The same drawing converted to a bitmap:
+
+![30%](./pics/loco-v5-circuits.png)
