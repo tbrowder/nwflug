@@ -78,7 +78,8 @@ Considerations (* recommended)
 
 ## Installing the Linux guest...
 
-We have a VM already prepared for you here through a link on the Computer Tech NWF home page:
+We have a VM already prepared for you here through a link on the
+Computer Tech NWF home page:
 
 - <**<https://computertechnwf.org/virtualbox-vm.html>**>
 
