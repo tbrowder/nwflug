@@ -5,3 +5,5 @@ tt
 *~
 \#*\#
 .~lock*
+*.pdoc
+otp
