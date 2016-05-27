@@ -1,0 +1,188 @@
+​​Carl, here are my 10 inputs for talks for 'Tech '17 (all can be 11 or 15
+min):
+
+************************************
+
+====================================
+01 Inkscape [free, cross-platform]
+   - Poor man's vector drawing program
+
+https://inkscape.org/en/
+
+Inkscape is a professional vector graphics editor for Windows, Mac OS
+X and Linux. It's free and open source.
+
+have logo in svg format
+
+====================================
+02 Gimp [free, cross-platform]
+   - Poor man's photo editor
+
+Gimp: GNU Image Manipulation Program
+
+https://www.gimp.org/
+
+GIMP is a cross-platform image editor available for GNU/Linux, OS X,
+Windows and more operating systems. It is free software, you can
+change its source code and distribute your changes.
+
+Whether you are a graphic designer, photographer, illustrator, or
+scientist, GIMP provides you with sophisticated tools to get your job
+done. You can further enhance your productivity with GIMP thanks to
+many customization options and 3rd party plugins.
+
+have logo in svg format
+
+====================================
+03 GNU Emacs [free, cross-platform]
+   - The Swiss army knife of editors
+
+https://www.gnu.org/software/emacs/
+
+An extensible, customizable, free/libre text editor — and more.
+
+At its core is an interpreter for Emacs Lisp, a dialect of the Lisp
+programming language with extensions to support text editing.
+
+have logo in svg format
+
+====================================
+04 Git [free, cross-platform]
+
+https://git-scm.com/
+
+Git is a free and open source distributed version control system
+designed to handle everything from small to very large projects with
+speed and efficiency.
+
+Git is easy to learn and has a tiny footprint with lightning fast
+performance. It outclasses SCM tools like Subversion, CVS, Perforce,
+and ClearCase with features like cheap local branching, convenient
+staging areas, and multiple workflows.
+
+have logo in eps (=> svg) format
+
+====================================
+05 GitHub [free, cross-platform]
+   - Contribute to Open Source projects
+
+https://github.com/home
+
+How people build software
+
+Millions of developers use GitHub [with Git] to build personal
+projects, support their businesses, and work together on open source
+technologies.
+
+GitHub fosters a fast, flexible, and collaborative development process
+that lets you work on your own or with others.
+
+GitHub is free to use for public and open source projects.
+
+have logo in eps (=> svg) format
+
+====================================
+06 Linux [free]
+   - Why use Linux?
+
+have logo in svg format
+
+====================================
+07 Ubuntu Desktop [free]
+   - A very popular Linux distribution
+
+http://www.ubuntu.com/desktop
+
+Ubuntu comes with everything you need to run your organisation,
+school, home or enterprise. All the essential applications, like an
+office suite, browsers, email and media apps come pre-installed and
+thousands more games and applications are available in the Ubuntu
+Software Centre.
+
+have logo in svg format
+
+
+====================================
+08 VirtualBox [free, cross-platform]
+   - Use Linux on Windows
+
+https://www.virtualbox.org/
+
+VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product
+for enterprise as well as home use. Not only is VirtualBox an
+extremely feature rich, high performance product for enterprise
+customers, it is also the only professional solution that is freely
+available as Open Source Software under the terms of the GNU General
+Public License (GPL) version 2. See "About VirtualBox" for an
+introduction.
+
+Presently, VirtualBox runs on Windows, Linux, Macintosh, and Solaris
+hosts and supports a large number of guest operating systems including
+but not limited to Windows (NT 4.0, 2000, XP, Server 2003, Vista,
+Windows 7, Windows 8, Windows 10), DOS/Windows 3.x, Linux (2.4, 2.6,
+3.x and 4.x), Solaris and OpenSolaris, OS/2, and OpenBSD.
+
+VirtualBox is being actively developed with frequent releases and has
+an ever growing list of features, supported guest operating systems
+and platforms it runs on. VirtualBox is a community effort backed by a
+dedicated company: everyone is encouraged to contribute while Oracle
+ensures the product always meets professional quality criteria.
+
+have logo in png format
+
+====================================
+09 Perl 6 [free, cross-platform]
+   - Programming for fun and profit
+
+http://perl6.org/
+
+The Perl 6 Programming Language
+
+Perl 6 is the plucky little sister of Perl 5. Like her world-famous big
+sister, Perl 6 intends to carry forward the high ideals of the Perl
+community.
+
+Many new features greatly advance our tradition of expressive and
+feature-rich programming:
+
++ Object-oriented programming including generics, roles and multiple
+  dispatch
+
++ Functional programming primitives, lazy and eager list evaluation,
+  junctions, autothreading and hyperoperators (vector operators)
+
++ Parallelism, concurrency, and asynchrony including multi-core
+  support
+
++ Definable grammars for pattern matching and generalized string
+  processing
+
++ Optional and gradual typing
+
+have logo in svg format
+
+====================================
+10 YouTube
+   - Arm-chair railfanning
+
+https://www.youtube.com/yt/about/
+
+Launched in May 2005, YouTube allows billions of people to discover,
+watch and share originally-created videos. YouTube provides a forum
+for people to connect, inform, and inspire others across the globe and
+acts as a distribution platform for original content creators and
+advertisers large and small.
+
+YouTube is a Google company.
+
+have logo in eps (=> svg) format
+
+************************************
+
+Note that they are not all exactly apps, but they are what they are.
+
+Note also I made the attached icons 120 pixels wide to approximately match yours.
+
+Best regards,
+
+-Tom
