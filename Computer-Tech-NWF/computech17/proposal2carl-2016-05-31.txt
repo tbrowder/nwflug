@@ -2,7 +2,7 @@
 min):
 
 ************************************
-
+************************************
 ====================================
 01 Inkscape [free, cross-platform]
    - Poor man's vector drawing program
@@ -178,7 +178,8 @@ YouTube is a Google company.
 have logo in eps (=> svg) format
 
 ************************************
-
+************************************
+ 
 Note that they are not all exactly apps, but they are what they are.
 
 Note also I made the attached icons 120 pixels wide to approximately match yours.
