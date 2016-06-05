@@ -7,3 +7,4 @@ tt
 .~lock*
 *.pdoc
 otp
+fake-src/
