@@ -39,7 +39,7 @@ TALKS  =
 #TALKS += agenda-2016-03-07
 #TALKS += agenda-2016-04-04
 TALKS += agenda-2016-06-06
-#TALKS += intro-to-wkhtmltopdf
+TALKS += intro-to-wkhtmltopdf
 
 COMMON +=
 COMMON += src/common*md
@@ -61,6 +61,7 @@ list-presentations:
 	@echo Presentations:
 	@echo -------------
 	@-ls -1 otp/agenda*pdf
+	@-ls -1 otp/intro*pdf
 	@echo
 
 src/%.pdoc :: src/%.md $(COMMON) src/headers.md src/make-pdoc-from-md.p6
