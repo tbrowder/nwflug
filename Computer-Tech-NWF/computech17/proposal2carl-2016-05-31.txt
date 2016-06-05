@@ -85,6 +85,31 @@ have logo in eps (=> svg) format
 06 Linux [free]
    - Why use Linux?
 
+https://www.kernel.org/category/about.html
+
+Linux is a clone of the operating system Unix, written from scratch by
+Linus Torvalds with assistance from a loosely-knit team of hackers
+across the Net. It aims towards POSIX and Single UNIX Specification
+compliance.
+
+It has all the features you would expect in a modern fully-fledged
+Unix, including true multitasking, virtual memory, shared libraries,
+demand loading, shared copy-on-write executables, proper memory
+management, and multistack networking including IPv4 and IPv6.
+
+Although originally developed first for 32-bit x86-based PCs (386 or
+higher), today Linux also runs on a multitude of other processor
+architectures, in both 32- and 64-bit variants.
+
+If you're new to Linux, you don't want to download the kernel, which
+is just a component in a working Linux system. Instead, you want what
+is called a distribution of Linux, which is a complete Linux
+system. There are numerous distributions available for download on the
+Internet as well as for purchase from various vendors; some are
+general-purpose, and some are optimized for specific uses. We
+currently have mirrors of several distributions available at
+https://mirrors.kernel.org/.
+
 have logo in svg format
 
 ====================================
