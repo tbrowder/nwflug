@@ -1,0 +1,11 @@
+$ ../wkhtmltopdf   https://nwflug.org nwflug-org.pdf
+
+$ evince nwflug-org.pdf
+
+$ ../wkhtmltoimage https://nwflug.org nwflug-org.png
+
+$ gimp nwflug-org.png
+
+# image | autocrop
+
+
