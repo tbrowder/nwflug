@@ -1,0 +1,1 @@
+Meeting held on second Monday due to the 4th of July is first Monday.
