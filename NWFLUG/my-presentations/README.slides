@@ -1,3 +1,7 @@
 Using a kludge from Jonathan of Perl 6 fame.
 
 Originals are in the src/*.md files.
+
+Debian packages required:
+
+  pandoc
