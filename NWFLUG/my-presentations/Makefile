@@ -20,12 +20,12 @@ PDFLATEX = pdflatex
 #TPERDIR = $(CTECHBASEDIR)/1100-intro-perl6
 #SITEDIR = $(CDSADIR)/pdf
 
-TFREPRODS  = otp/free-win-progs.pdf 
+TFREPRODS  = otp/free-win-progs.pdf
 TFREPRODS += common-handouts/toms-link-list.pdf
 TFREPRODS += free-win-progs/browder-handout-computech16.pdf
 TFREPRODS += free-win-progs/Questions-answered-and-Notes.txt
 
-TLINPRODS  = otp/intro-to-linux.pdf 
+TLINPRODS  = otp/intro-to-linux.pdf
 TLINPRODS += common-handouts/toms-link-list.pdf
 TLINPRODS += intro-to-linux/Questions-answered-and-Notes.txt
 
@@ -40,7 +40,8 @@ TALKS  =
 #TALKS += agenda-2016-04-04
 #TALKS += agenda-2016-06-06
 #TALKS += intro-to-wkhtmltopdf
-TALKS += agenda-2016-07-11
+#TALKS += agenda-2016-07-11
+TALKS += agenda-2016-10-03
 
 COMMON +=
 COMMON += src/common*md
@@ -50,7 +51,7 @@ COMMON += src/background.md
 PDFS  = $(patsubst %, otp/%.pdf, $(TALKS))
 pdocs = $(patsubst %, src/%.pdoc, $(TALKS))
 
-.PHONY : all 
+.PHONY : all
 #all: $(PDFS) deliver list-presentations
 all: $(PDFS) list-presentations
 

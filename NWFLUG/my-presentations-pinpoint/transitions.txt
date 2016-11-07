@@ -1,0 +1,11 @@
+# 9 current transitions:
+
+-- [transition=page-curl-both]
+-- [transition=sheet]
+-- [transition=slide-in-left]
+-- [transition=slide-left]
+-- [transition=slide-up]
+-- [transition=spin-text]
+-- [transition=swing]
+-- [transition=text-slide-down]
+-- [transition=text-slide-up]
