@@ -1,9 +1,11 @@
 EXE := pinpoint
 
-all: mtg-2016-11-07
+MTG := mtg-2016-12-05
 
-mtg-2016-11-07:
-	$(EXE) --output=mtg-2016-11-07.pdf mtg-2016-11-07.pin
+all: $(MTG)
+
+$(MTG):
+	$(EXE) --output=$(MTG).pdf $(MTG).pin
 
 simple:
 	(cd examples; $(EXE) --output=simple-demo.pdf simple-demo.pin)

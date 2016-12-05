@@ -1,0 +1,18 @@
+John Fay wound up using the 0.70 gray scale version.
+
+Proposes maybe using 0.75 version next year.
+
+Details on paper used (from John Fay):
+
+Southworth "Parchment" specialty paper, "ideal for announcements,
+invitations, awards," Ivory color, 24 lb. weight, 8 1/2 by 11,
+laser-inkjet-copier compatible.  I bought it at Office Depot
+yesterday.
+
+Winner for 2015 (41st annual fair event, our 1st annual award):
+
+Patrick Womack
+Senior, Niceville High School
+for the project
+The Effect of Heat on Power Consumption by Computers
+2015-02-17
