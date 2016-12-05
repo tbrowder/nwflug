@@ -6,7 +6,6 @@ Three sessions:
 
 2. Getting and using Linux
 
-
    * Get help through the NWFLUG
 
 3. Easy Christmas Cards and Linux
