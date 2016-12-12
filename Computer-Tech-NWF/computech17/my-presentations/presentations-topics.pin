@@ -1,0 +1,37 @@
+#!/usr/bin/env pinpoint
+
+# the 0th "slide" provides default styling for the presentation
+[center]    # position of text
+[black]     # default slide background
+[duration=5.000000]
+[font=Sans 50px]
+
+---
+
+My Three Topics for CTech '17
+
+--- [red]
+
+Linux: A free alternative to MS Windows and Mac
+
++ Simple uses to as complex as needed
++ Thousands of free applications
++ (Screen shots of apps)
++ Local help is available
+
+--- [white]
+
+Getting and using Linux
+
++ Ubuntu on Windows 10
++ VirtualBox
++ Native installation
++ Local help is available
+
+--- [blue]
+
+Two easy projects with linux:
+
++ Christmas card management
++ Personalized calendar
++ Local help is available
