@@ -113,7 +113,7 @@ save
   ox oy translate
 
   gsave
-  0 setgray
+  %0 setgray
   np 0 0 mt stname show
   grestore
 
@@ -633,14 +633,17 @@ closepath stroke
 
 
 % big text
+gsave
+1 0 0 setrgbcolor
 bf4
-
 2 i2p  22 i2p moveto (LINUX LIVE) 8 puttext
+grestore
 
+gsave
+0 0 1 setrgbcolor
 bf3
-
 2 i2p 22 i2p add 20 i2p 3 i2p sub moveto (DEMO) 8 puttext
-
+grestore
 
 grestore
 
