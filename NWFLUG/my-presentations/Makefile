@@ -42,7 +42,8 @@ TALKS  =
 #TALKS += intro-to-wkhtmltopdf
 #TALKS += agenda-2016-07-11
 #TALKS += agenda-2016-09-05
-TALKS += agenda-2016-10-03
+#TALKS += agenda-2016-10-03
+TALKS += agenda-2017-01-09
 
 COMMON +=
 COMMON += src/common*md

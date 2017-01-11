@@ -1,6 +1,6 @@
 EXE := pinpoint
 
-MTG := mtg-2016-12-05
+MTG := mtg-2017-01-09
 
 all: $(MTG)
 
