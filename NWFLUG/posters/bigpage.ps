@@ -301,17 +301,17 @@ closepath stroke
 /lin-y 22 i2p def
 /lin-s 1  def % scale
 
-/dem-x 2 i2p 21 i2p add def
+/dem-x 34 i2p  def
 /dem-y 20 i2p def
 /dem-s 1  def % scale
 
-/fre-x 8 i2p def
-/fre-y 20 i2p 3 i2p sub def
-/fre-s 1  def % scale
-
-/wrd-x 33 i2p def
-/wrd-y 20 i2p 3 i2p sub def
+/wrd-x 34 i2p def
+/wrd-y 16.5 i2p  def
 /wrd-s 1  def % scale
+
+/fre-x 20 i2p def
+/fre-y 11 i2p def
+/fre-s 1  def % scale
 
 % big text
 gsave
@@ -328,7 +328,7 @@ gsave
 bf2
 gsave
 dem-s
-dem-x dem-y moveto (LIVE DEMO) 1 puttext
+dem-x dem-y moveto (LIVE DEMO) 11 puttext
 grestore
 grestore
 
@@ -337,19 +337,25 @@ gsave
 bf2
 gsave
 fre-s
-fre-x fre-y moveto (WHICH OS IS FREE?) 8 puttext
+/fd-y  2 i2p def % for delta baseline
+fre-x fre-y moveto (WHICH OS) 10 puttext % center on baseline
+fre-x fre-y fd-y sub  moveto (IS FREE?) 10 puttext
 grestore
 grestore
 
 gsave
-0 1 0 setrgbcolor
-bf2
+0 0 0 setrgbcolor
+bf15
 gsave
 wrd-s
 % two or more lines
-/wd-y  20 def % for delta baseline
-wrd-x wrd-y moveto (thousands of free apps available including) 11 puttext % right-justified on baseline
-0     wd-y rmoveto (clones of Microsoft, Adobe, and Quicken products) 11 puttext % right-justified on baseline
+/wd-y  -1.6 i2p def % for delta baseline
+wrd-x wrd-y moveto (thousands of free apps available) 11 puttext % right-justified on baseline
+0     wd-y rmoveto (including clones of products from) 11 puttext % right-justified on baseline
+1 0 0 setrgbcolor
+0     wd-y rmoveto (Microsoft) 11 puttext % right-justified on baseline
+0     wd-y rmoveto (Adobe) 11 puttext % right-justified on baseline
+0     wd-y rmoveto (Quicken) 11 puttext % right-justified on baseline
 grestore
 grestore
 
@@ -363,27 +369,27 @@ grestore
 /tux-s .7  def % scale
 
 % looks like origin is in ll corner
-/gpc-x 10 i2p def
-/gpc-y 8.5 i2p def
+/gpc-x 8.5 i2p def
+/gpc-y 7.5 i2p def
 /gpc-s 3  def % scale
 
 
-/mac-x 5 i2p def
+/mac-x 3 i2p def
 /mac-y 3 i2p def
 /mac-s 2    def % scale
 
-/win-x 16 i2p def
-/win-y 6 i2p def
+/win-x 12 i2p def
+/win-y 4 i2p def
 /win-s 2  def % scale
 
 % looks like origin is in ll corner
-/nos-x 5 i2p def
+/nos-x 3 i2p def
 /nos-y 3 i2p def
 /nos-s 1.5  def % scale
 
 % looks like origin is in ll corner
-/nos2-x 19 i2p def
-/nos2-y 4.5 i2p def
+/nos2-x 14.75 i2p def
+/nos2-y 2.5 i2p def
 /nos2-s 1.5  def % scale
 
 %%%%=======================================================
