@@ -309,6 +309,10 @@ closepath stroke
 /fre-y 20 i2p 3 i2p sub def
 /fre-s 1  def % scale
 
+/wrd-x 33 i2p def
+/wrd-y 20 i2p 3 i2p sub def
+/wrd-s 1  def % scale
+
 % big text
 gsave
 1 0 0 setrgbcolor
@@ -334,6 +338,18 @@ bf2
 gsave
 fre-s
 fre-x fre-y moveto (WHICH OS IS FREE?) 8 puttext
+grestore
+grestore
+
+gsave
+0 1 0 setrgbcolor
+bf2
+gsave
+wrd-s
+% two or more lines
+/wd-y  20 def % for delta baseline
+wrd-x wrd-y moveto (thousands of free apps available including) 11 puttext % right-justified on baseline
+0     wd-y rmoveto (clones of Microsoft, Adobe, and Quicken products) 11 puttext % right-justified on baseline
 grestore
 grestore
 
