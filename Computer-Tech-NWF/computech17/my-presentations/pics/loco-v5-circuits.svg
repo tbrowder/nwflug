@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="990"
+   height="765"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="loco-v5-circuits.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="337.96544"
+     inkscape:cy="496.74847"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1272"
+     inkscape:window-height="709"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     units="mm"
+     objecttolerance="10000"
+     guidetolerance="10000"
+     inkscape:snap-global="true"
+     inkscape:snap-nodes="false"
+     inkscape:snap-bbox="false"
+     inkscape:bbox-paths="false"
+     inkscape:object-paths="false"
+     inkscape:snap-object-midpoints="false"
+     inkscape:bbox-nodes="false"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-bbox-edge-midpoints="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3004"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       units="mm"
+       spacingy="1mm"
+       spacingx="1mm" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-287.36218)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 177.16535,715.74801 0,-35.43307"
+       id="path3950"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2, 2;stroke-dashoffset:0"
+       d="m 177.16535,680.31494 17.71654,-31.88977"
+       id="path3948"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:type="arc"
+       id="path5942"
+       style="fill:#000000;stroke:none"
+       sodipodi:cx="354.56354"
+       sodipodi:cy="803.86462"
+       sodipodi:rx="3"
+       sodipodi:ry="3"
+       d="m 357.56354,803.86462 a 3,3 0 1 1 -6,0 3,3 0 1 1 6,0 z"
+       transform="translate(52.916777,-123.54969)" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5705"
+       width="106.29921"
+       height="70.866142"
+       x="230.31496"
+       y="538.58264" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="283.23016"
+       y="562.32623"
+       id="text5707"
+       sodipodi:linespacing="125%"><tspan
+         y="562.32623"
+         x="283.23016"
+         sodipodi:role="line"
+         id="tspan5745">12 volt audio</tspan><tspan
+         y="577.32623"
+         x="283.23016"
+         sodipodi:role="line"
+         id="tspan5747">amplifier</tspan><tspan
+         y="592.32623"
+         x="283.23016"
+         sodipodi:role="line"
+         id="tspan5749">(3 amps)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 798.09449,715.76375 0,88.58268"
+       id="path5862"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 762.66142,715.76375 0,88.58268"
+       id="path5860"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.69391751px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 549.90995,715.91679 0,-177.47143 212.90451,0 0,0 -8.51618,0 8.51618,0"
+       id="path4046"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="168.85896"
+       y="782.34717"
+       id="text3809"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3811"
+         x="168.85896"
+         y="782.34717">+</tspan></text>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect3008"
+       width="17.716536"
+       height="17.716536"
+       x="293.17322"
+       y="715.76373" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect3836"
+       width="10.629921"
+       height="3.5433071"
+       x="296.71652"
+       y="722.8504" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect3838"
+       width="3.5433071"
+       height="10.629921"
+       x="300.25986"
+       y="719.30707" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3010"
+       width="17.716536"
+       height="17.716536"
+       x="169.15747"
+       y="715.76373" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect3840"
+       width="10.629921"
+       height="3.5433071"
+       x="172.70078"
+       y="722.8504" />
+    <rect
+       y="733.48029"
+       x="151.44095"
+       height="106.29921"
+       width="177.16536"
+       id="rect3859"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3861"
+       y="780.98145"
+       x="239.43768"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#f9f9f9;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       xml:space="preserve"><tspan
+         y="780.98145"
+         x="239.43768"
+         id="tspan3863"
+         sodipodi:role="line">12 Volts DC</tspan><tspan
+         y="800.98145"
+         x="239.43768"
+         id="tspan3865"
+         sodipodi:role="line">Marine Battery</tspan></text>
+    <rect
+       y="733.48029"
+       x="399.47244"
+       height="106.29921"
+       width="177.16536"
+       id="rect3859-9"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3861-0"
+       y="780.98145"
+       x="487.46918"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       xml:space="preserve"><tspan
+         y="780.98145"
+         x="487.46918"
+         id="tspan3863-9"
+         sodipodi:role="line">12 Volts DC</tspan><tspan
+         y="800.98145"
+         x="487.46918"
+         id="tspan3865-3"
+         sodipodi:role="line">Marine Battery</tspan></text>
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none"
+       id="rect3008-9"
+       width="17.716536"
+       height="17.716536"
+       x="541.20471"
+       y="715.76373" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect3836-1"
+       width="10.629921"
+       height="3.5433071"
+       x="544.74805"
+       y="722.8504" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect3838-9"
+       width="3.5433071"
+       height="10.629921"
+       x="548.29132"
+       y="719.30707" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3010-5"
+       width="17.716536"
+       height="17.716536"
+       x="417.18896"
+       y="715.76373" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect3840-9"
+       width="10.629921"
+       height="3.5433071"
+       x="420.73227"
+       y="722.8504" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 301.31721,716.12089 0,-35.43307 124.01574,0 0,35.43307 0,0 0,0 0,0"
+       id="path4036"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4042"
+       width="37.857143"
+       height="18.571428"
+       x="346.14285"
+       y="671.2193" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#000000;font-family:Sans"
+       x="352.76285"
+       y="684.72766"
+       id="text3982"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3984"
+         x="352.76285"
+         y="684.72766">fuse</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.87227839px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 194.88189,644.88187 0,-159.44882 602.49831,0.19431 0,0 0,0 0,0"
+       id="path4044"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2.10077167;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5723"
+       width="176.06462"
+       height="123.91498"
+       x="692.84564"
+       y="591.7984" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 762.66142,591.74801 0,-53.14961"
+       id="path5733"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 798.09449,591.74801 0,-106.29922"
+       id="path5735"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="780.42676"
+       y="650.38379"
+       id="text5737"
+       sodipodi:linespacing="125%"><tspan
+         y="650.38379"
+         x="780.42676"
+         sodipodi:role="line"
+         id="tspan5751">24 volt motor</tspan><tspan
+         y="665.38379"
+         x="780.42676"
+         sodipodi:role="line"
+         id="tspan5753">controller</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path5743"
+       sodipodi:cx="726.37793"
+       sodipodi:cy="605.55121"
+       sodipodi:rx="35.433071"
+       sodipodi:ry="35.433071"
+       d="m 761.811,605.55121 a 35.433071,35.433071 0 1 1 -70.86614,0 35.433071,35.433071 0 1 1 70.86614,0 z"
+       transform="translate(54.000023,198.79522)" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="780.04395"
+       y="801.32007"
+       id="text5755"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5757"
+         x="780.04395"
+         y="801.32007">24 volt</tspan><tspan
+         sodipodi:role="line"
+         x="780.04395"
+         y="816.32007"
+         id="tspan5759">motor</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 585.49606,433.87962 0,104.71878"
+       id="path5777"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="567.54517"
+       y="393.98804"
+       id="text5779"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5781"
+         x="567.54517"
+         y="393.98804">24 volt</tspan><tspan
+         sodipodi:role="line"
+         x="567.54517"
+         y="408.98804"
+         id="tspan5783">charger</tspan><tspan
+         sodipodi:role="line"
+         x="567.54517"
+         y="423.98804"
+         id="tspan5785">plug</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5787"
+       width="70.866142"
+       height="53.149605"
+       x="532.34644"
+       y="379.14957" />
+    <path
+       sodipodi:type="arc"
+       id="path5936"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       sodipodi:cx="495.98489"
+       sodipodi:cy="608.90521"
+       sodipodi:rx="3"
+       sodipodi:ry="3"
+       d="m 498.98489,608.90521 a 3,3 0 1 1 -6,0 3,3 0 1 1 6,0 z"
+       transform="translate(-318.81954,71.409724)" />
+    <path
+       sodipodi:type="arc"
+       id="path5938"
+       style="fill:#000000;stroke:none"
+       sodipodi:cx="531.34021"
+       sodipodi:cy="662.4433"
+       sodipodi:rx="3"
+       sodipodi:ry="3"
+       d="m 534.34021,662.4433 a 3,3 0 1 1 -6,0 3,3 0 1 1 6,0 z"
+       transform="translate(54,-124)" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="511.36877"
+       y="928.34644"
+       id="text6022"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3344">Tom Browder's current proposed wiring diagram using the Ride Trains motor controller/sound system.</tspan><tspan
+         sodipodi:role="line"
+         id="tspan3346">2015-05-09</tspan><tspan
+         sodipodi:role="line"
+         id="tspan3348"> </tspan></text>
+    <path
+       sodipodi:type="arc"
+       id="path5942-2"
+       style="fill:#000000;stroke:none"
+       sodipodi:cx="354.56354"
+       sodipodi:cy="803.86462"
+       sodipodi:rx="3"
+       sodipodi:ry="3"
+       d="m 357.56354,803.86462 a 3,3 0 1 1 -6,0 3,3 0 1 1 6,0 z"
+       transform="translate(-159.68165,-229.8489)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 194.88189,574.01572 230,573.79075"
+       id="path3215"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 407.48031,680.31494 0,-77.95276 0,-28.34646 -70.86614,0 0,0 0,0"
+       id="path3219"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.99900001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 549.2126,432.28344 0,35.43307 -389.76378,0 0,0 0,177.16536"
+       id="path3058"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:type="arc"
+       id="path5936-6"
+       style="fill:none;stroke:#000000;stroke-opacity:1"
+       sodipodi:cx="495.98489"
+       sodipodi:cy="608.90521"
+       sodipodi:rx="3"
+       sodipodi:ry="3"
+       d="m 498.98489,608.90521 a 3,3 0 1 1 -6,0 3,3 0 1 1 6,0 z"
+       transform="translate(-336.53607,38.976653)" />
+    <path
+       sodipodi:type="arc"
+       id="path5936-2"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       sodipodi:cx="495.98489"
+       sodipodi:cy="608.90521"
+       sodipodi:rx="3"
+       sodipodi:ry="3"
+       d="m 498.98489,608.90521 a 3,3 0 1 1 -6,0 3,3 0 1 1 6,0 z"
+       transform="translate(-301.103,39.51996)" />
+    <path
+       sodipodi:type="arc"
+       id="path5936-5"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       sodipodi:cx="495.98489"
+       sodipodi:cy="608.90521"
+       sodipodi:rx="3"
+       sodipodi:ry="3"
+       d="m 498.98489,608.90521 a 3,3 0 1 1 -6,0 3,3 0 1 1 6,0 z"
+       transform="translate(-354.25261,57.193188)" />
+    <path
+       sodipodi:type="arc"
+       id="path5936-5-4"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       sodipodi:cx="495.98489"
+       sodipodi:cy="608.90521"
+       sodipodi:rx="3"
+       sodipodi:ry="3"
+       d="m 498.98489,608.90521 a 3,3 0 1 1 -6,0 3,3 0 1 1 6,0 z"
+       transform="translate(-283.38647,56.900678)" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;font-family:Sans;-inkscape-font-specification:Sans"
+       x="225.47485"
+       y="670.21558"
+       id="text3982-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3106"
+         x="225.47485"
+         y="670.21558">OFF</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path5743-9"
+       sodipodi:cx="726.37793"
+       sodipodi:cy="605.55121"
+       sodipodi:rx="35.433071"
+       sodipodi:ry="35.433071"
+       d="m 761.811,605.55121 a 35.433071,35.433071 0 1 1 -70.86614,0 35.433071,35.433071 0 1 1 70.86614,0 z"
+       transform="translate(-246.37793,-30.33189)" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="479.52539"
+       y="572.19293"
+       id="text5755-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3148"
+         x="479.52539"
+         y="572.19293">volt</tspan><tspan
+         sodipodi:role="line"
+         id="tspan3150"
+         x="479.52539"
+         y="587.19293">meter</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 141.73228,662.5984 0,-141.73228 336.61418,0 0,17.71653"
+       id="path3158"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 514.8429,574.01572 35.43307,0"
+       id="path3160"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:type="arc"
+       id="path5938-2"
+       style="fill:#000000;stroke:none"
+       sodipodi:cx="531.34021"
+       sodipodi:cy="662.4433"
+       sodipodi:rx="3"
+       sodipodi:ry="3"
+       d="m 534.34021,662.4433 a 3,3 0 1 1 -6,0 3,3 0 1 1 6,0 z"
+       transform="translate(18.45584,-88.490162)" />
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+Questions from the audience:
+===========================
+
+Q. Is Perl available on Rasperry Pi?
+
+A. Apparently Perl is not in the base installation of Raspian OS, but
+   available packages are listed here:
+
+     http://www.raspberryconnect.com/raspbian-packages-list
+
+   Perl packages (or any other desired packages) can be installed with
+   the package management system from the command line.
