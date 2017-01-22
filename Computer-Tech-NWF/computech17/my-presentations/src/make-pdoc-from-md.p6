@@ -27,10 +27,10 @@ for @*ARGS -> $arg is copy { # 'is copy' allows modifying locally
     #die "DEBUG exit";
   }
 
-  if ($arg eq '-i' || $arg eq '--infile') {
+  if $arg eq '-i' || $arg eq '--infile' {
     $infile = $val.IO:path.basename;
   }
-  elsif ($arg eq '-d' || $arg eq '--debug') {
+  elsif $arg eq '-d' || $arg eq '--debug' {
     $debug = $val ?? $val !! 1;
   }
   elsif ($arg eq '-h' || $arg eq '--help' || $arg eq q{?}) {
@@ -52,14 +52,14 @@ my @fo = [$outfile];
 say "Working file '$infile'...";
 # open input file
   my $fpi = open($infile);
-  
+
   # open output file
   my $fpo = open($outfile, :w);
-  
+
   # read the file and strip lines with certain dirs
   LINE:
   for $fpi.lines -> $line { # note that lines are already chomped
-    
+
     #say "DEBUG line: '$line'";
 
     my $ifil = '';
@@ -102,7 +102,7 @@ sub long-help {
   say();
   say q:heredoc/HERE/;
     Used to include files by adding one or lines like this:
-  
+
       <!-- insert-file <filename> -->
   HERE
   exit;
