@@ -11,48 +11,58 @@ PERL     = perl
 PANDOC   = pandoc
 PDFLATEX = pdflatex
 
-CTECHYEAR     = 2016
+CTECHYEAR     = 2017
 CDSADIR       = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr/mydomains/domains/primary-web-servers/web-sites/computertechnwf.org/public
 CTECHBASEDIR  = $(CDSADIR)/$(CTECHYEAR)/sessions
 
-TFREDIR = $(CTECHBASEDIR)/0900-free-software
-TLINDIR = $(CTECHBASEDIR)/1000-intro-linux
-TPERDIR = $(CTECHBASEDIR)/1100-intro-perl6
+# presentations (talks)
+P1_FNAME = intro-linux
+P2_FNAME = getting-linux
+P3_FNAME = using-linux
+
+P1_DIR = $(CTECHBASEDIR)/0900-$(P1_FNAME)
+P2_DIR = $(CTECHBASEDIR)/1000-$(P2_FNAME)
+P3_DIR = $(CTECHBASEDIR)/1100-$(P3_FNAME)
+
 SITEDIR = $(CDSADIR)/pdf
 
-SITEPRODS  = ../CompuTech-2016-Flyer.pdf
-SITEPRODS += ../CompuTech-2016-Schedule.pdf
+SITEPRODS  = ../CompuTech-$(CTECHYEAR)-Flyer.pdf
+SITEPRODS += ../CompuTech-$(CTECHYEAR)-Schedule.pdf
 
-TFREPRODS  = otp/free-win-progs.pdf 
-TFREPRODS += common-handouts/toms-link-list.pdf
-TFREPRODS += free-win-progs/browder-handout-computech16.pdf
-TFREPRODS += free-win-progs/Questions-answered-and-Notes.txt
+P1_PRODS  = otp/$(P1_FNAME).pdf
+P1_PRODS += common-handouts/toms-link-list.pdf
+P1_PRODS += $(P1_FNAME)/browder-handout-computech17.pdf
+P1_PRODS += $(P1_FNAME)/Questions-answered-and-Notes.txt
 
-TLINPRODS  = otp/intro-to-linux.pdf 
-TLINPRODS += common-handouts/toms-link-list.pdf
-TLINPRODS += intro-to-linux/Questions-answered-and-Notes.txt
+P2_PRODS  = otp/$(P2_FNAME).pdf
+P2_PRODS += common-handouts/toms-link-list.pdf
+P2_PRODS += $(P2_FNAME)/Questions-answered-and-Notes.txt
 
-TPERPRODS  = otp/intro-to-perl6.pdf
-TPERPRODS += common-handouts/toms-link-list.pdf
+P3_PRODS  = otp/$(P3_FNAME).pdf
+P3_PRODS += common-handouts/toms-link-list.pdf
 
 TALKS  =
-#TALKS += agenda-2016-01-04
 #TALKS += example
 #TALKS += example2
-TALKS += intro-to-linux
-TALKS += free-win-progs
-TALKS += intro-to-perl6
+TALKS += $(P1_FNAME)
+TALKS += $(P2_FNAME)
+TALKS += $(P3_FNAME)
 
 COMMON +=
-COMMON += src/common*md
-COMMON += src/headers.md
-COMMON += src/background.md
+COMMON += src/cmn/common*md
+COMMON += src/cmn/headers.md
+COMMON += src/cmn/background.md
+COMMON += src/cmn/closer-help.md
 
-PDFS = $(patsubst %, otp/%.pdf, $(TALKS))
+PDFS  = $(patsubst %, otp/%.pdf, $(TALKS))
 pdocs = $(patsubst %, src/%.pdoc, $(TALKS))
 
-.PHONY : all 
-all: $(PDFS) deliver list-presentations
+.PHONY : all
+all: make-dirs $(PDFS) deliver list-presentations
+
+.PHONY : make-dirs
+make-dirs : otp fake-src
+	  -mkdir $<
 
 .PHONY : pdoc
 pdoc: $(pdocs)
@@ -64,7 +74,7 @@ list-presentations:
 	@-ls -1 otp/[fi]*pdf
 	@echo
 
-src/%.pdoc :: src/%.md $(COMMON) src/headers.md src/make-pdoc-from-md.p6
+src/%.pdoc :: src/%.md $(COMMON) src/make-pdoc-from-md.p6
 	cd src ; ./make-pdoc-from-md.p6 -i=$(<)
 
 #echo "working file $(@)..."
@@ -86,9 +96,9 @@ otp/%.pdf : fake-src/%.tex
 
 .PHONY: deliver
 deliver:
-	cp $(TFREPRODS) $(TFREDIR)
-	cp $(TLINPRODS) $(TLINDIR)
-	cp $(TPERPRODS) $(TPERDIR)
+	cp $(P1_PRODS) $(P1_DIR)
+	cp $(P2_PRODS) $(P2_DIR)
+	cp $(P3_PRODS) $(P3_DIR)
 	cp $(SITEPRODS) $(SITEDIR)
 	@echo "Website updated\n"
 
