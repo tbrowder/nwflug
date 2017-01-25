@@ -1,0 +1,126 @@
+#!/usr/bin/env pinpoint
+
+# the 0th "slide" provides default styling for the presentation
+[center]    # position of text
+[black]     # default slide background
+[duration=5.000000]
+[font=Sans 50px]
+
+---
+
+NWFLUG Monthly Mtg
+
+2017-01-09
+
+---
+
+Agenda
+
++ New members
+
++ Robotics Award
+
++ Robotics
+
++ Computer Tech 2017 (Tom)
+
++ Volunteer Linux Mentors (Tom)
+
++ My CTech '17 topics (Tom)
+
++ New NWFLUG moderator needed
+
++ From the floor
+
+--- [green]
+
+Robotics Award
+
++ $111 raised so far
++ Excess over $100 to be given to Computer Tech
+
+--- [../nwflug-award-certificates/2017/2017-award-tux-0.75-grayscale.jpg]
+
+--- [green]
+
+We need to fill in the blanks on the award.
+
++ Rand?
++ Jimmy?
+
+--- [red]
+
+First Robotics Competition (FRC - High School)
+
++ I attended the presentation last Saturday for FRC robotics volunteers at the UF/REEF
+
++ Break for video
+
+--- [red]
+
+If interested, contact:
+
++ Chuck Kennedy (FRC: HS)
+
+    - ckennedy@firstinspires.org
+
++ Beth Hanning (Lego, Lego Jr)
+
+    - beth.henning@doolittleinstitute.org
+
+--- [green]
+
+Volunteer Linux Mentors
+
++ Willing to help folks wanting some personal assistance
++ Willing to publicize their volunteer status
++ Willing to add picture and e-mail for the website
++ Meet here on third Mondays if needed
+
+Alex?
+
+--- [red]
+
+CTech '17:
+
++ NWFSC Student Services Center, 28 Jan
++ Kevin and Tom are known to be presenting
++ See web site: https://computertechnwf.org
+
+---
+
+CTech '17:
+
+One or more volunteers needed:
+
++ man an NWFLUG desk and display computer
++ help with admin
+
+---
+
+CTech '17:
+
+NWFLUG Poster
+
+Ideas?
+
+---
+
+Kevin's CTech '17 presentations:
+
++ networking?
+
+---
+
+Tom's CTech '17 presentations:
+
++ Linux: A free alternative to MS Windows and Mac
++ Getting and using Linux
++ Two easy projects with linux:
+    - Christmas card management
+    - Personalized calendar
++ Local help is available
+
+--- [green]
+
+From the floor
