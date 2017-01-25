@@ -30,16 +30,16 @@ SITEPRODS  = ../CompuTech-$(CTECHYEAR)-Flyer.pdf
 SITEPRODS += ../CompuTech-$(CTECHYEAR)-Schedule.pdf
 
 P1_PRODS  = otp/$(P1_FNAME).pdf
-P1_PRODS += common-handouts/toms-link-list.pdf
-P1_PRODS += $(P1_FNAME)/browder-handout-computech17.pdf
+P1_PRODS += common-handouts/common-link-list-handout.docx
 P1_PRODS += $(P1_FNAME)/Questions-answered-and-Notes.txt
 
 P2_PRODS  = otp/$(P2_FNAME).pdf
-P2_PRODS += common-handouts/toms-link-list.pdf
+P2_PRODS += common-handouts/common-link-list-handout.docx
 P2_PRODS += $(P2_FNAME)/Questions-answered-and-Notes.txt
 
 P3_PRODS  = otp/$(P3_FNAME).pdf
-P3_PRODS += common-handouts/toms-link-list.pdf
+P3_PRODS += common-handouts/common-link-list-handout.docx
+P2_PRODS += $(P3_FNAME)/Questions-answered-and-Notes.txt
 
 TALKS  =
 #TALKS += example
