@@ -1,6 +1,5 @@
 title: Getting Linux
-author:   Tom Browder (tom.browder@gmail.com)
-date: 2016-??-??
+<!-- insert-file headers.md -->
 
 # Introduction to Linux
 

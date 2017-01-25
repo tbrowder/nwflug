@@ -62,7 +62,7 @@ all: make-dirs $(PDFS) deliver list-presentations
 
 .PHONY : make-dirs
 make-dirs : otp fake-src
-	  -mkdir $<
+	  if [ ! -d $< ] ; then -mkdir $< ; fi
 
 .PHONY : pdoc
 pdoc: $(pdocs)
@@ -96,6 +96,9 @@ otp/%.pdf : fake-src/%.tex
 
 .PHONY: deliver
 deliver:
+	if [ ! -d $(P1_DIR) ] ; then mkdir -p $(P1_DIR) ; fi
+	if [ ! -d $(P2_DIR) ] ; then mkdir -p $(P2_DIR) ; fi
+	if [ ! -d $(P3_DIR) ] ; then mkdir -p $(P3_DIR) ; fi
 	cp $(P1_PRODS) $(P1_DIR)
 	cp $(P2_PRODS) $(P2_DIR)
 	cp $(P3_PRODS) $(P3_DIR)
