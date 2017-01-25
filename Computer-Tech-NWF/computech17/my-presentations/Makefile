@@ -58,11 +58,20 @@ PDFS  = $(patsubst %, otp/%.pdf, $(TALKS))
 pdocs = $(patsubst %, src/%.pdoc, $(TALKS))
 
 .PHONY : all
-all: make-dirs $(PDFS) deliver list-presentations
+all: make-dirs make-P-dirs $(PDFS) deliver list-presentations
 
 .PHONY : make-dirs
 make-dirs : otp fake-src
-	  if [ ! -d $< ] ; then -mkdir $< ; fi
+	  @if [ ! -d $< ] ; then -mkdir $< ; fi
+
+.PHONY : make-P-dirs
+make-P-dirs:
+	@if [ ! -d $(P1_DIR) ] ; then mkdir -p $(P1_DIR) ; fi
+	@if [ ! -d $(P2_DIR) ] ; then mkdir -p $(P2_DIR) ; fi
+	@if [ ! -d $(P3_DIR) ] ; then mkdir -p $(P3_DIR) ; fi
+	@if [ ! -d $(P1_FNAME) ] ; then mkdir -p $(P1_FNAME) ; fi
+	@if [ ! -d $(P2_FNAME) ] ; then mkdir -p $(P2_FNAME) ; fi
+	@if [ ! -d $(P3_FNAME) ] ; then mkdir -p $(P3_FNAME) ; fi
 
 .PHONY : pdoc
 pdoc: $(pdocs)
@@ -96,13 +105,10 @@ otp/%.pdf : fake-src/%.tex
 
 .PHONY: deliver
 deliver:
-	if [ ! -d $(P1_DIR) ] ; then mkdir -p $(P1_DIR) ; fi
-	if [ ! -d $(P2_DIR) ] ; then mkdir -p $(P2_DIR) ; fi
-	if [ ! -d $(P3_DIR) ] ; then mkdir -p $(P3_DIR) ; fi
-	cp $(P1_PRODS) $(P1_DIR)
-	cp $(P2_PRODS) $(P2_DIR)
-	cp $(P3_PRODS) $(P3_DIR)
-	cp $(SITEPRODS) $(SITEDIR)
+	@-cp $(P1_PRODS) $(P1_DIR)
+	@-cp $(P2_PRODS) $(P2_DIR)
+	@-cp $(P3_PRODS) $(P3_DIR)
+	@-cp $(SITEPRODS) $(SITEDIR)
 	@echo "Website updated\n"
 
 .PHONY: clean
