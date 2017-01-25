@@ -26,8 +26,9 @@ P3_DIR = $(CTECHBASEDIR)/1100-$(P3_FNAME)
 
 SITEDIR = $(CDSADIR)/pdf
 
-SITEPRODS  = ../CompuTech-$(CTECHYEAR)-Flyer.pdf
-SITEPRODS += ../CompuTech-$(CTECHYEAR)-Schedule.pdf
+SITEPRODS  = ../CTech-$(CTECHYEAR)-Flyer.pdf
+SITEPRODS += ../CTech-$(CTECHYEAR)-Win-Linux.pdf
+SITEPRODS += ../CTech-$(CTECHYEAR)-Apple-Mac.pdf
 
 P1_PRODS  = otp/$(P1_FNAME).pdf
 P1_PRODS += common-handouts/common-link-list-handout.docx
@@ -39,7 +40,7 @@ P2_PRODS += $(P2_FNAME)/Questions-answered-and-Notes.txt
 
 P3_PRODS  = otp/$(P3_FNAME).pdf
 P3_PRODS += common-handouts/common-link-list-handout.docx
-P2_PRODS += $(P3_FNAME)/Questions-answered-and-Notes.txt
+P3_PRODS += $(P3_FNAME)/Questions-answered-and-Notes.txt
 
 TALKS  =
 #TALKS += example
