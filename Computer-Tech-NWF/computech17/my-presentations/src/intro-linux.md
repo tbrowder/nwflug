@@ -1,6 +1,93 @@
 title: Intro to Linux
 <!-- insert-file headers.md -->
 
+## Introduction to Linux
+
+## What is Linux?
+
+- Powerful, free operating system (O/S or OS) that can be used in place of
+  Windows or Mac
+
+- Usually packaged with thousands of free software packages to suit nearly every interest
+
+- Note there are other free OSs
+
+## Why use Linux?
+
+- Command-line-interface (CLI) that permits complex pipeline tasks and
+  GUI-less programming
+
+- All aspects of the system are accessible to the user, including the source code
+
+## Who uses Linux
+
+- Cloud service providers
+
+- Data warehouses
+
+- Web servers
+
+- High Performance Computing (HPC) facilities
+
+- Especially valuable as a modern slide-rule or calculator for
+  scientists, mathematicians, engineers, and analytical professionals
+  in all fields
+
+## Some terminology
+
+- OS (or O/S): Operating System (the executive program and all its
+  suppporting programs)
+
+- FOSS: Free and Open Source Software
+
+- GNU: Gnu's Not Unix, a brand of the Free Software Foundation
+
+- Linux: the name of the kernel (executive program) developed by Linus Torvald
+
+- distro: a GNU/Linux distribution
+
+- GUI: Graphical User Interface
+
+- CLI: Command Line Interface
+
+## GNU/Linux distributions (distros)
+
+- A distro is a collection of
+
+  -- a Linux kernel (the executive program)
+
+  -- hundreds of small utility CLI programs
+
+  -- a subset of the thousands of free aplication programs ("apps")
+
+## Which distro is for you?
+
+- Hunreds are available
+
+- distrowatch.org can help you decide
+
+- one of the most popular is Ubuntu
+
+- distros divided into groups by their package management systems
+
+  -- Debian apt
+
+  -- Fedora rpm
+
+  -- others...
+
+## Testing Linux distros (distributions)
+
+Several methods
+
+- VirtualBox
+
+- Live CD/DVD
+
+- Bootable USB drive
+
+- Spare computer (native install; dual or single boot)
+
 ## Windows Programs (Apps)
 
 - Free and Open Source Software (FOSS) for Windows
@@ -197,11 +284,9 @@ Use my free handout available online at **<https://computertechnwf.org>**.
 
 ## Inkscape
 
-Replacement for Corel Draw
+Replacement for Corel Draw or Adobe Illustrator
 
-Here is one of my drawings: a circuit diagram. (**demo**)
-
-The same drawing converted to a bitmap:
+Here is one of my drawings: a circuit diagram exported s a bitmap.
 
 ![30%](./pics/loco-v5-circuits.png)
 
@@ -217,13 +302,13 @@ We look at one of my sites for an example (report 2014-08-23).
 
 <**<https://psrr.info/pauls-reports.html>**>
 
-Here is an example of how I do that. (**demo**)
-
 ## GnuCash
 
 Replacement for Quicken
 
-## Libreoffice
+I've used it for at least eight years now, and have never looked back to Quicken!
+
+## LibreOffice
 
 Replacement for Microsoft Office
 
@@ -233,6 +318,6 @@ Replacement for Microsoft Office
   available for Windows (and Mac and Linux).
 
 - There is something out there for nearly any interest.  I encourage
-  to venture forth, have fun, and expand your knowledge and skills.
+  you to venture forth, have fun, and expand your knowledge and skills.
 
 <!-- insert-file closer-help.md -->
