@@ -21,10 +21,10 @@ The sessions are interrelated:
 
 These links are on your handout and are related to my sessions:
 
-<**<https://computertechnwf.org/2017/sessions/sessions.html>**>
+<**<https://computertechnwf.org/>**>
 
 <**<https://nwflug.org>**>
 
-<**<http://nicevile.pm.org>**>
-
 <**<https://github.com/tbrowder>**>
+
+<**<https://www.linuxfoundation.org>**>

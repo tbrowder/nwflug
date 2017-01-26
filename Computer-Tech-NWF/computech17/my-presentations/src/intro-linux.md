@@ -5,9 +5,7 @@ title: Introduction to Linux
 
 <!-- insert-file common-1.md -->
 
-## Linux
-
-Introduction to Linux
+# Introduction to Linux
 
 ## What is Linux?
 
@@ -64,7 +62,7 @@ A distro is a collection of
 
 - hundreds of small utility CLI programs
 
-- a subset of the thousands of free aplication programs ("apps")
+- a subset of the thousands of free application programs ("apps")
 
 ## Which distro is for you?
 
@@ -72,13 +70,13 @@ A distro is a collection of
 
 - <**<http://distrowatch.com>**> can help you decide
 
-- one of the most popular is Ubuntu
+- One of the most popular is Ubuntu
 
-- distros can be divided into groups by their package formats and management systems
+- Distros can be divided into groups by their package formats and management systems
 
     - Debian: 'deb' format, 'aptitude' package manager
 
-    - Fedora: rpm format, 'yum' package manager
+    - Fedora: 'rpm' format, 'yum' package manager
 
     - there are many others: ...
 
@@ -96,7 +94,6 @@ Several methods (next session)
 
 ## Becoming Familiar with FOSS
 
-Become familiar with FOSS
 
 - Motivation
 
@@ -233,7 +230,9 @@ particularly noteworthy in the FOSS arena:
 
 ## Tour of free programs and resources
 
-Use my free handout available online at **<https://computertechnwf.org>**.
+Use my free handout available online at
+
+- <**<https://computertechnwf.org>**>
 
 # Some brief looks
 
