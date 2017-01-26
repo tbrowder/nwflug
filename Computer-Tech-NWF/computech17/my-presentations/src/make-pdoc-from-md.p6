@@ -67,7 +67,9 @@ say "Working file '$infile'...";
     # look for insertion files (<!-- insert-file <file name> -->
     if $line ~~ m/  ^ \s* '<!--' \s* 'insert-file' \s+ (<[\w\.\-]>+) \s* '-->' \s* $ / {
       say "DEBUG: found insertion line for file '$0'";
-      $ifil = $0;
+      $ifil = "./cmn/$0";
+      die "FATAL:  No such file '$ifil'.\n"
+        if $ifil.IO !~~ :f;
       $headers = True if $ifil ~~ /headers|closer/;
     }
     else {
