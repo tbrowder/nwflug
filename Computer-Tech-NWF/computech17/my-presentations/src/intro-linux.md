@@ -1,7 +1,13 @@
-title: Intro to Linux
+title: Introduction to Linux
 <!-- insert-file headers.md -->
 
-## Introduction to Linux
+<!-- insert-file background.md -->
+
+<!-- insert-file common-1.md -->
+
+## Linux
+
+Introduction to Linux
 
 ## What is Linux?
 
@@ -40,9 +46,9 @@ title: Intro to Linux
 
 - FOSS: Free and Open Source Software
 
-- GNU: Gnu's Not Unix, a brand of the Free Software Foundation
+- GNU: "Gnu's Not Unix," a brand of the Free Software Foundation
 
-- Linux: the name of the kernel (executive program) developed by Linus Torvald
+- Linux: the name of the kernel (executive program)
 
 - distro: a GNU/Linux distribution
 
@@ -52,33 +58,33 @@ title: Intro to Linux
 
 ## GNU/Linux distributions (distros)
 
-- A distro is a collection of
+A distro is a collection of
 
-  -- a Linux kernel (the executive program)
+- a Linux kernel (the executive program)
 
-  -- hundreds of small utility CLI programs
+- hundreds of small utility CLI programs
 
-  -- a subset of the thousands of free aplication programs ("apps")
+- a subset of the thousands of free aplication programs ("apps")
 
 ## Which distro is for you?
 
-- Hunreds are available
+- Hundreds are available
 
-- distrowatch.org can help you decide
+- <**<http://distrowatch.com>**> can help you decide
 
 - one of the most popular is Ubuntu
 
-- distros divided into groups by their package management systems
+- distros can be divided into groups by their package formats and management systems
 
-  -- Debian apt
+    - Debian: 'deb' format, 'aptitude' package manager
 
-  -- Fedora rpm
+    - Fedora: rpm format, 'yum' package manager
 
-  -- others...
+    - there are many others: ...
 
-## Testing Linux distros (distributions)
+## Getting and testing Linux distros (distributions)
 
-Several methods
+Several methods (next session)
 
 - VirtualBox
 
@@ -88,21 +94,7 @@ Several methods
 
 - Spare computer (native install; dual or single boot)
 
-## Windows Programs (Apps)
-
-- Free and Open Source Software (FOSS) for Windows
-
-- From the schedule:
-
-       - Get free, legal software for MS Windows and Mac: download and install
-compatible substitutes for Office, Access, Photo Shop, Quicken, and others.
-Handout w/links.
-
-<!-- insert-file background.md -->
-
-<!-- insert-file common-1.md -->
-
-## Objectives
+## Becoming Familiar with FOSS
 
 Become familiar with FOSS
 
@@ -164,41 +156,18 @@ particularly noteworthy in the FOSS arena:
 
 ## Topics to be covered
 
-- Windows versus Linux
-
 - Internet considerations
 
 - Downloading
 
 - Authenticating
 
-- Tour of free programs and resources
-
-## Windows vs. Linux
-
-- Windows:
-
-	- Is everywhere
-
-	- It's primarily a GUI operation
-
-	- Expensive
-
-	- Hides internals
-
-- Linux:
-
-	- Is pretty much the opposite of Windows in most respects
-
-	- Is unparalleled for the scientist or engineers: a powerful,
-	  programmable calculator
-
-	- Is free
+- Brief look at some free programs and resources
 
 # Fundamentals
 
-- I assume familiarity with getting around your computer and the
-  internet and with:
+- A user should be familiar with getting around his or her computer and the
+  Internet and with:
 
 	- Files and directories (folders)
 
@@ -210,7 +179,7 @@ particularly noteworthy in the FOSS arena:
 
 	- Getting help
 
-	- Command line use
+	- Command line use (maybe)
 
 ## Internet considerations
 
@@ -232,7 +201,7 @@ particularly noteworthy in the FOSS arena:
 
 - Download authentication
 
-- Encrypted communications (**https**)
+- Encrypted communications (**https**) (BIG push on it now)
 
 - DNS spoofing
 
@@ -260,21 +229,7 @@ particularly noteworthy in the FOSS arena:
 
 - Use check sums to check downloaded files
 
-	- Jacksum
-
 - Use public key encryption when appropriate
-
-	- GNU Privacy Guard (GPG)
-
-## Preparation for using FOSS
-
-- Install a zip program (7Zip)
-
-- Install (if necessary) Windows Power Shell
-
-- Install a check sums program (Jacksum)
-
-- Install a public key program (gpg)
 
 ## Tour of free programs and resources
 
@@ -284,9 +239,9 @@ Use my free handout available online at **<https://computertechnwf.org>**.
 
 ## Inkscape
 
-Replacement for Corel Draw or Adobe Illustrator
+Replacement for Corel Draw or Adobe Illustrator or Adobe InDesign
 
-Here is one of my drawings: a circuit diagram exported s a bitmap.
+Here is one of my drawings: a circuit diagram exported as a bitmap.
 
 ![30%](./pics/loco-v5-circuits.png)
 
@@ -312,10 +267,12 @@ I've used it for at least eight years now, and have never looked back to Quicken
 
 Replacement for Microsoft Office
 
+- Not perfect, but improving all the time
+
 ## Summary
 
-- Today we have looked at a few of the thousands of free programs
-  available for Windows (and Mac and Linux).
+- Today we have looked at Linux and a few of the thousands of free programs
+  available for Linux (and Windows and Mac).
 
 - There is something out there for nearly any interest.  I encourage
   you to venture forth, have fun, and expand your knowledge and skills.
