@@ -1,3 +1,6 @@
+- Please check out the Linux live demo at the NWFLUG table
+  some time today!
+
 - I am glad to help via e-mail (please mention Computer Tech 2017 in
   the subject):
 
