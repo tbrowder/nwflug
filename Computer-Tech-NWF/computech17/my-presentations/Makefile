@@ -81,7 +81,9 @@ pdoc: $(pdocs)
 list-presentations:
 	@echo Presentations:
 	@echo -------------
-	@-ls -1 otp/[fi]*pdf
+	@-ls -1 otp/$(P1_FNAME).pdf
+	@-ls -1 otp/$(P2_FNAME).pdf
+	@-ls -1 otp/$(P3_FNAME).pdf
 	@echo
 
 src/%.pdoc :: src/%.md $(COMMON) src/make-pdoc-from-md.p6
