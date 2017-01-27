@@ -50,6 +50,7 @@ TALKS += $(P2_FNAME)
 TALKS += $(P3_FNAME)
 
 COMMON +=
+COMMON += src/cmn/prelims.md
 COMMON += src/cmn/common*md
 COMMON += src/cmn/headers.md
 COMMON += src/cmn/background.md

@@ -1,9 +1,13 @@
 title: Getting Linux
 <!-- insert-file headers.md -->
 
+<!-- insert-file prelims.md -->
+
 # Getting Linux
 
 ## Several Methods
+
+Pros and cons for each:
 
 - Virtual Box
 
@@ -31,9 +35,11 @@ The website
 ![50%](./pics/vbox-dloads.png)
 
 
-## Don't forget the "Extension Pack" (for USB 2/3; not distributable)
+## Don't forget the "Extension Pack"
 
-![50%](./pics/vbox-dloads-2.png)
+It's for USB 2/3, and it's not distributable.
+
+![45%](./pics/vbox-dloads-2.png)
 
 
 ## Upgrading or installing
@@ -50,6 +56,8 @@ Considerations (* recommended)
 - 32- or 64-bit (* 64-bit)
 - 64-bit guest on 32-bit host? (NOT recommended)
 - type network interface (remote access needed?)
+
+Note we have an Ubuntu 32-bit VirtualBox image on the Computer Tech website.
 
 ## Installing the Linux guest...
 
@@ -151,6 +159,18 @@ After starting and finishing the installation, you'll want to install
 Please experiment and read the excellent documentation--there's much
 more that can be done to tweak a host but this should get you started.
 
-## The end
+## Summary
 
-That's all, folks!
+- A live CD/DVD is the easiest way to test a Linux distro.
+
+- VirtualBox is the easiest way to have and use a Linux distro.
+
+- A bootable USB drive may be even better (I have no experience with it).
+
+- A native installation is best.
+
+- I have a Debian 8 host running on VB on my small laptop.
+
+    - I'll have it at the NWFLUG table after the 1100 session.
+
+<!-- insert-file closer-help.md -->

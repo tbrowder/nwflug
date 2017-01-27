@@ -1,9 +1,7 @@
 title: Introduction to Linux
 <!-- insert-file headers.md -->
 
-<!-- insert-file background.md -->
-
-<!-- insert-file common-1.md -->
+<!-- insert-file prelims.md -->
 
 # Introduction to Linux
 
@@ -72,6 +70,8 @@ A distro is a collection of
 
 - One of the most popular is Ubuntu
 
+- My favorite is Debian with the Mate desktop
+
 - Distros can be divided into groups by their package formats and management systems
 
     - Debian: 'deb' format, 'aptitude' package manager
@@ -82,7 +82,7 @@ A distro is a collection of
 
 ## Getting and testing Linux distros (distributions)
 
-Several methods (next session)
+Several methods (covered in next session)
 
 - VirtualBox
 
@@ -90,24 +90,9 @@ Several methods (next session)
 
 - Bootable USB drive
 
-- Spare computer (native install; dual or single boot)
+- Spare or main computer (native install; dual or single boot)
 
-## Becoming Familiar with FOSS
-
-
-- Motivation
-
-- Resources
-
-- Advantages
-
-- Scope
-
-- Sources
-
-- Installation
-
-- Cautions
+# Becoming Familiar with FOSS
 
 ## Kudos
 
@@ -124,7 +109,9 @@ particularly noteworthy in the FOSS arena:
 
 	- **Linus Torvalds** (originator of the Linux kernel)
 
-## Why do we recommend and use FOSS?
+## Motivation
+
+Why do we recommend and use FOSS?
 
 - Source is available for inspection
 
@@ -151,16 +138,6 @@ particularly noteworthy in the FOSS arena:
 
 - Doesn't it seem like socialism?
 
-## Topics to be covered
-
-- Internet considerations
-
-- Downloading
-
-- Authenticating
-
-- Brief look at some free programs and resources
-
 # Fundamentals
 
 - A user should be familiar with getting around his or her computer and the
@@ -178,7 +155,11 @@ particularly noteworthy in the FOSS arena:
 
 	- Command line use (maybe)
 
-## Internet considerations
+## Installation
+
+For merely using a program, most programs should be installed with your distro's package manager.
+
+For building from source you will have to download from the appropriate Internet source:
 
 - Like the Biblical Tree of Knowledge
 
@@ -192,13 +173,9 @@ particularly noteworthy in the FOSS arena:
 
 - You **must** be on the alert
 
-## Security concerns
-
-- Browser security
+- Encrypted communications (**https**) (BIG push on it now)
 
 - Download authentication
-
-- Encrypted communications (**https**) (BIG push on it now)
 
 - DNS spoofing
 
@@ -207,20 +184,6 @@ particularly noteworthy in the FOSS arena:
 	- DNS servers can be hijacked
 
 	- Familiar home pages can be hijacked
-
-## Browser security
-
-- Chrome (or Firefox)
-
-	- **Lastpass** add-on (**<https://lastpass.com>**)
-
-		- Strong passwords
-
-		- Unique password for every site
-
-- Use **https** where available
-
-	- Provides encrypted communications between you and recipient
 
 ## Authentication
 
@@ -240,6 +203,10 @@ Use my free handout available online at
 
 Replacement for Corel Draw or Adobe Illustrator or Adobe InDesign
 
+A quick look...
+
+## Inkscape
+
 Here is one of my drawings: a circuit diagram exported as a bitmap.
 
 ![30%](./pics/loco-v5-circuits.png)
@@ -252,7 +219,11 @@ I use all the time for preparing images for my websites.  I crop all
 my images to a small square and then scale to 100x100 pixels to use as
 thumb nails.
 
-We look at one of my sites for an example (report 2014-08-23).
+A quick look...
+
+## Gimp
+
+We look at one of my sites for an example output (report 2014-08-23).
 
 <**<https://psrr.info/pauls-reports.html>**>
 
@@ -262,11 +233,15 @@ Replacement for Quicken
 
 I've used it for at least eight years now, and have never looked back to Quicken!
 
+A quick look...
+
 ## LibreOffice
 
 Replacement for Microsoft Office
 
 - Not perfect, but improving all the time
+
+A quicl look...
 
 ## Summary
 
