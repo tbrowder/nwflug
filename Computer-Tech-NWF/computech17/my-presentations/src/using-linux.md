@@ -1,15 +1,31 @@
 title: Using Linux
 <!-- insert-file headers.md -->
 
-## Introduction to Linux
+# Using Linux
 
-- Using VirtualBox for Windows
+## Preview
 
-- From the schedule:
+Two personal projects:
 
-    1. Demo install of **Oracle's Virtual Box**.
-    2. Install a Virtual Machine image of **Ubuntu**.
-    3. Take tour of **Ubuntu**'s features.
+- A peronalized calendar
+
+        - Programmed in Perl 5
+
+        - 20 years in the making
+
+        - Done annually 
+
+- A Christmas card system
+
+        - Programmed in Perl 5
+
+        - 20 years in the making
+
+        - Done annually 
+
+# A Personalized Calendar
+
+# A Christams Card System
 
 <!-- insert-file background.md -->
 

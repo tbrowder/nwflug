@@ -1,11 +1,9 @@
 title: Getting Linux
 <!-- insert-file headers.md -->
 
-# Introduction to Linux
+# Getting Linux
 
-## Testing Linux Distros
-
-Several methods
+## Several Methods
 
 - Virtual Box
 
