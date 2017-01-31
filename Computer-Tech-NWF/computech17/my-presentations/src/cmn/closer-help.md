@@ -1,3 +1,5 @@
+## Finally
+
 - Please check out the Linux live demo at the NWFLUG table
   downstairs some time today!
 
@@ -9,6 +11,6 @@
 - Don't forget we have several computer clubs in the area, one of which is
   for Linux: <**<https://nwflug.org>**>
 
-    - Installation assistance every third Monday (by appointmen only).
+    - Installation assistance every third Monday (by appointment only).
 
-    - Note free, on-line Linux course mentioned on home page.
+    - Note the free, on-line Linux course mentioned on home page.
