@@ -1,8 +1,8 @@
 Spcl|Rcvd|Sent|Label|Owner|Salutation|FirstName|LastName|Address|Address2|City|State|Zip|Country|Suffix|MiddleName
-|||Y|Sally|Dr. and Mrs.|Sam|Barnes|4455 Peachtree Blvd.||Atlanta|GA|31444|||P.
-|||Y|Joe|Mr. and Mrs.|Billy|Smith|18 Country Club Road||New York|NY|09202-2002||III|Ray
-|||Y|Sally|Ms.|William|Jones|P.O. Box 442||Hermitage|NY|11782-3059|||E.
-|||Y|Joe|Mrs.|Michael|Brown|The Hermitage, London Rd||Frostenden, Beccles||NR34 7HX|UK||James
-|||Y|Sally|Mrs.|Hilda|van der Poel|Gutenberg 13||Brunssum||6444 KM|The Netherlands||
-|||Y|Joe|Dr.|Wilhelm|Berger|Slotenmake 33||A-4020 Linz|||Austria / Europe||
-|||Y|Sally|Mr. and Mrs.|Bryon|Smith|PSC 33 Box 42||APO AE||99211|||
+|||Y|Sally|Dr. and Mrs.|Sam|Barnes|4455 Peachtree Blvd.||Fairfax|GA|31444|||P.
+|||Y|Joe|Mr. and Mrs.|Billy|Smith|18 Country Club Road|No. 3|New York|NY|09202-2002||III|Ray
+|||Y|Sally|Mr.|William|Jones|P.O. Box 442||Hermitage|NY|11782-3059|||E.
+|||Y|Joe|Mr. and Mrs.|Michael|Brown|The Hermitage, London Rd.||Norich, Sexton||QS62 6HZ|UK||James
+|||Y|Sally|Mrs.|Hilda|van der Hoot|Gutenberg 13||Rotterdam||5333 KN|The Netherlands||
+|||Y|Joe|Dr.|Wilhelm|Berger|Slotenmaker 33||A-5020 Vienna|||Austria / Europe||
+|||Y|Sally|Ms.|Junie|Smith|PSC 33 Box 42||APO AE||99211|||
