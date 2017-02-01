@@ -26,3 +26,9 @@ directory:
 More information on the SQLite database can be found here:
 
   http://sqlite.org/
+
+If you want to use the two-owner system to distinguish between two people
+to split the list you must provide one name per "Owner" field in
+the input data.  You must use two names, not just one, and the two
+names must be different at least in the first N characters where N
+is the number of characters in the shortest name.
