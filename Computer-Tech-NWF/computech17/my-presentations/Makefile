@@ -30,17 +30,23 @@ SITEPRODS  = ../CTech-$(CTECHYEAR)-Flyer.pdf
 SITEPRODS += ../CTech-$(CTECHYEAR)-Win-Linux.pdf
 SITEPRODS += ../CTech-$(CTECHYEAR)-Apple-Mac.pdf
 
+CMN_PRODS = common-handouts/common-link-list-handout.pdf
+
 P1_PRODS  = otp/$(P1_FNAME).pdf
-P1_PRODS += common-handouts/common-link-list-handout.docx
-P1_PRODS += $(P1_FNAME)/Questions-answered-and-Notes.txt
+P1_PRODS +=  $(CMN_PRODS)
+#P1_PRODS += $(P1_FNAME)/Questions-answered-and-Notes.txt
 
 P2_PRODS  = otp/$(P2_FNAME).pdf
-P2_PRODS += common-handouts/common-link-list-handout.docx
-P2_PRODS += $(P2_FNAME)/Questions-answered-and-Notes.txt
+P2_PRODS +=  $(CMN_PRODS)
+#P2_PRODS += $(P2_FNAME)/Questions-answered-and-Notes.txt
 
 P3_PRODS  = otp/$(P3_FNAME).pdf
-P3_PRODS += common-handouts/common-link-list-handout.docx
-P3_PRODS += $(P3_FNAME)/Questions-answered-and-Notes.txt
+P3_PRODS +=  $(CMN_PRODS)
+#P3_PRODS += $(P3_FNAME)/Questions-answered-and-Notes.txt
+
+TBZRHDIR = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr
+P3_PRODS_XDIR = $(TBZRHDIR)/myps/xmas/example
+P3_PRODS_CDIR = /usr/local/bzr-repos/calendar/example
 
 TALKS  =
 #TALKS += example
@@ -109,9 +115,12 @@ otp/%.pdf : fake-src/%.tex
 
 .PHONY: deliver
 deliver:
-	@-cp $(P1_PRODS) $(P1_DIR)
-	@-cp $(P2_PRODS) $(P2_DIR)
-	@-cp $(P3_PRODS) $(P3_DIR)
+	@-cp $(P1_PRODS)        $(P1_DIR)
+	@-cp $(P2_PRODS)        $(P2_DIR)
+	@-cp $(P3_PRODS)        $(P3_DIR)
+	@-cp $(P3_PRODS_XDIR)/* $(P3_DIR)/example-xmas
+	@-cp $(P3_PRODS_CDIR)/* $(P3_DIR)/example-cal
+
 	@-cp $(SITEPRODS) $(SITEDIR)
 	@echo "Website updated\n"
 
