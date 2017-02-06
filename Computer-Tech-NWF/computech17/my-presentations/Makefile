@@ -13,7 +13,7 @@ PDFLATEX = pdflatex
 
 CTECHYEAR     = 2017
 CDSADIR       = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr/mydomains/domains/primary-web-servers/web-sites/computertechnwf.org/public
-CTECHBASEDIR  = $(CDSADIR)/$(CTECHYEAR)/sessions
+CTECHBASEDIR  = $(CDSADIR)/$(CTECHYEAR)
 
 # presentations (talks)
 P1_FNAME = intro-linux
