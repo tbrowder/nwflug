@@ -30,7 +30,9 @@ SITEPRODS  = ../CTech-$(CTECHYEAR)-Flyer.pdf
 SITEPRODS += ../CTech-$(CTECHYEAR)-Win-Linux.pdf
 SITEPRODS += ../CTech-$(CTECHYEAR)-Apple-Mac.pdf
 
-CMN_PRODS = common-handouts/common-link-list-handout.pdf
+CMN_PRODS  =
+CMN_PRODS += common-handouts/common-link-list-handout.pdf
+CMN_PRODS += common-handouts/foss-handout-computech17.pdf
 
 P1_PRODS  = otp/$(P1_FNAME).pdf
 P1_PRODS +=  $(CMN_PRODS)
