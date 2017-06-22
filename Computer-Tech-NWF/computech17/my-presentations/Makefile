@@ -12,8 +12,10 @@ PANDOC   = pandoc
 PDFLATEX = pdflatex
 
 CTECHYEAR     = 2017
-CDSADIR       = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr/mydomains/domains/primary-web-servers/web-sites/computertechnwf.org/public
+CDSADIR      = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr/mydomains/domains/primary-web-servers/web-sites/computertechnwf.org/public
+TPCDIR       = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr/mydomains/domains/primary-web-servers/web-sites/niceville.pm.org/public
 CTECHBASEDIR  = $(CDSADIR)/$(CTECHYEAR)
+TPCBASEDIR    = $(TPCDIR)/talks/2017
 
 # presentations (talks)
 P1_FNAME = intro-linux
@@ -24,7 +26,7 @@ P4_FNAME = perl-calendar
 P1_DIR = $(CTECHBASEDIR)/0900-$(P1_FNAME)
 P2_DIR = $(CTECHBASEDIR)/1000-$(P2_FNAME)
 P3_DIR = $(CTECHBASEDIR)/1100-$(P3_FNAME)
-P4_DIR = $(CTECHBASEDIR)/1200-$(P4_FNAME)
+P4_DIR = $(TPCBASEDIR)
 
 SITEDIR = $(CDSADIR)/pdf
 
@@ -49,7 +51,7 @@ P3_PRODS +=  $(CMN_PRODS)
 #P3_PRODS += $(P3_FNAME)/Questions-answered-and-Notes.txt
 
 P4_PRODS  = otp/$(P4_FNAME).pdf
-P4_PRODS +=  $(CMN_PRODS)
+P4_PRODS +=  $(P4_FNAME)/wall-calendar-2017-missy.pdf
 
 TBZRHDIR = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr
 P3_PRODS_XDIR = $(TBZRHDIR)/myps/xmas/example
@@ -77,8 +79,8 @@ PDFS  = $(patsubst %, otp/%.pdf, $(TALKS))
 pdocs = $(patsubst %, src/%.pdoc, $(TALKS))
 
 .PHONY : all
-#all: make-dirs make-P-dirs $(PDFS) deliver list-presentations
-all: make-dirs make-P-dirs $(PDFS) list-presentations
+all: make-dirs make-P-dirs $(PDFS) deliver list-presentations
+#all: make-dirs make-P-dirs $(PDFS) list-presentations
 
 .PHONY : make-dirs
 make-dirs : otp fake-src
@@ -130,12 +132,7 @@ otp/%.pdf : fake-src/%.tex
 
 .PHONY: deliver
 deliver:
-	@-cp $(P1_PRODS)        $(P1_DIR)
-	@-cp $(P2_PRODS)        $(P2_DIR)
-	@-cp $(P3_PRODS)        $(P3_DIR)
 	@-cp $(P4_PRODS)        $(P4_DIR)
-	@-cp $(P3_PRODS_XDIR)/* $(P3_DIR)/example-xmas
-	@-cp $(P3_PRODS_CDIR)/* $(P3_DIR)/example-cal
 
 	@-cp $(SITEPRODS) $(SITEDIR)
 	@echo "Website updated\n"

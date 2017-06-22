@@ -48,6 +48,10 @@ clear cover and black end sheet,and printed in color for about $15.
 
 ## Pertinent Links
 
+This is a link to an example of my wife's calendar for 2017:
+
+<**<http://niceville.pm.org/talks/2017/wall-calendar-2017-missy.pdf>**>
+
 This link will get you to some public files for the calendar:
 
 <**<https://computertechnwf.org/2017/sessions/>**>
