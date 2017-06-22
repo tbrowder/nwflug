@@ -54,7 +54,7 @@ This is a link to an example of my wife's calendar for 2017:
 
 This link will get you to some public files for the calendar:
 
-<**<https://computertechnwf.org/2017/sessions/>**>
+<**<https://computertechnwf.org/2017/1100-using-linux/>**>
 
 ## Current Features
 
