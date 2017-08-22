@@ -1,7 +1,7 @@
 entry for NWF Daily News Calendar
-date of entry:
+date of entry: August 22, 2017
 
-start date: ???
+start date: September 4, 2017
 start time: 5:30 PM
 end time:   7:30 PM
 
@@ -11,11 +11,17 @@ categories: all educational, volunteering, workshops, all community
 
 description:
 
-The Northwest Florida Linux User Group (NWFLUG) will hold its next monthly meeting on Monday, ???, 2017, from 5:30 PM until no later than 7:30 PM, in the front meeting room of the Helen Back Cafe in Niceville, Florida. All interested persons are invited to join us to discuss and learn more about the Linux operating system (OS) and free and open source software (FOSS). Directions to the meeting place, details of the (always free) planned program, and more information on Linux and FOSS  can be found on the group's website at https://nwflug.org>.  Persons planning to attend are encouraged to notify us via email to <tom.browder@gmail.com>.  For more information, contact Tom Browder.
+The Northwest Florida Linux User Group (NWFLUG) will hold its next monthly meeting on Monday, September 4, 2017, from 5:30 PM until no later than 7:30 PM, in the front meeting room of the Helen Back Again Cafe in Niceville, Florida. All interested persons are invited to join us to discuss and learn more about the Linux operating system (OS) and free and open source software (FOSS). Directions to the meeting place, details of the (always free) planned program, and more information on Linux and FOSS  can be found on the group's website at <https://nwflug.org>.  Persons planning to attend are encouraged to notify us via email to <tom.browder@gmail.com>.  For more information, contact Tom Browder.
 
 image:
 
 linux-image.jpg
 
-where: crosspoint
+where: 
+  Helen Back Again
+  1128 E John Simms Pkwy
+  Niceville, FL 32578
+
 room: front meeting room
+website: http://helenbackcafe.com
+phone: 850-389-8030
