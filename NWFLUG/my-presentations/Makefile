@@ -47,7 +47,8 @@ TALKS  =
 #TALKS += agenda-2017-02-06
 #TALKS += agenda-2017-03-06
 #TALKS += agenda-2017-04-03
-TALKS += agenda-2017-06-05
+#TALKS += agenda-2017-06-05
+TALKS += agenda-2017-12-04
 
 COMMON +=
 COMMON += src/common*md

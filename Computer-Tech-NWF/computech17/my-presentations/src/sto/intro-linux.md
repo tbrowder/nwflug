@@ -241,7 +241,7 @@ Replacement for Microsoft Office
 
 - Not perfect, but improving all the time
 
-A quicl look...
+A quick look...
 
 ## Summary
 

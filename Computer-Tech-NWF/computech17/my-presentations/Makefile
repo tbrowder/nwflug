@@ -135,7 +135,7 @@ deliver:
 	@-cp $(P4_PRODS)        $(P4_DIR)
 
 	@-cp $(SITEPRODS) $(SITEDIR)
-	@echo "Website updated\n"
+	#@echo "Website updated\n"
 
 .PHONY: clean
 clean:

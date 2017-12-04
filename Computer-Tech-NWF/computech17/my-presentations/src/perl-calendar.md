@@ -20,7 +20,8 @@ title: A Perl Calendar
 ## Break for browser and doc
 
 
-...
+[break to view some resources]
+
 
 ## Project background
 
@@ -36,6 +37,17 @@ wife, then for the public
 	- Code is still ugly, but getting better
 	    - early days: get in fast, do the job, and get the heck out!
 		- now, with maturity, I've settled in with Perl 6
+
+## Dynamite features
+
+The following DRY (don't repeat yourself) features make my calendar special:
+
+- Flat file (special ASCII format) database of special events
+  (birthdays, anniversaries, etc.)
+
+    - number of years since original date shown on annual calendar
+
+- Easy personalization for gifts
 
 ## Pass arounds
 
