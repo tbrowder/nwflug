@@ -1,0 +1,12 @@
+Questions from the audience:
+===========================
+
+Q. MS Excel versus LibreOffice password protection?
+
+A. Both have password protection and should be adequate for most
+   private uses.
+
+Notes:
+=====
+
+The free MatLab clone, SciLab, has been added to the list of free software.

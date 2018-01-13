@@ -1,0 +1,14 @@
+# file: tutorial-data.txt
+# a data file of users and their attributes
+# note all valid lines are in format "key: value..."
+user: 1234 # unique ID (an integer > zero)
+  last: Brown
+  first: Sam
+  job: gunsmith
+  # hobbies may be a comma-separated list
+  hobbies: hunting, Perl Monging
+user: 2316
+  last: Doe
+  first: Jane
+  job: financial analyst
+  hobbies: Python open source, bowling
