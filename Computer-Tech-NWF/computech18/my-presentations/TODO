@@ -1,13 +1,71 @@
-*Get all my attendees on separate mailing groups.
+ALL SESSIONS
+============
 
-Assemble question for each session as best we can:
+target audience: adults who know
+  children interested in STEMM, music,
+  art, or whom are also interested
+  in such things
 
-free software
-  Excel vs LibreOffice password protection
+take my linux small laptop
 
-Linux
-  Perl on Rasperry Pi?
+Linux poster
 
-Perl 6
+0-nwflug-niceville.pm.md
+========================
 
-Put questions on the website
+likely target: parents of STEMM, music, art, children
+
+NWFLUG - monthly, website, linux (software and hardware)
+
+Niceville PM - all things Perl 6/5
+
+1-free-science-progs
+========================
+
++ show my thesis
++ jupyter
++ scripting languages
++ graphic design
++ publishing cycle:
+  latex
+  inkscape
+  postscript
++ R
++ scilab
++ brlcad
++ chemical progs
++ fea
++ music progs
++ photo progs
+
+2-linux-slide-rule
+========================
+
++ distros, pic of destop with shell terminals
++ CLI programs
++ brlcad, etc.
++ scripting languages
++ one-off projects need flexibility
++ example of my thesis: code writing code
++ example of HPC use
++ example of brlcad use
+
+
+3-foss-resume
+========================
+
+github - example of collaboration platform
+  name others: sourceforge, etc.
+  + hacktoberfest - free t-shirts
+participants can be:
+  coders
+  writers
+  graphic designers
+  project leaders
+
+get some links and references for support
+
+4-linux-q-and-a
+========================
+
+set up laptops and pcs to work 
