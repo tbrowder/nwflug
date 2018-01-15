@@ -25,4 +25,4 @@
 
 This link will get you to some public files for the calendar:
 
-<**<https://computertechnwf.org/2017/sessions/>**>
+<**<https://computertechnwf.org/2018/sessions/>**>
