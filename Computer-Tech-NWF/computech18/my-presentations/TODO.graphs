@@ -1,0 +1,6 @@
+use GraphViz2 perl 5 wrapper around graphviz
+
+use Cairo perl 5 wrapper around Cairo graphics lib
+
+try to use Perl6 module:
+

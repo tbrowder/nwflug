@@ -133,6 +133,8 @@ otp/%.pdf : fake-src/%.tex
 .PHONY: deliver
 deliver:
 	@-cp $(P1_PRODS)        $(P1_DIR)
+	@-cp $(P2_PRODS)        $(P2_DIR)
+	@-cp $(P3_PRODS)        $(P3_DIR)
 
 	@-cp $(SITEPRODS) $(SITEDIR)
 	#@echo "Website updated\n"
@@ -150,6 +152,7 @@ clean:
 
 realclean: clean
 	(cd otp; rm -f *.log ; rm -f *.pdf )
+	(cd src; rm -f *.pdoc) 
 
 
 trash  = $(patsubst %, otp/%.log, $(TALKS))
