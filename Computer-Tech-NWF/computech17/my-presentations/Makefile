@@ -60,9 +60,9 @@ P3_PRODS_CDIR = /usr/local/bzr-repos/calendar/example
 TALKS  =
 #TALKS += example
 #TALKS += example2
-#TALKS += $(P1_FNAME)
-#TALKS += $(P2_FNAME)
-#TALKS += $(P3_FNAME)
+TALKS += $(P1_FNAME)
+TALKS += $(P2_FNAME)
+TALKS += $(P3_FNAME)
 TALKS += $(P4_FNAME)
 
 COMMON +=
