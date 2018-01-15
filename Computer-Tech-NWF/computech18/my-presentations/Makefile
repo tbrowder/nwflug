@@ -28,7 +28,7 @@ P0_DIR = $(CTECHBASEDIR)/0700-$(P0_FNAME)
 P1_DIR = $(CTECHBASEDIR)/0900-$(P1_FNAME)
 P2_DIR = $(CTECHBASEDIR)/1000-$(P2_FNAME)
 P3_DIR = $(CTECHBASEDIR)/1100-$(P3_FNAME)
-P4_DIR = $(TPCBASEDIR)
+P4_DIR = $(CTECHBASEDIR)/1300-$(P4_FNAME)
 
 SITEDIR = $(CDSADIR)/pdf
 
@@ -53,7 +53,8 @@ P3_PRODS +=  $(CMN_PRODS)
 #P3_PRODS += $(P3_FNAME)/Questions-answered-and-Notes.txt
 
 P4_PRODS  = otp/$(P4_FNAME).pdf
-P4_PRODS +=  $(P4_FNAME)/wall-calendar-2017-missy.pdf
+P4_PRODS +=  $(CMN_PRODS)
+#P4_PRODS +=  $(P4_FNAME)/wall-calendar-2018-missy.pdf
 
 TBZRHDIR = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr
 P3_PRODS_XDIR = $(TBZRHDIR)/myps/xmas/example
@@ -62,9 +63,9 @@ P3_PRODS_CDIR = /usr/local/bzr-repos/calendar/example
 TALKS  =
 #TALKS += example
 #TALKS += example2
-#TALKS += $(P1_FNAME)
-#TALKS += $(P2_FNAME)
-#TALKS += $(P3_FNAME)
+TALKS += $(P1_FNAME)
+TALKS += $(P2_FNAME)
+TALKS += $(P3_FNAME)
 TALKS += $(P4_FNAME)
 
 COMMON +=
@@ -108,6 +109,9 @@ list: list-presentations
 list-presentations:
 	@echo Presentations:
 	@echo -------------
+	@-ls -1 otp/$(P1_FNAME).pdf
+	@-ls -1 otp/$(P2_FNAME).pdf
+	@-ls -1 otp/$(P3_FNAME).pdf
 	@-ls -1 otp/$(P4_FNAME).pdf
 	@echo
 
