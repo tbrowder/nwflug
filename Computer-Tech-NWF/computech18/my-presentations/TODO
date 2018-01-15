@@ -1,6 +1,10 @@
 ALL SESSIONS
 ============
 
+try using a p6 file and Cairo to generate eps files with text to
+  be included on a slide!
+  + look at Text::More
+
 screen shots
 put perl books in classroom
 put operating hardware in classroom
