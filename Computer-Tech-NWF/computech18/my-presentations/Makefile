@@ -33,8 +33,9 @@ P4_DIR = $(CTECHBASEDIR)/1300-$(P4_FNAME)
 SITEDIR = $(CDSADIR)/pdf
 
 SITEPRODS  = ../CTech-$(CTECHYEAR)-Flyer.pdf
-SITEPRODS += ../CTech-$(CTECHYEAR)-Win-Linux.pdf
-SITEPRODS += ../CTech-$(CTECHYEAR)-Apple-Mac.pdf
+SITEPRODS += ../CTech-$(CTECHYEAR)-Windows-Misc.pdf
+SITEPRODS += ../CTech-$(CTECHYEAR)-Apple-Mac-Linux.pdf
+SITEPRODS += ../CTech-$(CTECHYEAR)-NWFSC-Niceville-Campus.pdf
 
 CMN_PRODS  =
 CMN_PRODS += common-handouts/common-link-list-handout.pdf
