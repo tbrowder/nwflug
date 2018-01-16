@@ -1,6 +1,14 @@
 ALL SESSIONS
 ============
 
+emphasize students are getting heavy training in Windows
+    and may know nothing about other operating
+    systems such as (list)
+
+    if they go into any kind of technical discipline they
+    most likely will profit from at least a familiarity 
+    with one or more of them
+
 try using a p6 file and Cairo to generate eps files with text to
   be included on a slide!
   + look at Text::More
@@ -62,6 +70,24 @@ Niceville PM - all things Perl 6/5
 + example of HPC use
 + example of brlcad use
 
+example process from my experience as a project manager of a DOD
+contractor:
+
++ contract requirements: given a list of one or more real-world mobile
+  offensive or defensive weapon systems, assess their vulnerability to:
+
+  the following threats 1..N (16 or more)
+  for the following views... (45 or more)
+  for the following impact conditions... (10 or more)
+  for the following kill levels (3 or more)
+  ...
+
+processing steps are often iterative in that one step may show a need
+to modify a previous step
+
+difficult to modify a window program, usually requires a manual step
+
+
 
 3-foss-resume
 ========================
@@ -80,4 +106,4 @@ get some links and references for support
 4-linux-q-and-a
 ========================
 
-set up laptops and pcs to work 
+set up laptops and pcs to work
