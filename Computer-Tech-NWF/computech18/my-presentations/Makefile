@@ -18,13 +18,13 @@ CTECHBASEDIR  = $(CDSADIR)/$(CTECHYEAR)
 TPCBASEDIR    = $(TPCDIR)/talks/2018
 
 # presentations (talks)
-P0_FNAME = 0-nwflug-niceville.pm
+P0_FNAME = 0-nwflug-niceville-pm
 P1_FNAME = 1-free-science-progs
 P2_FNAME = 2-linux-slide-rule
 P3_FNAME = 3-foss-resume
 P4_FNAME = 4-linux-q-and-a
 
-P0_DIR = $(CTECHBASEDIR)/0700-$(P0_FNAME)
+P0_DIR = $(CTECHBASEDIR)/0730-$(P0_FNAME)
 P1_DIR = $(CTECHBASEDIR)/0900-$(P1_FNAME)
 P2_DIR = $(CTECHBASEDIR)/1000-$(P2_FNAME)
 P3_DIR = $(CTECHBASEDIR)/1100-$(P3_FNAME)
@@ -40,6 +40,10 @@ SITEPRODS += ../CTech-$(CTECHYEAR)-NWFSC-Niceville-Campus.pdf
 CMN_PRODS  =
 CMN_PRODS += common-handouts/common-link-list-handout.pdf
 CMN_PRODS += common-handouts/foss-handout-computech17.pdf
+
+P0_PRODS  = otp/$(P0_FNAME).pdf
+P0_PRODS +=  $(CMN_PRODS)
+#P1_PRODS += $(P1_FNAME)/Questions-answered-and-Notes.txt
 
 P1_PRODS  = otp/$(P1_FNAME).pdf
 P1_PRODS +=  $(CMN_PRODS)
@@ -64,6 +68,7 @@ P3_PRODS_CDIR = /usr/local/bzr-repos/calendar/example
 TALKS  =
 #TALKS += example
 #TALKS += example2
+TALKS += $(P0_FNAME)
 TALKS += $(P1_FNAME)
 TALKS += $(P2_FNAME)
 TALKS += $(P3_FNAME)
@@ -92,10 +97,12 @@ make-dirs : otp fake-src
 
 .PHONY : make-P-dirs
 make-P-dirs:
+	@if [ ! -d $(P0_DIR) ] ; then mkdir -p $(P0_DIR) ; fi
 	@if [ ! -d $(P1_DIR) ] ; then mkdir -p $(P1_DIR) ; fi
 	@if [ ! -d $(P2_DIR) ] ; then mkdir -p $(P2_DIR) ; fi
 	@if [ ! -d $(P3_DIR) ] ; then mkdir -p $(P3_DIR) ; fi
 	@if [ ! -d $(P4_DIR) ] ; then mkdir -p $(P4_DIR) ; fi
+	@if [ ! -d $(P0_FNAME) ] ; then mkdir -p $(P0_FNAME) ; fi
 	@if [ ! -d $(P1_FNAME) ] ; then mkdir -p $(P1_FNAME) ; fi
 	@if [ ! -d $(P2_FNAME) ] ; then mkdir -p $(P2_FNAME) ; fi
 	@if [ ! -d $(P3_FNAME) ] ; then mkdir -p $(P3_FNAME) ; fi
@@ -110,6 +117,7 @@ list: list-presentations
 list-presentations:
 	@echo Presentations:
 	@echo -------------
+	@-ls -1 otp/$(P0_FNAME).pdf
 	@-ls -1 otp/$(P1_FNAME).pdf
 	@-ls -1 otp/$(P2_FNAME).pdf
 	@-ls -1 otp/$(P3_FNAME).pdf
