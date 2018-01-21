@@ -1,4 +1,4 @@
-subtitle: TPC NA 2017
+subtitle: Computer Tech 2018
 author: Tom Browder [tom.browder@gmail.com]
-institute: Perl 6 [perl6.org]
+institute: Northwest Florida Linux User Group [nwflug.org]
 date: 2018-01-27
