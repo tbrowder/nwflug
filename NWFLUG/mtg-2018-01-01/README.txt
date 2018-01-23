@@ -1,0 +1,1 @@
+no meeting was held on 1 Jan 2018
