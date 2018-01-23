@@ -165,6 +165,7 @@ clean:
 
 realclean: clean
 	(cd otp; rm -f *.log ; rm -f *.pdf )
+	(cd src; rm -f *.pdoc )
 
 
 trash  = $(patsubst %, otp/%.log, $(TALKS))
