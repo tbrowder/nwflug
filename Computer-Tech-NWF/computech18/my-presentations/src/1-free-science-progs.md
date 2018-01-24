@@ -1,9 +1,10 @@
-title: Free STEAM Software
+title: Cross-Platform FOSSS
 <!-- insert-file headers.md -->
 
 ## Free STEAM Programs (Apps)
 
 - Free and Open Source Software (FOSS) for Windows, Mac, and Linux
+    + FOS[Scientific]S => FOSSS
 
 - From the schedule:
 
@@ -12,8 +13,6 @@ compatible substitutes for Office, Access, Photo Shop, Quicken, and others.
 Handout w/links.
 
 <!-- insert-file background.md -->
-
-<!-- insert-file common-1.md -->
 
 ## Objectives
 
@@ -70,7 +69,7 @@ particularly noteworthy in the FOSS arena:
 - Why do companies give it away?
 
 	- Constrained by licensing
-	
+
 	- Sell support services
 
 - Doesn't it seem like socialism?
@@ -124,7 +123,7 @@ particularly noteworthy in the FOSS arena:
 	- Getting help
 
 	- Command line use
-	
+
 ## Internet considerations
 
 - Like the Biblical Tree of Knowledge

@@ -67,6 +67,8 @@ Linux posters...
 
 0-nwflug-niceville.pm.md
 ========================
+schedule title: User Group Programs
+slide title: Computer User Groups
 
 likely target: parents of STEMM, music, art, children
 
@@ -76,6 +78,8 @@ Niceville PM - all things Perl 6/5
 
 1-free-science-progs
 ========================
+schedule title: Windows, Mac, and Linux Scientific and Engineering Software
+slide title: Cross-Platform FOSSS
 
 + show my thesis
 + jupyter
@@ -95,6 +99,8 @@ Niceville PM - all things Perl 6/5
 
 2-linux-slide-rule
 ========================
+schedule title: Learn why Linux is the modern Engineer’s Slide Rule
+slide title: Linux: the Engineer's Tool Box
 
 + distros, pic of destop with shell terminals
 + CLI programs
@@ -126,6 +132,8 @@ difficult to modify a window program, usually requires a manual step
 
 3-foss-resume
 ========================
+schedule title: Open Source Community Support: Learn how to build a technical resume
+slide title: FOSS: Road to a Quality Technical Resume
 
 github - example of collaboration platform
   name others: sourceforge, etc.
@@ -140,5 +148,7 @@ get some links and references for support
 
 4-linux-q-and-a
 ========================
+schedule title: What is Linux and what is it for? What are the main advantages? How can you get Linux? Linux Q & A
+slide title: Linux: Powering the Internet
 
-set up laptops and pcs to work
+set up laptops and PCs to work

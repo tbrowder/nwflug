@@ -6,14 +6,14 @@ Free stuff (FOSS)
 ===============
 
   Linux! (Pitch NWLUG, later session):
-    Install/ learn sessions 
+    Install/ learn sessions
   Distrowatch - add to spreadsheet
   Pitch working on open source projects
 
 Linux
 =====
 
-NEFLUG installation, learn
+NWFLUG installation, learn
 Linux Foundation free course
 
 Perl 6
