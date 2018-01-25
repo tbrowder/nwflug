@@ -38,8 +38,8 @@ SITEPRODS += ../CTech-$(CTECHYEAR)-Apple-Mac-Linux.pdf
 SITEPRODS += ../CTech-$(CTECHYEAR)-NWFSC-Niceville-Campus.pdf
 
 CMN_PRODS  =
-CMN_PRODS += common-handouts/common-link-list-handout.pdf
-CMN_PRODS += common-handouts/foss-handout-computech17.pdf
+CMN_PRODS += common-handouts/common-link-list-handout-ctech18.pdf
+CMN_PRODS += common-handouts/foss-handout-ctech18.pdf
 
 P0_PRODS  = otp/$(P0_FNAME).pdf
 P0_PRODS +=  $(CMN_PRODS)
