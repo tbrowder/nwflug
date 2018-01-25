@@ -4,8 +4,8 @@ title: Cross-Platform FOSSS
 ## FOSS
 
 - **F**ree and **O**pen **S**ource **S**oftware (FOSS) for Windows, Mac, and Linux
-    + FOS[Scientific]S => FOSSS
 
+- **F**ree and **O**pen **S**ource **S**cientific **S**oftware (FOSSS)
 
 ## STEAM
 
@@ -14,26 +14,6 @@ title: Cross-Platform FOSSS
 - **E** - Engineering
 - **A** - Art(s)
 - **M** - Mathematics
-
-## Geniuses
-
-Einstein
-![25%](pics/einstein.png)
-
-## Geniuses
-
-Madam Curie
-![25%](pics/curie.png)
-
-## Geniuses
-
-Characteristics
-
-- Curious?
-
-- Passionate?
-
-- Range of interests?
 
 ## STEM(M)
 
@@ -45,10 +25,49 @@ Okaloosa County
 - **M** - Mathematics
 - **M** - Medicine
 
-## Free STEAM Programs (Apps)
+## Geniuses
+
+![50%](pics/Albert_Einstein-nobel-prize.png)
+
+## Geniuses
+
+![200%](pics/Marie_Curie_c1920.jpg)
+
+## Geniuses
+
+Characteristics
+
+- Curious?
+
+- Passionate?
+
+- Range of interests?
+
+## Geniuses
+
+You don't have to be a genius to be a scientist, but I believe you do
+have to have a curiosity and a passion for technical details in one or
+more areas to be successful in STEAM fields.
+
+The objective today is to expose you to some software that may be
+useful in one or more of those fields.
+
+The beauty of the software is it is free, runs on a wide variety of
+hardware, and thus has a low or no cost for those needing access to
+it.
+
+- Perhaps you have a child or grandchild who might benefit from the
+  information.
+
+- Perhaps your civic club or church can use it for helping underserved
+  children or adults.
 
 
 <!-- insert-file background.md -->
+
+## Free STEAM Programs (Apps)
+
+
 
 ## Objectives
 
