@@ -147,8 +147,10 @@ otp/%.pdf : fake-src/%.tex
 
 .PHONY: deliver
 deliver:
-	@-cp $(P4_PRODS)        $(P4_DIR)
-
+	@-cp $(P1_PRODS) $(P1_DIR)
+	@-cp $(P2_PRODS) $(P2_DIR)
+	@-cp $(P3_PRODS) $(P3_DIR)
+	@-cp $(P4_PRODS) $(P4_DIR)
 	@-cp $(SITEPRODS) $(SITEDIR)
 	#@echo "Website updated\n"
 
