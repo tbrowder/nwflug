@@ -1,16 +1,52 @@
 title: Cross-Platform FOSSS
 <!-- insert-file headers.md -->
 
-## Free STEAM Programs (Apps)
+## FOSS
 
-- Free and Open Source Software (FOSS) for Windows, Mac, and Linux
+- **F**ree and **O**pen **S**ource **S**oftware (FOSS) for Windows, Mac, and Linux
     + FOS[Scientific]S => FOSSS
 
-- From the schedule:
 
-       - Get free, legal software for MS Windows and Mac: download and install
-compatible substitutes for Office, Access, Photo Shop, Quicken, and others.
-Handout w/links.
+## STEAM
+
+- **S** - Science
+- **T** - Tecnology
+- **E** - Engineering
+- **A** - Art(s)
+- **M** - Mathematics
+
+## Geniuses
+
+Einstein
+![25%](pics/einstein.png)
+
+## Geniuses
+
+Madam Curie
+![25%](pics/curie.png)
+
+## Geniuses
+
+Characteristics
+
+- Curious?
+
+- Passionate?
+
+- Range of interests?
+
+## STEM(M)
+
+Okaloosa County
+
+- **S** - Science
+- **T** - Tecnology
+- **E** - Engineering
+- **M** - Mathematics
+- **M** - Medicine
+
+## Free STEAM Programs (Apps)
+
 
 <!-- insert-file background.md -->
 
@@ -232,6 +268,6 @@ Replacement for Microsoft Office
   available for Windows (and Mac and Linux).
 
 - There is something out there for nearly any interest.  I encourage
-  to venture forth, have fun, and expand your knowledge and skills.
+  you to venture forth, have fun, and expand your knowledge and skills.
 
 <!-- insert-file closer-help.md -->
