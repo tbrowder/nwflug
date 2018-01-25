@@ -25,6 +25,17 @@ Current day
 
 ## Linux
 
+## Why Linux?
+
+- Tool box atmosphere
+
+- CLI more usable
+
+- Multidisciplinary
+
+- Kit bashing
+
+- More control over your system
 
 ## SUMMARY
 

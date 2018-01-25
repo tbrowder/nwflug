@@ -155,86 +155,22 @@ Other programs:
 
 	- Is free
 
-# Fundamentals
+## Publishing cycle
 
-- I assume familiarity with getting around your computer and the
-  internet and with:
+A technical student will have to deal with the publishing cycle:
 
-	- Files and directories (folders)
+~ plan and execute programs or experiments
 
-	- Searching (local and web)
+- collect data
 
-	- Downloading and installing
+- post-process data
 
-	- Browsing
+- document results
 
-	- Getting help
+Many of the programs introduced can be used for that cycle
+to produce beautiful results, such as my thesis.
 
-	- Command line use
-
-## Internet considerations
-
-- Like the Biblical Tree of Knowledge
-
-	- Good
-
-		- Infinite resources for good
-
-	- Evil
-
-		- Criminals, terrorists, and mischief makers abound
-
-- You **must** be on the alert
-
-## Security concerns
-
-- Browser security
-
-- Download authentication
-
-- Encrypted communications (**https**)
-
-- DNS spoofing
-
-	- **google.com** translates to an IP address by a DNS server
-
-	- DNS servers can be hijacked
-
-	- Familiar home pages can be hijacked
-
-## Browser security
-
-- Chrome (or Firefox)
-
-	- **Lastpass** add-on (**<https://lastpass.com>**)
-
-		- Strong passwords
-
-		- Unique password for every site
-
-- Use **https** where available
-
-	- Provides encrypted communications between you and recipient
-
-## Authentication
-
-- Use check sums to check downloaded files
-
-	- Jacksum
-
-- Use public key encryption when appropriate
-
-	- GNU Privacy Guard (GPG)
-
-## Preparation for using FOSS
-
-- Install a zip program (7Zip)
-
-- Install (if necessary) Windows Power Shell
-
-- Install a check sums program (Jacksum)
-
-- Install a public key program (gpg)
+Stay for the next session for more details.
 
 ## Tour of free programs and resources
 
@@ -265,14 +201,6 @@ We look at one of my sites for an example (report 2014-08-23).
 <**<https://psrr.info/pauls-reports.html>**>
 
 Here is an example of how I do that. (**demo**)
-
-## GnuCash
-
-Replacement for Quicken
-
-## Libreoffice
-
-Replacement for Microsoft Office
 
 ## Summary
 
