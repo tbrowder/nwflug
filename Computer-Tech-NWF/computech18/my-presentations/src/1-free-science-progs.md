@@ -49,15 +49,15 @@ You don't have to be a genius to be a scientist, but I believe you do
 have to have a curiosity and a passion for technical details in one or
 more areas to be successful in STEAM fields.
 
-The objective today is to expose you to some software that may be
+My objective today is to expose you to some software that may be
 useful in one or more of those fields.
+
+- Perhaps you have a child or grandchild who might benefit from the
+  information.
 
 The beauty of the software is it is free, runs on a wide variety of
 hardware, and thus has a low or no cost for those needing access to
 it.
-
-- Perhaps you have a child or grandchild who might benefit from the
-  information.
 
 - Perhaps your civic club or church can use it for helping underserved
   children or adults.
@@ -67,40 +67,45 @@ it.
 
 ## Free STEAM Programs (Apps)
 
+Following are some of the programs I have used for professional and
+personal projects:
+
+**Graphical**
+
+- **Gimp** (replace **Photoshop** for bitmap images)
+
+- **Inkscape** (replace **CorelDraw** for vector images)
+
+**Office suites**
+
+- **LibreOffice** (replace **MS Office**)
+
+**CAD**
+
+- **BRL-CAD**
+
+**Version control and collaboration**
+
+- **Github**
+- **Bitbucket**
+- **SourceForge**
 
 
-## Objectives
+## Free STEAM Programs (Apps)
 
-Become familiar with FOSS
+Other programs:
 
-- Motivation
+**Mathematical programming**
 
-- Resources
+- **SciLab** (replace **MatLab**)
 
-- Advantages
+**Publishing (page layout)**
 
-- Scope
+- **Scribus** (replace **MS Publisher** or **Adobe PageMaker/InDesign**)
 
-- Sources
+**Statistical programming**
 
-- Installation
-
-- Cautions
-
-## Kudos
-
-Many people are responsible for our current technology, but these are
-particularly noteworthy in the FOSS arena:
-
-- Windows is not my OS of choice, but I thank **Bill Gates** for making
-  the PC widely available
-
-- For Linux and FOSS we need to thank:
-
-	- **Richard Stallman** (originator of the Free Software
-	  Foundation and much GNU software)
-
-	- **Linus Torvalds** (originator of the Linux kernel)
+- **R** (repalce **SAS** or **SPSS**)
 
 ## Why do we recommend and use FOSS?
 
@@ -128,18 +133,6 @@ particularly noteworthy in the FOSS arena:
 	- Sell support services
 
 - Doesn't it seem like socialism?
-
-## Topics to be covered
-
-- Windows versus Linux
-
-- Internet considerations
-
-- Downloading
-
-- Authenticating
-
-- Tour of free programs and resources
 
 ## Windows vs. Linux
 

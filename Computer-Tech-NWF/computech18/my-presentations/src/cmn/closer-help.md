@@ -1,6 +1,7 @@
 ## Finally
 
-- I am glad to help via e-mail (please mention CTech '18 in the
-  subject):
+- **Feel free to contact me at any time regarding this session or any
+  other of my sessions (please mention CTech '18 in the subject):**
 
-	- [**tom.browder@gmail.com**]
+    - **Tom Browder**
+    - **<tom.browder@gmail.com>**
