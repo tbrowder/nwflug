@@ -16,9 +16,33 @@ In my college days (early 1960's) we used:
 
 \* shared use
 
+## Slide rule similar to the one I used
+
+![25%](pics/SliderulePickettN902T-agr.jpg)
+
+## Small analog computer
+
+First EE course in analog computers:
+
+![75%](pics/gte-table-top-analog-front_thumb.jpg)
+
+## Large analog computer
+
+Advanced EE course in analog computers:
+
+![100%](pics/larger-era64_eai_european_small.jpg)
+
+## Computer room from the mid-1980's
+
+On the left is the late Mike Muuss, inventor of **BRL-CAD** and the
+well-known freeware utility *ping*.
+
+![50%](pics/mike-muuss-brlcad-album.jpg)
+
 ## Engineer's Tools
 
-Current day engineers use
+Current day engineers (and scientists, economists, artists,
+mathematicians) use
 
 - personal computer
 - *cloud computers
@@ -33,7 +57,7 @@ Current day engineers use
 
 - Multidisciplinary
 
-- Kit bashing
+- Kitbashing (chaining tools)
 
 - More control over your system
 
@@ -74,7 +98,7 @@ I use it similarly in that, given a particular task and resulting work
 flow, a person may have to use a model (program) that is reswtricted
 in some way, and envelope it to get the desired results.
 
-## Kitbashing Example**
+## Kitbashing Example
 
 Some commercial programs I've seen require you to take the following steps:
 
@@ -92,17 +116,81 @@ expensive for both parties).
   proprietary format which only their post-processor can use!  Keep as
   far away as possible!
 
-## Kitbashing Example**
+## Kitbashing Example
 
-With *Linux* one can usually find a way to automate the task anyway.  One **tool** to help do that
-is **Expect** which is not available under Windows unless you use the **Cygwin** or other work-around environments running under Windows.
+With *Linux* one can usually find a way to at least partially automate
+the task anyway.  One **tool** to help do that is **Expect** which is
+under some versions of Windows, including the **Cygwin** or other
+work-around environments running under Windows.
+
+See its website here:
+
+- <**<http://expect.sourceforge.net>**>
+
+## Kitbashing Example
+
+Let's say we are to evaluate a new kinetic energy round against a military target, such as this:
+
+![50%](pics/220px-PLZ45155mm_Howitzer.jpg)
 
 
-## Kitbashing Example**
+## Kitbashing Example
 
+Use *pseudocode* to define your work flow in program runs, e.g.:
+
+Collecting data using **BRL-CAD** as the ray-tracer:
+
+~~~
+for every velocity
+  for every impact angle
+    for every aspect angle
+       run 'rt' against the target
+       collect raw data
+    end for
+  end for
+end for
+~~~
+
+## Kitbashing Example
+
+Analyzing data
+
+~~~
+for every velocity
+  for every impact angle
+    for every aspect angle
+       arrange the data for input to a graphing program
+       arrange the data for a table
+    end for
+  end for
+end for
+~~~
+
+## Kitbashing Example
+
+After you get work and data flows established in pseudocode, you can
+then script repetitive cases with, my choice, **Rakudo Perl 6**:
+
+~~~
+#!/usr/bin/env perl6
+my @vels = <1000 2000>;
+my @angs = <30 45>;
+my @azs = <0 180>;
+for @vels -> $v {
+    for @angs -> $ang {
+        for @azs -> $az {
+            run "rt", "$v $az $ang";
+        }
+    }
+}
+~~~
 
 ## SUMMARY
 
+- We have taken a brief look at using Linux as an engineer's tool box.
+
+- If we have time, we can use a volunteer to look around and maybe do
+  some simple exercises on a Linux laptop running Linux Mint 18.2.
 
 
 <!-- insert-file closer-help.md -->
