@@ -74,15 +74,17 @@ TALKS += $(P2_FNAME)
 TALKS += $(P3_FNAME)
 TALKS += $(P4_FNAME)
 
+#COMMON += src/cmn/prelims2.md
+#COMMON += src/cmn/headers2.md
+#COMMON += src/cmn/closer-help2.md
+#COMMON += src/cmn/common*md
+
 COMMON +=
-#COMMON += src/cmn/prelims.md
-COMMON += src/cmn/prelims2.md
-COMMON += src/cmn/common*md
-#COMMON += src/cmn/headers.md
-COMMON += src/cmn/headers2.md
 COMMON += src/cmn/background.md
-#COMMON += src/cmn/closer-help.md
-COMMON += src/cmn/closer-help2.md
+COMMON += src/cmn/closer-help.md
+COMMON += src/cmn/headers.md
+COMMON += src/cmn/my-sessions.md
+COMMON += src/cmn/prelims.md
 
 PDFS  = $(patsubst %, otp/%.pdf, $(TALKS))
 pdocs = $(patsubst %, src/%.pdoc, $(TALKS))
