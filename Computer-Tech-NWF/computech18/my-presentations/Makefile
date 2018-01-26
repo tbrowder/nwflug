@@ -85,9 +85,9 @@ TALKS += $(P4_FNAME)
 COMMON +=
 COMMON += src/cmn/background.md
 COMMON += src/cmn/closer-help.md
-#COMMON += src/cmn/exercises.md
 COMMON += src/cmn/headers.md
 COMMON += src/cmn/my-sessions.md
+COMMON += src/cmn/my-views.md
 COMMON += src/cmn/prelims.md
 
 PDFS  = $(patsubst %, otp/%.pdf, $(TALKS))

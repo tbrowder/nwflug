@@ -11,15 +11,9 @@ My purpose is to give you an introduction to
 collaboration with Free and Open Source Software (FOSS)
 as a means of gaining real technical experience.
 
-I hope the parents and grandparents of children interested in a
-technical career can benefit from the information and pass that
-ocollaboration with Free and Open Source Software (FOSS) as a means of
-gaining real technical experience.
-
 I hope the parents and grandparents of children
 interested in a technical career can benefit from
 the information and pass that on.
-
 
 <!-- insert-file background.md -->
 
@@ -29,7 +23,7 @@ Software developers are in demand, as are other technical
 positions.
 
 An internship in an appropriate position is an ideal way
-to see and be seen working in you desired field.
+to see and be seen working in your desired field.
 
 However, good internships are not easy to come by.
 
@@ -47,6 +41,20 @@ but the ones I have used are:
 
 Github is my favorite, and it is one of the most popular sites.
 
+Let's look at my home page there.
+
+## FOSS Collaboration
+
+My Github home screen...
+
+![25%](pics/tbrowder-github-home.png)
+
+## FOSS Collaboration
+
+One of my repositories (*repos*)...
+
+![25%](pics/tbrowder-github-one-repo.png)
+
 ## FOSS Participation
 
 **Joining**
@@ -59,9 +67,22 @@ projects also use Google Groups.
 Some projects have multiple mailing lists with a special one
 for newcomers.
 
+
+## FOSS Participation
+
+One of the *Rakudo Perl 6* group's page (*perl6*)...
+
+![25%](pics/perl-6-github-home.png)
+
+## FOSS Participation
+
+The *github/perl6/nqp* repo...
+
+![25%](pics/perl6-github-nqp-repo.png)
+
 **Newcomers**
 
-Project's vary in reputation for friendliness, but don't be
+Projects vary in reputation for friendliness, but don't be
 put off if they are too impatient. It's a good idea to lurk
 unnoticed for awhile so you can get a feeling for how
 they treat *newbies* (aka *noobs*).
@@ -77,7 +98,7 @@ By procedures I mean documented methods for completing such regular tasks as:
 
 - submitting a pull request (PR)
 
-- reviewing and merging PR's
+- reviewing and merging PR's (pull request)
 
 - preparing a release
 
@@ -99,7 +120,7 @@ You may work at many roles on a project:
 
 - programmer
 
-    - submit code changes
+    - submit code changes, often with PR's
 
 
 ## GITHUB
@@ -110,8 +131,42 @@ with it on your own system, whether Windows, Mac, or Linux.
 See the handout for the Git website where you can git for
 your system and help for using git.
 
-
 Github has a pretty good help section, but
+it's much too fragmented IMHO (in my humble opinion).
+
+The Git website has all its extensive documentation there, 
+and there are lots of ebook and printed books. I
+have one here you're welcome to peruse.
+
+## Git basics
+
+Git can be used on Windows or Linux, and there are some good graphics
+interfaces which really help on Windows where the CLI (command line
+interface) is not so friendly IMHO.
+
+Git is usually already installed on most Linux *distros* these days,
+but you can alway install it from the website.
+
+The following are inputs at thecLinud CLI:
+
+Initializing a git repo on your local host in
+a non-existing subdirectory *foo*...
+
+$ git init foo
+$ git cd foo
+$ echo "This is the home of the 'foo' project." > README.md
+$ git add README.md
+$ git commit README.md -m"initiate README"
+$ # edit README.md and add some text
+$ echo "The lead developer is Joe." >> README.md
+$ git commit -a -m"add lead developer's name."
+$ git status
+
+And so on...
+
+Eventually you could link the local repo to your account on Github
+which will provide you a version controlled backup on Github
+(but it will be public unless you pay for private repos).
 
 ## MY EXPERIENCES
 
