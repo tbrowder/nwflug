@@ -18,6 +18,7 @@ CTECHBASEDIR  = $(CDSADIR)/$(CTECHYEAR)
 TPCBASEDIR    = $(TPCDIR)/talks/2018
 
 # presentations (talks)
+P00_FNAME = 00-exercises
 P0_FNAME = 0-nwflug-niceville-pm
 P1_FNAME = 1-free-science-progs
 P2_FNAME = 2-linux-slide-rule
@@ -40,6 +41,7 @@ SITEPRODS += ../CTech-$(CTECHYEAR)-NWFSC-Niceville-Campus.pdf
 CMN_PRODS  =
 CMN_PRODS += common-handouts/common-link-list-handout-ctech18.pdf
 CMN_PRODS += common-handouts/foss-handout-ctech18.pdf
+CMN_PRODS += otp/00-exercises.pdf
 
 P0_PRODS  = otp/$(P0_FNAME).pdf
 P0_PRODS +=  $(CMN_PRODS)
@@ -68,6 +70,7 @@ P3_PRODS_CDIR = /usr/local/bzr-repos/calendar/example
 TALKS  =
 #TALKS += example
 #TALKS += example2
+TALKS += $(P00_FNAME)
 TALKS += $(P0_FNAME)
 TALKS += $(P1_FNAME)
 TALKS += $(P2_FNAME)
@@ -82,6 +85,7 @@ TALKS += $(P4_FNAME)
 COMMON +=
 COMMON += src/cmn/background.md
 COMMON += src/cmn/closer-help.md
+#COMMON += src/cmn/exercises.md
 COMMON += src/cmn/headers.md
 COMMON += src/cmn/my-sessions.md
 COMMON += src/cmn/prelims.md
@@ -119,6 +123,7 @@ list: list-presentations
 list-presentations:
 	@echo Presentations:
 	@echo -------------
+	@-ls -1 otp/$(P00_FNAME).pdf
 	@-ls -1 otp/$(P0_FNAME).pdf
 	@-ls -1 otp/$(P1_FNAME).pdf
 	@-ls -1 otp/$(P2_FNAME).pdf
@@ -126,8 +131,8 @@ list-presentations:
 	@-ls -1 otp/$(P4_FNAME).pdf
 	@echo
 
-#src/%.pdoc :: src/%.md $(COMMON) src/make-pdoc-from-md.p6
-src/%.pdoc : src/%.md
+src/%.pdoc :: src/%.md $(COMMON) src/make-pdoc-from-md.p6
+#src/%.pdoc : src/%.md
 	( cd src ; ./make-pdoc-from-md.p6 -i=$(<) )
 
 #echo "working file $(@)..."

@@ -67,6 +67,8 @@ it.
 
 ## Free STEAM Programs (Apps)
 
+(Pay attention, there will be a quiz at the end!)
+
 Following are some of the programs I have used for professional and
 personal projects:
 
@@ -80,16 +82,39 @@ personal projects:
 
 - **LibreOffice** (replace **MS Office**)
 
+## Free STEAM Programs (Apps)
+
+**Typesetting**
+
+- **LaTex**
+
 **CAD**
 
 - **BRL-CAD**
 
-**Version control and collaboration**
+**Version control**
+
+- **Git**
+- **Subversion**
+- **Bazaar**
+
+## Free STEAM Programs (Apps)
+
+**Version control hosting and collaboration**
 
 - **Github**
 - **Bitbucket**
 - **SourceForge**
 
+**Text Editors**
+
+- **Emacs**
+- **Vi**
+- **Gedit**
+
+**Specialized Editors**
+
+- **TexStudio** (for LaTeX and TeX-based languages)
 
 ## Free STEAM Programs (Apps)
 
@@ -98,6 +123,8 @@ Other programs:
 **Mathematical programming**
 
 - **SciLab** (replace **MatLab**)
+- **Octave** (plotting and visualization)
+- **Maxima** (symbolic mathematics)
 
 **Publishing (page layout)**
 
@@ -105,7 +132,9 @@ Other programs:
 
 **Statistical programming**
 
-- **R** (repalce **SAS** or **SPSS**)
+- **R (R-base)** (replace **SAS** or **SPSS**)
+
+And many others...
 
 ## Why do we recommend and use FOSS?
 
@@ -134,32 +163,11 @@ Other programs:
 
 - Doesn't it seem like socialism?
 
-## Windows vs. Linux
-
-- Windows:
-
-	- Is everywhere
-
-	- It's primarily a GUI operation
-
-	- Expensive
-
-	- Hides internals
-
-- Linux:
-
-	- Is pretty much the opposite of Windows in most respects
-
-	- Is unparalleled for the scientist or engineers: a powerful,
-	  programmable calculator
-
-	- Is free
-
 ## Publishing cycle
 
 A technical student will have to deal with the publishing cycle:
 
-~ plan and execute programs or experiments
+- plan and execute programs or experiments
 
 - collect data
 
@@ -167,40 +175,14 @@ A technical student will have to deal with the publishing cycle:
 
 - document results
 
-Many of the programs introduced can be used for that cycle
-to produce beautiful results, such as my thesis.
+Many of the programs introduced so far can be used for that cycle to
+produce beautiful results, such as my thesis (available for
+inspection) which used:
+
+- **LaTeX**
+- **Encapsulated PostScript**
 
 Stay for the next session for more details.
-
-## Tour of free programs and resources
-
-Use my free handout available online at **<https://computertechnwf.org>**.
-
-# Some brief looks
-
-## Inkscape
-
-Replacement for Corel Draw
-
-Here is one of my drawings: a circuit diagram. (**demo**)
-
-The same drawing converted to a bitmap:
-
-![30%](./pics/loco-v5-circuits.png)
-
-## Gimp
-
-Replacement for Photoshop
-
-I use all the time for preparing images for my websites.  I crop all
-my images to a small square and then scale to 100x100 pixels to use as
-thumb nails.
-
-We look at one of my sites for an example (report 2014-08-23).
-
-<**<https://psrr.info/pauls-reports.html>**>
-
-Here is an example of how I do that. (**demo**)
 
 ## Summary
 

@@ -11,13 +11,17 @@ title: Computer User Groups
 **Crosspoint UMC** and **Helen Back Again Cafe**)
 
 - Purpose: to educate the local community in the use of the free
-non-Windows, non-Mac operating system (OS) called GNU/Linux.
+non-Windows, non-Mac operating system (OS) called **GNU/Linux**.
+
+- We provide **Linux** installation and one-on-one help on the third
+Monday of every month (by appointment only), 5:30 to 7:30 (at
+**Crosspoint UMC**).
 
 - **Gnu/Linux** powers the Internet (just ask Gooogle and Microsoft).
 
 ## NWFLUG
 
-- Grandparents, outdo your grandkids, be a Linux pro...
+- Grandparents, outdo your grandkids, be a **Linux** pro...
 
 ![25%](pics/upper-dzone-comics-linux-depressed-developer-21.png)
 
@@ -41,8 +45,8 @@ interested in the Perl programming languages.
   7:30 (**Crosspoint UMC**).
 
 - Purpose: meet others with similar interests, and teach and learn
-about various aspects of the Perl programming languages (including the
-new Rakudo Perl 6).
+about various aspects of the **Perl** programming languages (including the
+new **Rakudo Perl 6**).
 
 - **Perl** also powers the Internet (it was the first language used
   during the rapid onset of the Internet and still powers much of it
@@ -54,7 +58,7 @@ new Rakudo Perl 6).
   everyone, and there is no formal membership requirement.**
 
 - **Attend my sessions today (this building, third floor, room 309) and
-  find out more about Linux and other geeky stuff!**
+  find out more about Linux and other geeky stuff! Hands-on practice, too!**
 
 - **Feel free to contact me at any time regarding either group:**
 

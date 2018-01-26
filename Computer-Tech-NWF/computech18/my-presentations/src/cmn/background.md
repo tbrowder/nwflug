@@ -1,21 +1,15 @@
 
 ## Background
 
-- Retired USAF fighter pilot
+- Retired USAF fighter pilot, retired engineer with ManTech Corporation
 
-- Retired engineer with ManTech Corporation
+- Programmed computers since 1961, had my own programmable computer(s) since 1974
 
-- I've been programming computers since 1961
+- Used Unix and GNU/Linux and FOSS professionally for over 23 years
 
-- I've had my own programmable computer(s) since 1974
+    - Use them daily in my personal projects as well as my work on FOSS projects
 
-- I've used Unix and GNU/Linux and FOSS professionally for over 23 years
-
-    - I use them daily in my personal projects as well as my work on FOSS projects
-
-- I'm curious about lots of things
-
-- I'm passionate about computer programming
+- I'm curious about lots of things, I'm passionate about computer programming
 
 ## My View as a Knowledge Worker
 
@@ -29,9 +23,11 @@
 
 - **All tasks should be automated as much as possible.**
 
+## My View as a Knowledge Worker
+
 - **Interoperability between tools relies on knowing data formats for inputs and outputs.**
 
-- **FOSS allows access to internals while proprietary tools usually don't.** 
+- **FOSS allows access to internals while proprietary tools usually don't.**
 
 - **Proprietary tools tend to be more expensive as they become more complex and more useful.**
 
