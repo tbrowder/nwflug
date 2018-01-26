@@ -11,10 +11,10 @@ My purpose is to give you an introduction to
 collaboration with Free and Open Source Software (FOSS)
 as a means of gaining real technical experience.
 
-I hope the parents and grandparents of children
-interested in a technical career can benefit from
-the information and pass that ocollaboration with Free and Open Source Software (FOSS)
-as a means of gaining real technical experience.
+I hope the parents and grandparents of children interested in a
+technical career can benefit from the information and pass that
+ocollaboration with Free and Open Source Software (FOSS) as a means of
+gaining real technical experience.
 
 I hope the parents and grandparents of children
 interested in a technical career can benefit from
@@ -51,11 +51,10 @@ Github is my favorite, and it is one of the most popular sites.
 
 **Joining**
 
-After finding a project you want to work with, you will have
-to join that group's communication channels.
-That may be one or more mailing lists, wikis, Internet Relay
-Chat (IRC) channels, or forums. Some projects also
-use Google Groups.
+After finding a project you want to work with, you will have to join
+that group's communication channels.  That may be one or more mailing
+lists, wikis, Internet Relay Chat (IRC) channels, or forums. Some
+projects also use Google Groups.
 
 Some projects have multiple mailing lists with a special one
 for newcomers.
@@ -69,7 +68,7 @@ they treat *newbies* (aka *noobs*).
 
 **Policies**
 
-A good project will have documented policies and procedures. They may have 
+A good project will have documented policies and procedures. They may have
 a formal management structure.
 
 **Procedures**
@@ -112,28 +111,27 @@ See the handout for the Git website where you can git for
 your system and help for using git.
 
 
-Github has a pretty good help section, but 
+Github has a pretty good help section, but
+
 ## MY EXPERIENCES
 
 **While Employed**
 
-While still employed as an engineer, our company had
-to regularly submit employee resumes with proposal
-packages.  My resume always mentioned expertese with
-vulnerability analysis tools, one of which the 
-US DoD-supported, FOSS CAD program, BRL-CAD (hosted on SourceForge).
-I had significant contributions to that project
-that I could reference in my resume and which
-could be viewed by anyone interested in confirming
-that.
+While still employed as an engineer, our company had to regularly
+submit employee resumes with proposal packages.  My resume always
+mentioned expertese with vulnerability analysis tools, one of which
+the US DoD-supported, FOSS CAD program, BRL-CAD (hosted on
+SourceForge).  I had significant contributions to that project that I
+could reference in my resume and which could be viewed by anyone
+interested in confirming that.
 
 ## MY EXPERIENCES
 
 **While "Unemployed"**
 
-Although officially retired, I'm actively supporting
-one major FOSS project (**Rakudo Perk 6**), located on Github and consisting of
-three major subprojects, each having its own Github project name:
+Although officially retired, I'm actively supporting one major FOSS
+project (**Rakudo Perk 6**), located on Github and consisting of three
+major subprojects, each having its own Github project name:
 
 - perl6
 - rakudo
@@ -147,10 +145,9 @@ including *repo forks*.
 Github, as well as other such sites, are popular collaboration
 platforms for thousands of FOSS projects of all kinds.
 
-By working on one or more FOSS projects with publicly documented 
+By working on one or more FOSS projects with publicly documented
 contributions, you can have a powerful testament to
 your technical or managerial skills.
-
 
 
 <!-- insert-file closer-help.md -->

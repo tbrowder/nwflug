@@ -49,6 +49,18 @@ mathematicians) use
 
 \* shared use
 
+## My Debian 8 Linux Desktop
+
+Empty while working at the command line...
+
+![25%](pics/my-deb8-desktop-Screenshot.png)
+
+## My Debian 8 Linux Desktop
+
+Cluttered while working with windowed programs...
+
+![25%](pics/cluttered-desktop-Screenshot.png)
+
 ## Why Linux?
 
 - Tool box atmosphere
