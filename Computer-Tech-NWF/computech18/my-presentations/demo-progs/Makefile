@@ -3,10 +3,10 @@ prods := hello-world hello-world.pdf
 all: $(prods)
 
 hello-world : hello-world.c
-        gcc $<  -o $@
+	gcc $<  -o $@
 
 hello-world.pdf : hello-world.ps
-        ps2pdf $<
+	ps2pdf $<
 
 clean:
-        @rm $(prods)
+	@rm $(prods)
