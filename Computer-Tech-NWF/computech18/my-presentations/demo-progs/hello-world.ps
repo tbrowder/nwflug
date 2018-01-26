@@ -1,0 +1,14 @@
+%!
+% the unit of length is the PS point: 72 points per inch
+/in {72 mul} def % a convenience definition
+% define the font and size
+/Times-Roman findfont 50 scalefont setfont
+% origin is the lower left corner of the page
+% positions are in x,y pairs
+%   x is the horizontal scale increasing to the right,
+%   y is the vertical scale increasing up
+% move to the desired lower left pint of the text
+2.5 in 5 in moveto
+% show for text
+(Hello, World!) show
+showpage
