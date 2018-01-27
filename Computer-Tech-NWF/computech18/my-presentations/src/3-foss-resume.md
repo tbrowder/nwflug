@@ -41,6 +41,9 @@ but the ones I have used are:
 
 Github is my favorite, and it is one of the most popular sites.
 
+Note they have been sponsoring a hackathon, called **Hacktoberfest**,
+for the past several years, and you can win a T-shirt for participation.
+
 Let's look at my home page there.
 
 ## FOSS Collaboration

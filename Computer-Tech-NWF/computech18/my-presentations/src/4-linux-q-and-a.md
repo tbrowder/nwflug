@@ -1,6 +1,19 @@
 title: Linux: Powering the Internet
 <!-- insert-file headers.md -->
 
+## AUDIENCE EXPECTATIONS
+
+**What do you expect from this presentation?**
+
+## OBJECTIVE
+
+My purpose is to give you more details on Linux
+and how to get it.
+
+I hope the parents and grandparents of children
+interested in a technical career can benefit from
+the information and pass that on.
+
 ## Linux: What is it?
 
 GNU/Linux is a general name for an operating system (*OS*, sometime
@@ -18,6 +31,7 @@ Windows 10.
 
 My distro of choice is *Debian*, and an easier-to-use distro, with a
 similar desktop, I recommend to new users is *Linux Mint*.
+It's running on this laptop.
 
 ## Linux: Why should I care?
 

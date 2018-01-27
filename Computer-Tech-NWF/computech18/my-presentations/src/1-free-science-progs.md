@@ -1,6 +1,20 @@
 title: Cross-Platform FOSSS
 <!-- insert-file headers.md -->
 
+## AUDIENCE EXPECTATIONS
+
+**What do you expect from this presentation?**
+
+## OBJECTIVE
+
+My purpose is to give you an introduction to
+available Free and Open Source Software (FOSS)
+for scientists and other technical persons.
+
+I hope the parents and grandparents of children
+interested in a technical career can benefit from
+the information and pass that on.
+
 ## FOSS
 
 - **F**ree and **O**pen **S**ource **S**oftware (FOSS) for Windows, Mac, and Linux

@@ -1,6 +1,20 @@
 title: Linux: the Engineer's Tool Box
 <!-- insert-file headers.md -->
 
+## AUDIENCE EXPECTATIONS
+
+**What do you expect from this presentation?**
+
+## OBJECTIVE
+
+My purpose is to give you an introduction to
+the utility of a Linux computer
+for scientists and other technical persons.
+
+I hope the parents and grandparents of children
+interested in a technical career can benefit from
+the information and pass that on.
+
 <!-- insert-file background.md -->
 
 ## Engineer's Tools

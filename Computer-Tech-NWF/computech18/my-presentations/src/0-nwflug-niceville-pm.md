@@ -1,6 +1,19 @@
 title: Computer User Groups
 <!-- insert-file headers.md -->
 
+## Computer Tech Expo - 12 Years! Carl Lofstrom
+
+**Carl Lofstrom**
+
+- Founder of Computer Tech, first one in 2006 
+- Advocate of life-long and continuous learning
+- Keeps up with latest tech
+- Long-time adult educator at NWFSC
+- Generous with time, talent, and money
+- Boundless energy
+- Indefatigable
+- Good friend
+
 ## NWFLUG
 
 - **Northwest Florida Linux User Group (NWFLUG)**
