@@ -67,7 +67,6 @@ projects also use Google Groups.
 Some projects have multiple mailing lists with a special one
 for newcomers.
 
-
 ## FOSS Participation
 
 One of the *Rakudo Perl 6* group's page (*perl6*)...
@@ -79,6 +78,8 @@ One of the *Rakudo Perl 6* group's page (*perl6*)...
 The *github/perl6/nqp* repo...
 
 ![25%](pics/perl6-github-nqp-repo.png)
+
+## FOSS Participation
 
 **Newcomers**
 
@@ -92,6 +93,8 @@ they treat *newbies* (aka *noobs*).
 A good project will have documented policies and procedures. They may have
 a formal management structure.
 
+## FOSS Participation
+
 **Procedures**
 
 By procedures I mean documented methods for completing such regular tasks as:
@@ -103,6 +106,8 @@ By procedures I mean documented methods for completing such regular tasks as:
 - preparing a release
 
 - publishing a releaee
+
+## FOSS Participation
 
 **Roles**
 
@@ -134,7 +139,7 @@ your system and help for using git.
 Github has a pretty good help section, but
 it's much too fragmented IMHO (in my humble opinion).
 
-The Git website has all its extensive documentation there, 
+The Git website has all its extensive documentation there,
 and there are lots of ebook and printed books. I
 have one here you're welcome to peruse.
 
@@ -144,27 +149,66 @@ Git can be used on Windows or Linux, and there are some good graphics
 interfaces which really help on Windows where the CLI (command line
 interface) is not so friendly IMHO.
 
+For Windows I use the commercial program *SmartGit* (which is also
+cross-platform), but I rarely use it on Linux.
+
 Git is usually already installed on most Linux *distros* these days,
 but you can alway install it from the website.
 
-The following are inputs at thecLinud CLI:
+## Git basics
 
-Initializing a git repo on your local host in
-a non-existing subdirectory *foo*...
+At the Linux CLI, initializing a git repo on your local host in a
+non-existing subdirectory *foo*...
 
+~~~
+$ pwd
+/path/to/dir
 $ git init foo
-$ git cd foo
+Initialized empty Git /path/to/dir/foo/.git/
+$ cd foo
 $ echo "This is the home of the 'foo' project." > README.md
 $ git add README.md
-$ git commit README.md -m"initiate README"
+$ git commit README.md -m"initiate README.md"
+[master (root-commit) 9160f05] initiate README.md
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+~~~
+
+## Git basics
+
+Continuing...
+
+~~~
 $ # edit README.md and add some text
 $ echo "The lead developer is Joe." >> README.md
 $ git commit -a -m"add lead developer's name."
+[master 9501dbf] add lead developer's name.
+ 1 file changed, 1 insertion(+)
 $ git status
+On branch master
+nothing to commit, working directory clean
+~~~
 
-And so on...
 
-Eventually you could link the local repo to your account on Github
+## Git basics
+
+Continuing...
+
+~~~
+$ git branch
+On branch master
+nothing to commit, working directory clean
+$ git checkout -b fix-widget
+Switched to a new branch 'fix-widget'
+$ git branch
+* fix-widget
+  master
+~~~
+
+And so on as we work on branch *fix-widget* and eventually merge it
+into the *master* branch.
+
+Eventually you could link the local repo to your account on Github,
 which will provide you a version controlled backup on Github
 (but it will be public unless you pay for private repos).
 
@@ -188,12 +232,12 @@ Although officially retired, I'm actively supporting one major FOSS
 project (**Rakudo Perk 6**), located on Github and consisting of three
 major subprojects, each having its own Github project name:
 
-- perl6
+- perl6 (you've already seen this one)
 - rakudo
 - moarvm
 
-My Github user name is **tbrowder** and I have a lot of *repos* there,
-including *repo forks*.
+Also as you've seen, my Github user name is **tbrowder** and I have a
+lot of *repos* there, including *repo forks*.
 
 ## SUMMARY
 
