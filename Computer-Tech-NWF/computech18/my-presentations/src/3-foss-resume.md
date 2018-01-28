@@ -108,7 +108,7 @@ By procedures I mean documented methods for completing such regular tasks as:
 
 - preparing a release
 
-- publishing a releaee
+- publishing a release
 
 ## FOSS Participation
 
@@ -121,7 +121,7 @@ You may work at many roles on a project:
     - usually a meritorious position, gained by experience
       and good work in the trenches
 
-- tecnical writer
+- technical writer
 
     - always needed (programmers are notorious for lack
       of documentation)

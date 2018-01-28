@@ -1,0 +1,26 @@
+Al Holzschuh wanted a question to stump his son-in-law.
+
+Here are some from Kevin Dennis:
+
+Trivia
+
+Q: What name did Linuz Torvalds originally want to use?
+
+A: Not Linux, Freax => combination of freak and free.
+
+Tech
+
+Q: How do you enable TCP fast open?
+
+A: Modify sysctl parameter:
+
+   net.ipv4.tcp_fastopen = 3
+
+Q: How do you adjust the page cache swapping?
+
+A: Change vm.swappiness setting in
+
+   /proc/sys/vm/swappiness
+
+
+

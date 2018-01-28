@@ -24,7 +24,7 @@ the information and pass that on.
 ## STEAM
 
 - **S** - Science
-- **T** - Tecnology
+- **T** - Technology
 - **E** - Engineering
 - **A** - Art(s)
 - **M** - Mathematics
