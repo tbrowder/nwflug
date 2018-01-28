@@ -37,11 +37,17 @@ Exercise 1: Write a program to show "Hello, World!"
 
 **Perl 6**
 
+source file name: **hello-world.p6**
+
+source file contents:
+
 ~~~
-$ # show source file contents
-$ cat hello-world.p6
 say "Hello, World!"
-$ # execute the file
+~~~
+
+execute the source file
+
+~~~
 $ perl6 hello-world.p6
 Hello, World!
 ~~~
@@ -52,12 +58,18 @@ Exercise 1: Write a program to show "Hello, World!"
 
 **Bash**
 
+source file name: **hello-world.sh**
+
+source file contents:
+
 ~~~
-$ # show source file contents
-$ cat hello-world.sh
-$ # execute the file
+echo Hello, World!
+~~~
+
+execute the source file
+
+~~~
 $ bash hello-world.sh
-echo "Hello, World!"
 Hello, World!
 ~~~
 
@@ -67,10 +79,17 @@ Exercise 1: Write a program to show "Hello, World!"
 
 **Python**
 
+source file name: **hello-world.py**
+
+source file contents:
+
 ~~~
-$ # show source file contents
-$ cat hello-world.py
-$ # execute the file
+print "Hello, World!"
+~~~
+
+execute the source file
+
+~~~
 $ python hello-world.py
 Hello, World!
 ~~~
@@ -81,16 +100,27 @@ Exercise 1: Write a program to show "Hello, World!"
 
 **C**
 
+source file name: **hello-world.c**
+
+source file contents:
+
 ~~~
-$ # show source file contents
-$ cat hello-world.c
+int
 main() {
     print("Hello, World!\n");
-    return 0; /* shows a succesful exit code to the caller */
+    return 0; /* shows a successful exit code to the caller */
 }
-$ # create the executable
+~~~
+
+create the executable
+
+~~~
 $ gcc hello-world.c -o hello-world
-$ # execute the file
+~~~
+
+execute the program file
+
+~~~
 $ ./hello-world
 Hello, World!
 ~~~
@@ -101,9 +131,11 @@ Exercise 1: Write a program to show "Hello, World!"
 
 **PostScript** (part 1)
 
+source file name: **hello-world.ps**
+
+source file contents:
+
 ~~~
-$ # show source file contents
-$ cat hello-world.ps
 %!
 % the unit of length is the PS point: 72 points per inch
 /in {72 mul} def % a convenience definition
@@ -113,7 +145,7 @@ $ cat hello-world.ps
 % positions are in x,y pairs
 %   x is the horizontal scale increasing to the right,
 %   y is the vertical scale increasing up
-% move to the desired lower left pint of the text
+% move to the desired lower left point of the text
 2.5 in 5 in moveto
 ~~~
 
@@ -124,13 +156,20 @@ Exercise 1: Write a program to show "Hello, World!"
 **PostScript** (part 2)
 
 ~~~
-% show for text
 (Hello, World!) show
 showpage
-$ # create the pdf version
+~~~
+
+create the pdf version
+
+~~~
 $ ps2pdf hello-world.ps
-$ # view it with program *ev*
-ev hello-world.pdf
+~~~
+
+view it with program *evince*
+
+~~~
+evince hello-world.pdf
 ~~~
 
 ## Solutions
@@ -145,18 +184,24 @@ $ locate * > files.list ; wc --lines files.txt
 
 ## Solutions
 
-Exercise 3: Write a overarching script in one of the scripting languages
+Exercise 3: Write an overarching script in one of the scripting languages
 
 **Bash**
 
+source file name: **run-all.sh**
+
+source file contents:
+
 ~~~
-$ # show source file contents
-$ cat run-all.sh
 bash hello-world.sh
 perl6 hello-world.p6
 python hello-world.py
 ./hello-world
-$ # execute the file
+~~~
+
+execute the file
+
+~~~
 $ bash run-all.sh
 Hello, World!
 Hello, World!
@@ -170,14 +215,23 @@ Exercise 3: Write a overarching script in one of the scripting languages
 
 **Perl 6**
 
+source file name: **run-all.p6**
+
+source file contents:
+
 ~~~
-$ # show source file contents
-$ cat run-all.p6
-shell "bash hello-world.sh"; # not recommended
-run "perl6", "hello-world.p6"; # 'run' is safer
-run "python", "hello-world.py";
-run "./hello-world";
-$ # execute the file
+# 'shell' is not recommended in some instances
+# it is safe to use for regular characters
+# use 'run' otherwise
+shell "bash hello-world.sh";
+shell "perl6 hello-world.p6";
+shell "python hello-world.py";
+shell "./hello-world";
+~~~
+
+execute the source file
+
+~~~
 $ perl6 run-all.p6
 Hello, World!
 Hello, World!
