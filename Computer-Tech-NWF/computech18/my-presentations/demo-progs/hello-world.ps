@@ -3,12 +3,13 @@
 /in {72 mul} def % a convenience definition
 % define the font and size
 /Times-Roman findfont 50 scalefont setfont
-% origin is the lower left corner of the page
+% origin is the lower-left corner of the page
 % positions are in x,y pairs
 %   x is the horizontal scale increasing to the right,
 %   y is the vertical scale increasing up
-% move to the desired lower left pint of the text
+% move to the desired lower-left point of the text
 2.5 in 5 in moveto
-% show for text
+% paint the text on the page
 (Hello, World!) show
+% show the entire, finished page
 showpage

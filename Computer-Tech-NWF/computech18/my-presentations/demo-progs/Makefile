@@ -9,4 +9,4 @@ hello-world.pdf : hello-world.ps
 	ps2pdf $<
 
 clean:
-	@rm $(prods)
+	@rm $(prods) *~

@@ -1,5 +1,5 @@
 #include <stdio.h>
-main() {
+int main() {
     printf("Hello, World!\n");
-    return 0; /* shows a succesful exit code to the caller */
+    return 0; /* shows a successful exit code to the caller */
 }

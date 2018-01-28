@@ -3,18 +3,18 @@ title: Exercises
 
 ## Exercise 1
 
-Using the *gedit* editor (or the editor of your choice), write a program
-that prints "Hello, World!" to the screen (stdout) when executed.
-Name the source file "hello-world.\*" where '*' is the conventional
-suffix (file extension) for the language.
+Using the *gedit* editor (or the editor of your choice), write a
+program that prints "Hello, World!" to the screen (stdout) when
+executed.  Save and name the source files "hello-world.\*" where '*'
+is the conventional suffix (file extension) for the language.
 
 Write it in one or more of the following languages:
 
-- **Perl6**
-- **Bash**
-- **Python**
-- **C**
-- **PostScript**
+- 1. **Perl6**
+- 2. **Bash**
+- 3. **Python**
+- 4. **C**
+- 5. **PostScript**
 
 Note that the first three are commonly referred to as *scripting*
 languages), *C* is a *compiled* language, and *PostScript* is a
@@ -33,6 +33,21 @@ the other programs (except the PostScript one).
 
 ## Solutions
 
+Solutions are shown as entries in a command-line (shell) window. The
+'$' is the standard prompt for a user and shows the shell program is
+awaitng input from the user.
+
+Lines following user entries (commands) are the shell's echoed
+responses from the user's command, and the end of the command response
+is normally indicated by the '$' being shown again as the shell awaits
+the user's next command.
+
+For brevity we do not show that following prompt in the solutions, but you
+should see it as you do the exercises.
+
+
+## Solutions: 1.1 - Perl 6
+
 Exercise 1: Write a program to show "Hello, World!"
 
 **Perl 6**
@@ -42,7 +57,7 @@ source file name: **hello-world.p6**
 source file contents:
 
 ~~~
-say "Hello, World!"
+say "Hello, World!";
 ~~~
 
 execute the source file
@@ -52,7 +67,7 @@ $ perl6 hello-world.p6
 Hello, World!
 ~~~
 
-## Solutions
+## Solutions: 1.2 - Bash
 
 Exercise 1: Write a program to show "Hello, World!"
 
@@ -73,7 +88,7 @@ $ bash hello-world.sh
 Hello, World!
 ~~~
 
-## Solutions
+## Solutions: 1.3 - Python
 
 Exercise 1: Write a program to show "Hello, World!"
 
@@ -94,7 +109,7 @@ $ python hello-world.py
 Hello, World!
 ~~~
 
-## Solutions
+## Solutions: 1.4 - C
 
 Exercise 1: Write a program to show "Hello, World!"
 
@@ -105,14 +120,16 @@ source file name: **hello-world.c**
 source file contents:
 
 ~~~
-int
-main() {
-    print("Hello, World!\n");
+#include <stdio.h>
+int main() {
+    printf("Hello, World!\n");
     return 0; /* shows a successful exit code to the caller */
 }
 ~~~
 
-create the executable
+## Solutions: 1.4 - C (cont.)
+
+create the executable program file
 
 ~~~
 $ gcc hello-world.c -o hello-world
@@ -125,11 +142,11 @@ $ ./hello-world
 Hello, World!
 ~~~
 
-## Solutions
+## Solutions: 1.5 - PostScript
 
 Exercise 1: Write a program to show "Hello, World!"
 
-**PostScript** (part 1)
+**PostScript**
 
 source file name: **hello-world.ps**
 
@@ -141,24 +158,27 @@ source file contents:
 /in {72 mul} def % a convenience definition
 % define the font and size
 /Times-Roman findfont 50 scalefont setfont
-% origin is the lower left corner of the page
+% origin is the lower-left corner of the page
 % positions are in x,y pairs
 %   x is the horizontal scale increasing to the right,
 %   y is the vertical scale increasing up
-% move to the desired lower left point of the text
+~~~
+
+## Solutions: 1.5 - PostScript (cont.)
+
+PostScript source file continued:
+
+~~~
+% move to the desired lower-left point of the text
 2.5 in 5 in moveto
-~~~
-
-## Solutions
-
-Exercise 1: Write a program to show "Hello, World!"
-
-**PostScript** (part 2)
-
-~~~
+% paint the text on the page
+(Hello, World!) show
+% show the entire, finished page
 (Hello, World!) show
 showpage
 ~~~
+
+## Solutions: 1.5 - PostScript (cont.)
 
 create the pdf version
 
@@ -169,10 +189,10 @@ $ ps2pdf hello-world.ps
 view it with program *evince*
 
 ~~~
-evince hello-world.pdf
+$ evince hello-world.pdf
 ~~~
 
-## Solutions
+## Solutions: 2
 
 Exercise 2: Determine how many files are on this computer
 
@@ -182,7 +202,7 @@ $ locate * > files.list ; wc --lines files.txt
 ~~~
 
 
-## Solutions
+## Solutions: 3 - Bash
 
 Exercise 3: Write an overarching script in one of the scripting languages
 
@@ -199,6 +219,8 @@ python hello-world.py
 ./hello-world
 ~~~
 
+## Solutions: 3 - Bash (cont.)
+
 execute the file
 
 ~~~
@@ -209,9 +231,9 @@ Hello, World!
 Hello, World!
 ~~~
 
-## Solutions
+## Solutions: 3 - Perl 6
 
-Exercise 3: Write a overarching script in one of the scripting languages
+Exercise 3: Write an overarching script in one of the scripting languages
 
 **Perl 6**
 
@@ -228,6 +250,8 @@ shell "perl6 hello-world.p6";
 shell "python hello-world.py";
 shell "./hello-world";
 ~~~
+
+## Solutions: 3 - Perl 6 (con't)
 
 execute the source file
 
