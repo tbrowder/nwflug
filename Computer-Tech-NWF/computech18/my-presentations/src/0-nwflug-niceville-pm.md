@@ -5,7 +5,7 @@ title: Computer User Groups
 
 **Carl Lofstrom**
 
-- Founder of Computer Tech, first one in 2006 
+- Founder of Computer Tech, first one in 2006
 - Advocate of life-long and continuous learning
 - Keeps up with latest tech
 - Long-time adult educator at NWFSC
@@ -20,8 +20,8 @@ title: Computer User Groups
 
 - <**<https://nwflug.org>**>
 
-- Meets first Monday of every month, 5:30 to 7:30 (alternating between
-**Crosspoint UMC** and **Helen Back Again Cafe**)
+- Meets first Monday of every month, 5:30 to 7:30 at
+**Crosspoint UMC**.
 
 - Purpose: to educate the local community in the use of the free
 non-Windows, non-Mac operating system (OS) called **GNU/Linux**.

@@ -30,6 +30,7 @@ P1_DIR = $(CTECHBASEDIR)/0900-$(P1_FNAME)
 P2_DIR = $(CTECHBASEDIR)/1000-$(P2_FNAME)
 P3_DIR = $(CTECHBASEDIR)/1100-$(P3_FNAME)
 P4_DIR = $(CTECHBASEDIR)/1300-$(P4_FNAME)
+P5_DIR = $(CTECHBASEDIR)/1415-$(P4_FNAME)
 
 SITEDIR = $(CDSADIR)/pdf
 
@@ -61,6 +62,10 @@ P3_PRODS +=  $(CMN_PRODS)
 
 P4_PRODS  = otp/$(P4_FNAME).pdf
 P4_PRODS +=  $(CMN_PRODS)
+#P4_PRODS +=  $(P4_FNAME)/wall-calendar-2018-missy.pdf
+
+P5_PRODS  = otp/$(P4_FNAME).pdf
+P5_PRODS +=  $(CMN_PRODS)
 #P4_PRODS +=  $(P4_FNAME)/wall-calendar-2018-missy.pdf
 
 TBZRHDIR = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr
@@ -108,11 +113,7 @@ make-P-dirs:
 	@if [ ! -d $(P2_DIR) ] ; then mkdir -p $(P2_DIR) ; fi
 	@if [ ! -d $(P3_DIR) ] ; then mkdir -p $(P3_DIR) ; fi
 	@if [ ! -d $(P4_DIR) ] ; then mkdir -p $(P4_DIR) ; fi
-	@if [ ! -d $(P0_FNAME) ] ; then mkdir -p $(P0_FNAME) ; fi
-	@if [ ! -d $(P1_FNAME) ] ; then mkdir -p $(P1_FNAME) ; fi
-	@if [ ! -d $(P2_FNAME) ] ; then mkdir -p $(P2_FNAME) ; fi
-	@if [ ! -d $(P3_FNAME) ] ; then mkdir -p $(P3_FNAME) ; fi
-	@if [ ! -d $(P4_FNAME) ] ; then mkdir -p $(P4_FNAME) ; fi
+	@if [ ! -d $(P5_DIR) ] ; then mkdir -p $(P5_DIR) ; fi
 
 .PHONY : pdoc
 pdoc: $(pdocs)
@@ -154,10 +155,12 @@ otp/%.pdf : fake-src/%.tex
 
 .PHONY: deliver
 deliver:
+	@-cp $(P0_PRODS) $(P0_DIR)
 	@-cp $(P1_PRODS) $(P1_DIR)
 	@-cp $(P2_PRODS) $(P2_DIR)
 	@-cp $(P3_PRODS) $(P3_DIR)
 	@-cp $(P4_PRODS) $(P4_DIR)
+	@-cp $(P5_PRODS) $(P5_DIR)
 	@-cp $(SITEPRODS) $(SITEDIR)
 	#@echo "Website updated\n"
 
