@@ -87,30 +87,32 @@ Cluttered while working with windowed programs...
 
 - More control over your system
 
-## Windows vs. Linux
+## Linux vs. Windows: Windows
 
-- Windows:
+Windows:
 
-	- Is everywhere
+- Is everywhere
 
-	- It's primarily a GUI operation
+- It's primarily a GUI operation
 
-	- Expensive
+- Expensive
 
-	- **Hides internals**
+- **Hides internals**
 
-    - **Non-case-sensitive file system**
+- **Non-case-sensitive file system**
 
-- Linux:
+## Linux vs. Windows: linux
 
-	- Is pretty much the opposite of Windows in most respects
+Linux:
 
-	- Is unparalleled for the scientist or engineers: a powerful,
-	  "programmable calculator"
+- Is pretty much the opposite of Windows in most respects
 
-	- **Is free**
+- Is unparalleled for the scientist or engineers: a powerful,
+  "programmable calculator"
 
-    - **Ugrades are done ONLY if you want to!**
+- **Is free**
+
+- **Upgrades are done ONLY if you want to!**
 
 Note that in Linux we say *directories*, **not** *folders*!
 
