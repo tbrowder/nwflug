@@ -38,7 +38,10 @@ Thank you!
 
     list if so
 
+
+================================================
 YOU MAY STOP NOW IF YOU DID NOT ATTEND THE EVENT
+================================================
 
 6. What scheduled events did you attend?
 
@@ -56,3 +59,9 @@ YOU MAY STOP NOW IF YOU DID NOT ATTEND THE EVENT
    list
 
 10. Will you plan to attend next year? (Y/N)
+
+11. What could we do to improve the appeal of the event for you?
+
+12. Our local computer clubs have been footing the bill for this
+    event, but cost are rising next year and we must raise
+    money. Would you be willing to pay $5.00 to attend the event?
