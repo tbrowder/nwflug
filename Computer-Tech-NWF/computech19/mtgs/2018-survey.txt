@@ -1,0 +1,53 @@
+Here's a draft start:
+
+Please take a few minutes to answer this brief survey about the recent
+Computer Tech Expo held at the Niceville campus of NWFSC.
+
+Even if you did not attend, your responses will help us improve the
+event for next year.
+
+Thank you!
+
+
+1. Did you know about the event? (Y/N)
+
+2. If you knew about the event, where did you find out about it
+   (multiple answers are ok)?
+
+   a. Bay Beacon
+   b. e-mail
+   c. Northwest Florida Daily news
+   d. a friend
+   e. other [explain]
+
+3. Did you attend the event? (Y/N)
+
+4. If not why not?
+
+    a. sick
+    b. not interested in any sessions
+    c. out of town
+    d. prior engagement
+    e. sessions too technical
+    f. sessions not technical enough
+    f. other [explain]
+
+4. If you did not attend, would some other session topic have
+    interested you?
+
+    list if so
+
+5. What scheduled events did you attend?
+
+6. What scheduled events would you have liked to attend but couldn't?
+
+7. What category of computer user would desrcibe you?
+
+   a. novice or beginning
+   b. competent or intermediate
+   c expert or advanced
+   d. other [explain]
+
+8. What was you favorite session?
+
+9. Will you plan to attend next year?
