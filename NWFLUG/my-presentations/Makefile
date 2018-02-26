@@ -49,8 +49,10 @@ TALKS  =
 #TALKS += agenda-2017-04-03
 #TALKS += agenda-2017-06-05
 #TALKS += agenda-2017-12-04
-TALKS += agenda-2018-02-05
+#TALKS += agenda-2018-02-05
+TALKS += agenda-2018-03-05
 TALKS += why-linux
+TALKS += boot-usb-2018-03-05
 
 COMMON +=
 COMMON += src/common*md
@@ -73,6 +75,7 @@ list-presentations:
 	@echo -------------
 	@-ls -1 otp/agenda*pdf
 	@-ls -1 otp/why-linux.pdf
+	@-ls -1 otp/boot*.pdf
 	@echo
 
 src/%.pdoc :: src/%.md $(COMMON) src/headers.md src/make-pdoc-from-md.p6
