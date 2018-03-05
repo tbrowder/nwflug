@@ -1,12 +1,12 @@
 title: Why Linux?
 <!-- insert-file why-linux-headers.md -->
-date: 2018-02-05
+date: 2018-03-05
 
 ## Hypothesis
 
-Young people interested in careers involved with
-science, mathematics, engineering, or almost any technical
-field should be introduced to **Linux**.
+Young people interested in careers involved with science, mathematics,
+engineering, or almost any technical field should be introduced to
+**Linux**.
 
 ## What is Linux?
 
@@ -18,7 +18,13 @@ such a system.
 
 It, rather than Windows or Mac, provides much of the behind-the-scenes
 *cloud* computing in data centers and high-performance computing
-facilities.
+facilities. It also powers the Android and the *Internet of Things* (IoT).
+
+## What is Linux?
+
+A more detailed look:
+
+<**<https://www.lifewire.com/basic-guide-linux-operating-system-2202786>**>
 
 ## Why Linux?
 
@@ -53,8 +59,19 @@ Linux:
 
 - **Upgrades are done ONLY if you want to!**
 
-## Linux: Introduction
+## Linux vs. Widows
 
+Other opinions
+
+<**<https://www.lifewire.com/windows-vs-linux-mint-2200609>**>
+
+<**<http://whylinuxisbetter.net/en/>**>
+
+<**<https://www.popsci.com/switch-to-linux-operating-system#page-4w>**>
+
+<**<https://www.makeuseof.com/tag/linux-beginners-guide/>**>
+
+## Linux: Introduction
 Empty while working at the command line...
 
 ![25%](pics/my-deb8-desktop-Screenshot.png)
@@ -73,9 +90,21 @@ On Windows or Mac:
 
 + Install the Windows 10 Ubuntu subsystem
 
++ Use a live, bootable USB [recommended for intro]
+
++ Use a live, bootable CD/DVD [not recommended]
+
+## Linux: How to get it
+
 + Install VirtualBox to run a Linux Virtual Machine
 
-+ Use a dual-boot native installation
++ Use *Cygwin* on Windows
+
+Best:
+
++ Use a dual-boot, native installation
+
++ Use a dedicated GNU/Linux PC or laptop
 
 ## Linux comes in many "flavors"
 
