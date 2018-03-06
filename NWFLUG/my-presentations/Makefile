@@ -52,7 +52,8 @@ TALKS  =
 #TALKS += agenda-2018-02-05
 TALKS += agenda-2018-03-05
 TALKS += why-linux
-TALKS += boot-usb-2018-03-05
+TALKS += boot-usb-part1-2018-03-05
+TALKS += boot-usb-part2-2018-03-05
 
 COMMON +=
 COMMON += src/common*md

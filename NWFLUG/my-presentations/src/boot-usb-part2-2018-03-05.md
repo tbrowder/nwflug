@@ -168,11 +168,51 @@ sync
 echo "USB stick is ready"
 ~~~
 
-## Duplicate the USB
+## Copying the Live Image
+
+Plug in the new USB and inspect it:
+
+~~~
+$ lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda      8:0    0 931.5G  0 disk
+|-sda1   8:1    0   100M  0 part
+|-sda2   8:2    0 393.5G  0 part
+|-sda3   8:3    0   286M  0 part /boot
+|-sda4   8:4    0     1K  0 part
+|-sda5   8:5    0   1.9G  0 part [SWAP]
+|-sda6   8:6    0  93.1G  0 part /
+`-sda7   8:7    0 442.6G  0 part /usr/local
+sdb      8:16   1   7.5G  0 disk
+`-sdb1   8:17   1   7.5G  0 part /media/tbrowde/USB DISK
+sr0     11:0    1  1024M  0 rom
+~~~
+
+~~~
+$ sudo parted -s /dev/sdb print
+Model: IS817 innostor (scsi)
+Disk /dev/sdb: 8020MB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End     Size    Type     File system  Flags
+ 1      16.4kB  8020MB  8019MB  primary  fat32        lba
+~~~
+
+Copy the live image to the "master" USB (note the USB is *not*
+mounted)
+
+
+~~~
+dd if=<image file> of=<device> bs=4M; sync
+~~~
+
+Took about seven minutes on my old laptop running Debian 8.
 
 Duplicate the USB
 
-mount both USBs
+mount both USBs, *then unmount them*
 ...
 
 ## Next Steps
