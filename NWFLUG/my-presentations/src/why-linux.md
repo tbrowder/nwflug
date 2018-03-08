@@ -46,7 +46,7 @@ Windows:
 
 - **Non-case-sensitive file system**
 
-## Linux vs. Windows: linux
+## Linux vs. Windows: Linux
 
 Linux:
 
@@ -59,7 +59,7 @@ Linux:
 
 - **Upgrades are done ONLY if you want to!**
 
-## Linux vs. Widows
+## Linux vs. Windows
 
 Other opinions
 
