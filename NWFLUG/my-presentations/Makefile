@@ -56,6 +56,7 @@ TALKS  =
 TALKS += agenda-2018-06-04
 TALKS += why-linux
 TALKS += opnsense
+TALKS += boot-usb-2018-06-04
 
 COMMON +=
 COMMON += src/common*md
@@ -79,6 +80,7 @@ list-presentations:
 	@-ls -1 otp/agenda*pdf
 	@-ls -1 otp/opnsense.pdf
 	@-ls -1 otp/why-linux.pdf
+	@-ls -1 otp/boot-usb-2018-06-04.pdf
 	@echo
 
 src/%.pdoc :: src/%.md $(COMMON) src/headers.md src/make-pdoc-from-md.p6

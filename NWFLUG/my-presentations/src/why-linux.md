@@ -1,6 +1,6 @@
 title: Why Linux?
 <!-- insert-file why-linux-headers.md -->
-date: 2018-03-05
+date: 2018-06-04
 
 ## Hypothesis
 
@@ -72,6 +72,7 @@ Other opinions
 <**<https://www.makeuseof.com/tag/linux-beginners-guide/>**>
 
 ## Linux: Introduction
+
 Empty while working at the command line...
 
 ![25%](pics/my-deb8-desktop-Screenshot.png)
@@ -92,9 +93,11 @@ On Windows or Mac:
 
 + Use a live, bootable USB [recommended for intro]
 
-+ Use a live, bootable CD/DVD [not recommended]
++ Use a live, bootable CD/DVD [only as a last resort]
 
 ## Linux: How to get it
+
++ Install Linux as a VM guest on Windows 10 Pro Hyper-V
 
 + Install VirtualBox to run a Linux Virtual Machine
 
@@ -103,6 +106,8 @@ On Windows or Mac:
 Best:
 
 + Use a dual-boot, native installation
+
++ Use Hyper-V on Windows 10 Pro
 
 + Use a dedicated GNU/Linux PC or laptop
 

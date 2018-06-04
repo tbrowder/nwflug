@@ -4,36 +4,56 @@ date: 2018-06-04
 
 ## Overview
 
-Using a new Win 10 computer and modifying my home network.
+Status of my home computer network project to:
 
-## Specifics
++ upgrade to a new Win 10 computer
++ modify my home network per Kevin's and Chris's suggestions
 
-WAN
-|
-CenturyLink modem (wireless off, dhcp on) LAN IP 192.168.0.1
-|
-| <== intended future opnsense firewall placement
-|
-TP-Link 8-port managed switch IP 192.168.0.2
+## WAN to LAN
 
-6 ports enabled:
+WAN => CenturyLink modem (10 Mbps)
 
-1 CenturyLink modem/router
-2 printer
-3 Win10 new computer (will become opnsense firewall later)
-4 Win10 old computer
-5 TP-Link AC1750 wireless router (as access point) IP 192.168.0.3
-6 power line router
++ wireless off, dhcp on
++ IP 192.168.0.1
 
-The network works, and I can access the three static devices through
-the Win10 computers.
+## LAN
+
+| <== future opnsense virtual firewall (HYPER-V)
+
+TP-Link 8-port managed switch
+
++ IP 192.168.0.2
+
+## SWITCH
+
+6 ports enabled
+
+- CenturyLink modem/router
+- printer
+- Win10 new computer (will host opnsense firewall VM later)
+- Win10 old computer
+- TP-Link AC1750 wireless router (as access point) IP 192.168.0.3
+- Panasonic BL-PA300A power line NIC (30 Mbps)
+
+## Other Devices
+
++ One network extender
++ One Linux laptop
++ Multiple Apple devices (iPhone, iPad, Appl TV)
++ Smart DVD (for streaming video)
+
+## STATUS
+
++ The network works
++ I can access the three static devices through
+  the Win10 computers
 
 ## Questions
 
-0. Other than turning off the firewall in the CenturyLink router, are there any other of its settings I should change?
++ Other than turning off the firewall in the CenturyLink router, are
+   there any other of its settings I should change?
++ Can the appliance be used as the router in place of the CenturyLink
+   router?
 
-1. Can the appliance be used as the router in place of the CenturyLink router?
-
-  a. If so, should it be used as the router?
-
-  b. If so, anything special to do other than turn off dhcp in the CenturyLink router?
+   - If so, should it be used as the router?
+   - If so, anything special to do other than turn off dhcp in the CenturyLink router?

@@ -141,7 +141,7 @@ Considerations (* recommended)
 
 I made a typo on the guest name.  We can rename the host easily,
 but we have to remove the disk and create a new one to rename it,
-which is too complicated for me.  
+which is too complicated for me.
 
 The easiest thing to do is to start all over again and use the correct
 spelling OR accept the misspelled hard disk name.
