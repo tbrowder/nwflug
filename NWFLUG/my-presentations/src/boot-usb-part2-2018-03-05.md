@@ -106,7 +106,7 @@ parted ${dev} --script set 1 msftdata on
 parted ${dev} --script set 2 legacy_boot on
 parted ${dev} --script set 2 msftdata on
 
-echo "syncing and probing new paritions"
+echo "syncing and probing new partitions"
 sync
 partprobe
 

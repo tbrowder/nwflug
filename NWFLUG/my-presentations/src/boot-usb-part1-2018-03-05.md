@@ -126,4 +126,4 @@ I'm using these procedures to
 build USBs for a course I'm
 offering this fall:
 
-+ Introduction to Computer Programming
++ Introduction to Computer Programming for Seniors
