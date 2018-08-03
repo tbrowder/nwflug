@@ -11,12 +11,12 @@ engineering, or almost any technical field should be introduced to
 ## What is Linux?
 
 More formally known as  **GNU/Linux**,
-it's a free system (OS) invented by Linus Torvald to
+it's a free operating system (OS) invented by Linus Torvald to
 provide a UNIX-like system with all the standard
 command-line and graphical tools that accompany
 such a system.
 
-It, rather than Windows or Mac, provides much of the behind-the-scenes
+**Linux**, rather than Windows or Mac, provides much of the behind-the-scenes
 *cloud* computing in data centers and high-performance computing
 facilities. It also powers the Android and the *Internet of Things* (IoT).
 
@@ -32,19 +32,26 @@ The command-line environment provides the user with almost complete
 freedom to automate tasks typical in research or other work or study
 in technical fields.
 
+**Linux** also gives the user much greater control over what happens
+and what does not happen on his or her computer.
+
 ## Linux vs. Windows: Windows
 
 Windows:
 
 - Is everywhere
 
-- It's primarily a GUI operation
+- Is primarily a GUI operation
 
-- Expensive
+- Is expensive
 
 - **Hides internals**
 
-- **Non-case-sensitive file system**
+- **Has a non-case-sensitive file system**
+
+- Updates when Microsoft says it should, often restarting your
+  computer without your permission.
+
 
 ## Linux vs. Windows: Linux
 
@@ -52,12 +59,20 @@ Linux:
 
 - Is pretty much the opposite of Windows in most respects
 
+- Is everywhere, although it is usually working behind the scenes
+
+- Has both GUI and intrinsic command line capabilities
+
+- **Is FREE**
+
+- Shows as much or as little of the internals as you want to see
+
+- Has a case-sensitive file system
+
+- **Performs upgrades only if you want it to**
+
 - Is unparalleled for the scientist or engineers: a powerful,
   "programmable calculator"
-
-- **Is free**
-
-- **Upgrades are done ONLY if you want to!**
 
 ## Linux vs. Windows
 
