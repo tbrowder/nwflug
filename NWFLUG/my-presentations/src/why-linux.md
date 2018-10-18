@@ -1,6 +1,6 @@
 title: Why Linux?
 <!-- insert-file why-linux-headers.md -->
-date: 2018-10-01
+date: 2018-10-18
 
 ## Hypothesis
 
@@ -34,6 +34,11 @@ in technical fields.
 
 **Linux** also gives the user much greater control over what happens
 and what does not happen on his or her computer.
+
+As a bonus, **Linux** comes packaged with thousands of free
+applications in categories of games, office suites, publishing and
+graphics, CAD, FEA, educational, scientific, mathematical, musical,
+and many others.
 
 ## Linux vs. Windows: Windows
 
@@ -110,13 +115,11 @@ On Windows or Mac:
 
 + Use a live, bootable CD/DVD [only as a last resort]
 
-## Linux: How to get it
+## Linux: How to get it (cont.)
 
 + Install Linux as a VM guest on Windows 10 Pro Hyper-V
 
-+ Install VirtualBox to run a Linux Virtual Machine
-
-+ Use *Cygwin* on Windows
++ Install VirtualBox or VMwareto run a Linux Virtual Machine
 
 Best:
 

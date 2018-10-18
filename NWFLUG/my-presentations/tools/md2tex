@@ -233,14 +233,14 @@ $maybe_table
 
 sub intuit_tables {
     my $text = shift;
-    $text =~ s[\\begin{verbatim}\n(.*?)^\\end{verbatim}]
+    $text =~ s[\\begin\\{verbatim}\n(.*?)^\\end{verbatim}]
               [maybe_substitute_table($1)]egxms;
     return $text;
 }
 
 sub wrap_verbatims_in_blocks {
     my $text = shift;
-    $text =~ s[(\\begin{verbatim}\n.*?^)\n(\\end{verbatim})]
+    $text =~ s[(\\begin\\{verbatim}\n.*?^)\n(\\end{verbatim})]
               [\\begin{block}{\\vspace{-2ex}}\n\\vspace{-4ex}\\scriptsize$1$2\n\\end{block}]gxms;
     return $text;
 }
