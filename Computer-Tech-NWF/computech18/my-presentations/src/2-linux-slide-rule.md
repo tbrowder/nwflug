@@ -157,7 +157,8 @@ See its website here:
 
 ## Kitbashing Example
 
-Let's say we are to evaluate a new kinetic energy round against a military target, such as this:
+Let's say we are to evaluate a new kinetic energy round against a
+military target, such as this:
 
 ![50%](pics/220px-PLZ45155mm_Howitzer.jpg)
 

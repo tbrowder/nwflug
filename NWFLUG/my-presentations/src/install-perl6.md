@@ -1,19 +1,13 @@
 title: Perl 6 Scripting Language
 <!-- insert-file headers.md -->
 
-## Introduction to Perl 6
+## Installing Perl 6
 
-- From the schedule:
+The official website:
 
-    - Part (1) Install Perl 6.
-    - Part (2) Tour of IDE.
-    - Part (3) Demo some short programs written with Perl 6.
- 
-<!-- insert-file background.md -->
+- <**<http://perl6.org>**>
 
-<!-- insert-file common-1.md -->
-
-## What is Perl 6
+## What is Perl 6?
 
 Perl 6 is what is known as a scripting or interpreted programming
 language as opposed to a compiled language like C++ or Fortran.
@@ -24,8 +18,8 @@ released around 1987, and Perl 6 started being developed in 2000 (15
 years in the making!).
 
 Although Perl 6 has a lot of compatibility with her big sister, it is
-largely a new language.  Larry Wall, the author of
-both languages, can explain the evolution of both languages.
+largely a new language.  Larry Wall, the author of both languages, can
+explain the evolution of both languages.
 
 Perl 6 is a much larger language than Perl 5, but all its features
 don't have to be used for beginning to learn the language.
@@ -74,7 +68,7 @@ Within the terminal, type **perl6**, write your code and hit [Enter]
 $ perl6
 > say "Hello, World!";
 Hello, World!
-> 
+>
 ~~~
 
 Use [Ctrl-D] to exit.  The REPL is handy for experimenting and
@@ -158,9 +152,8 @@ used in Perl 5 and it is not currently available, you can add it to
 the list of most wanted modules as described on the link above.
 
 By the way, I got into that situation as I started diving into Perl 6
-last year and I am working on translating module **Geo::Ellipsoid**
+last year and I have working on translating module **Geo::Ellipsoid**
 which you will see in that list.
-
 
 ## Perl 6 for Perl 5 users
 
@@ -168,9 +161,6 @@ which you will see in that list.
 
 - One can use Perl 5 code in Perl 6 with appropriate measures (I have
   not yet experimented with that).
-
-- There are two Perl 5 to Perl 6 translators available (I have not
-  experimented with that either).
 
 - If you are a Perl 5 user and are interested in Perl 6, there is lots
   of work to do in providing translation of Perl 5 modules to Perl 6
@@ -185,8 +175,6 @@ which you will see in that list.
 
     - If we have enough interest, we can also start a regular class in
       Perl 6 and use the Niceville library for meetings.
-
-<!-- insert-file closer-help.md -->
 
 ## One last word
 

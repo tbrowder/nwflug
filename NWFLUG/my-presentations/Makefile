@@ -53,10 +53,12 @@ TALKS  =
 #TALKS += agenda-2018-03-05
 #TALKS += boot-usb-part1-2018-03-05
 #TALKS += boot-usb-part2-2018-03-05
-TALKS += agenda-2018-06-04
+#TALKS += agenda-2018-06-04
+#TALKS += opnsense
+#TALKS += boot-usb-2018-06-04
+TALKS += agenda-2018-08-06
 TALKS += why-linux
-TALKS += opnsense
-TALKS += boot-usb-2018-06-04
+TALKS += install-perl6
 
 COMMON +=
 COMMON += src/common*md
@@ -78,9 +80,8 @@ list-presentations:
 	@echo Presentations:
 	@echo -------------
 	@-ls -1 otp/agenda*pdf
-	@-ls -1 otp/opnsense.pdf
 	@-ls -1 otp/why-linux.pdf
-	@-ls -1 otp/boot-usb-2018-06-04.pdf
+	@-ls -1 otp/install-perl6.pdf
 	@echo
 
 src/%.pdoc :: src/%.md $(COMMON) src/headers.md src/make-pdoc-from-md.p6
