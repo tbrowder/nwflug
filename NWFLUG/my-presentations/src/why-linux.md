@@ -10,15 +10,15 @@ engineering, or almost any technical field should be introduced to
 
 ## What is Linux?
 
-More formally known as  **GNU/Linux**,
-it's a free operating system (OS) invented by Linus Torvald to
-provide a UNIX-like system with all the standard
-command-line and graphical tools that accompany
-such a system.
+More formally known as **GNU/Linux**, it's a free operating system
+(OS) invented by Linus Torvald to provide a UNIX-like system with all
+the standard command-line and graphical tools that accompany such a
+system.
 
-**Linux**, rather than Windows or Mac, provides much of the behind-the-scenes
-*cloud* computing in data centers and high-performance computing
-facilities. It also powers the Android and the *Internet of Things* (IoT).
+**Linux**, rather than Windows or Mac, provides much of the
+behind-the-scenes *cloud* computing in data centers and
+high-performance computing facilities. It also powers the Android and
+the *Internet of Things* (IoT).
 
 ## What is Linux?
 
@@ -36,8 +36,8 @@ in technical fields.
 and what does not happen on his or her computer.
 
 As a bonus, **Linux** comes packaged with thousands of free
-applications in categories of games, office suites, publishing and
-graphics, CAD, FEA, educational, scientific, mathematical, musical,
+applications in such categories as: games, office suites, publishing
+and graphics, CAD, FEA, education, science, mathematics, music, art,
 and many others.
 
 ## Linux vs. Windows: Windows
@@ -107,7 +107,8 @@ Cluttered while working with windowed programs...
 
 On Windows or Mac:
 
-+ Use **Putty** to connect to a cloud server (as cheap as $2.50 per month)
++ Use **Putty** on Windows or a terminal app on an iPad to connect to
+  a cloud server (as cheap as $2.50 per month)
 
 + Install the Windows 10 Ubuntu subsystem
 
