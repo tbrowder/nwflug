@@ -1,6 +1,6 @@
 title: Why Linux?
 <!-- insert-file why-linux-headers.md -->
-date: 2018-10-18
+date: 2018-12-31
 
 ## Hypothesis
 
@@ -17,8 +17,8 @@ system.
 
 **Linux**, rather than Windows or Mac, provides much of the
 behind-the-scenes *cloud* computing in data centers and
-high-performance computing facilities. It also powers the Android and
-the *Internet of Things* (IoT).
+high-performance computing facilities. It also powers the Android, the
+Chromebook, and the *Internet of Things* (IoT).
 
 ## What is Linux?
 
@@ -79,9 +79,9 @@ Linux:
 - Is unparalleled for the scientist or engineers: a powerful,
   "programmable calculator"
 
-## Linux vs. Windows
+## Linux vs. Windows: Other views
 
-Other opinions
+Other opinions:
 
 <**<https://www.lifewire.com/windows-vs-linux-mint-2200609>**>
 
@@ -93,13 +93,13 @@ Other opinions
 
 ## Linux: Introduction
 
-Empty while working at the command line...
+Desktop empty while working at the command line...
 
 ![25%](pics/my-deb8-desktop-Screenshot.png)
 
-## Linux: Introduction
+## Linux: Introduction (cont.)
 
-Cluttered while working with windowed programs...
+Desktop cluttered while working with windowed programs...
 
 ![25%](pics/cluttered-desktop-Screenshot.png)
 
@@ -107,12 +107,12 @@ Cluttered while working with windowed programs...
 
 On Windows or Mac:
 
++ Use a live, bootable USB [recommended for intro]
+
 + Use **Putty** on Windows or a terminal app on an iPad to connect to
   a cloud server (as cheap as $2.50 per month)
 
 + Install the Windows 10 Ubuntu subsystem
-
-+ Use a live, bootable USB [recommended for intro]
 
 + Use a live, bootable CD/DVD [only as a last resort]
 
@@ -122,25 +122,29 @@ On Windows or Mac:
 
 + Install VirtualBox or VMwareto run a Linux Virtual Machine
 
+On a Chromebook:
+
++ Use the Linux App
+
 Best:
 
 + Use a dual-boot, native installation
 
-+ Use Hyper-V on Windows 10 Pro
++ Use a Chromebook
 
-+ Use a dedicated GNU/Linux PC or laptop
+## Linux comes in many \"flavors\"
 
-## Linux comes in many "flavors"
-
-A Linux system comes packaged in many **distributions** such as
-Debian, Ubuntu, Linux Mint, and others.
+A Linux system comes packaged in many **distributions** (*distros*)
+such as Debian, Ubuntu, Linux Mint, and others.
 
 See <**<https://distrowatch.com>**> for lots of information about
 popularity, download statistics, and other stats on hundreds of
 **distros**.
 
 We think *Linux Mint* is one of the best *distros* for beginners. I
-prefer *Debian* and have used it for over ten years
+prefer *Debian* and have used it for over ten years.
+
+(Note that Google has moved to **Debian** from Ubuntu recently.)
 
 ## Linux help?
 
