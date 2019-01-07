@@ -58,7 +58,8 @@ TALKS  =
 #TALKS += boot-usb-2018-06-04
 #TALKS += agenda-2018-08-06
 #TALKS += install-perl6
-TALKS += agenda-2018-12-03
+#TALKS += agenda-2018-12-03
+TALKS += agenda-2019-01-07
 TALKS += why-linux
 
 COMMON +=
