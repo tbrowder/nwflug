@@ -33,8 +33,6 @@ my $HEADER = <<'EOT';
 \newcommand\Hkt[1]{\textcolor{keyword_or_type}{#1}}
 \newcommand\Hcn[1]{\textcolor{classname}{#1}}
 
-\def\tightlist{}
-
 \title{[:title:]}
 \subtitle{[:subtitle:]}
 \author{[:author:]}
@@ -47,6 +45,11 @@ my $HEADER = <<'EOT';
 %\titlegraphic{
 %  \includegraphics[scale=0.1]{eps/edument-logo.eps}
 %}
+
+%%%%% THIS FIXES TIGHTLIST ERROR %%%%%
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+%%%%% END TIGHTLIST ERROR FIX %%%%%
 
 \begin{document}
 
@@ -243,7 +246,7 @@ sub intuit_tables {
 sub wrap_verbatims_in_blocks {
     my $text = shift;
     $text =~ s[(\\begin\{verbatim}\n.*?^)\n(\\end\{verbatim})]
-              [\\begin{block}{\\vspace{-2ex}}\n\\vspace{-4ex}\\scriptsize$1$2\n\\end{block}]gxms;
+              [\\begin\{block}{\\vspace{-2ex}}\n\\vspace{-4ex}\\scriptsize$1$2\n\\end\{block}]gxms;
     return $text;
 }
 

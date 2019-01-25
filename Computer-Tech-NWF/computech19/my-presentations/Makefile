@@ -11,21 +11,20 @@ PERL     = perl
 PANDOC   = pandoc
 PDFLATEX = pdflatex
 
-CTECHYEAR     = 2018
+CTECHYEAR     = 2019
 CDSADIR       = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr/mydomains/domains/primary-web-servers/web-sites/computertechnwf.org/public
 TPCDIR        = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr/mydomains/domains/primary-web-servers/web-sites/niceville.pm.org/public
 CTECHBASEDIR  = $(CDSADIR)/$(CTECHYEAR)
-TPCBASEDIR    = $(TPCDIR)/talks/2018
+TPCBASEDIR    = $(TPCDIR)/talks/2019
 
 # presentations (talks)
-P00_FNAME = 00-exercises
-P0_FNAME = 0-nwflug-niceville-pm
-P1_FNAME = 1-free-science-progs
-P2_FNAME = 2-linux-slide-rule
-P3_FNAME = 3-foss-resume
-P4_FNAME = 4-linux-q-and-a
+#P00_FNAME = 00-exercises
+P1_FNAME = 01-free-progs
+P2_FNAME = 02-why-linux
+P3_FNAME = 03-intro2coding
+P4_FNAME = 04-linux-q-and-a
 
-P0_DIR = $(CTECHBASEDIR)/0730-$(P0_FNAME)
+#P0_DIR = $(CTECHBASEDIR)/0730-$(P0_FNAME)
 P1_DIR = $(CTECHBASEDIR)/0900-$(P1_FNAME)
 P2_DIR = $(CTECHBASEDIR)/1000-$(P2_FNAME)
 P3_DIR = $(CTECHBASEDIR)/1100-$(P3_FNAME)
@@ -40,11 +39,11 @@ SITEPRODS += ../CTech-$(CTECHYEAR)-Apple-Mac-Linux.pdf
 SITEPRODS += ../CTech-$(CTECHYEAR)-NWFSC-Niceville-Campus.pdf
 
 CMN_PRODS  =
-CMN_PRODS += common-handouts/common-link-list-handout-ctech18.pdf
-CMN_PRODS += common-handouts/foss-handout-ctech18.pdf
+CMN_PRODS += common-handouts/common-link-list-handout-ctech19.pdf
+CMN_PRODS += common-handouts/foss-handout-ctech19.pdf
 CMN_PRODS += otp/00-exercises.pdf
 
-P0_PRODS  = otp/$(P0_FNAME).pdf
+P0_PRODS  =
 P0_PRODS +=  $(CMN_PRODS)
 #P1_PRODS += $(P1_FNAME)/Questions-answered-and-Notes.txt
 

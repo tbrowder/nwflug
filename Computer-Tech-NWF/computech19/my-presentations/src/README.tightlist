@@ -1,0 +1,8 @@
+THIS WORKS: insert in the md2tex file just BEFORE \begin{document}):
+==================================================================
+
+for beamer. You'll need to add those two lines (before the
+\begin{document}):
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}

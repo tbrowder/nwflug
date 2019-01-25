@@ -1,7 +1,7 @@
 
 ## Background
 
-- Retired USAF fighter pilot, retired engineer with ManTech Corporation
+- Retired USAF fighter pilot, retired engineer from ManTech Corporation
 
 - Programmed computers since 1961, had my own programmable computer(s) since 1974
 
