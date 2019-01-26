@@ -1,6 +1,6 @@
-title: Why Linux?
-<!-- insert-file why-linux-headers.md -->
-date: 2018-12-31
+title: Introduction to Linux
+<!-- insert-file headers.md -->
+date: 2019-01-26
 
 ## Hypothesis
 
@@ -20,7 +20,7 @@ behind-the-scenes *cloud* computing in data centers and
 high-performance computing facilities. It also powers the Android, the
 Chromebook, and the *Internet of Things* (IoT).
 
-## What is Linux?
+## What is Linux? (cont.)
 
 A more detailed look:
 
@@ -57,7 +57,6 @@ Windows:
 - Updates when Microsoft says it should, often restarting your
   computer without your permission.
 
-
 ## Linux vs. Windows: Linux
 
 Linux:
@@ -66,7 +65,7 @@ Linux:
 
 - Is everywhere, although it is usually working behind the scenes
 
-- Has both GUI and intrinsic command line capabilities
+- Has both GUI and intrinsic command line interface (CLI) capabilities
 
 - **Is FREE**
 
@@ -146,6 +145,41 @@ prefer *Debian* and have used it for over ten years.
 
 (Note that Google has moved to **Debian** from Ubuntu recently.)
 
+## Linux and its FOSS apps in the work place
+
+A common requirement for many work flows inludes:
+
++ data filtering...pipeline tools...
++ app chaining
++ glue languages
++ data formats in/out
++ data exchange
+
+    + proprietary vs foss
+
+All of those are much easier to deal with (in my opinion and
+experience) in a Linux CLI environment.
+
+## Sometimes Linux is the only answer
+
+**Eukleides**: A geometry drawing tool
+
+It is a FOSS app that is **NOT** available on Windows or Mac:
+
+<**<http://www.eukleides.org/>**>
+
+Would the students you know like that?
+
+## Sometimes Linux is the only answer (cont.)
+
+My slide generator runs on Linux, and consists of several major pieces:
+
++ **LaTex**  a markup language with typesetting sotware
++ **Beamer** a collection of LaTex code for slide making
++ **Perl 6** a computer programming language
+
+I can fix errors almost on the fly. Seen any yet?
+
 ## Linux help?
 
 There is practically an infinite amount of Linux resources to be found
@@ -156,3 +190,12 @@ monthly, and we have an installation meeting (by appointment only) on
 the third Monday of every month.
 
 Check out our website at <**<https://nwflug.org>**>.
+
+## Summary
+
+- Today we have looked at the utility of Linux and the advantages it
+  can provide in many domains.
+
+- Stay for my next session to learn a bit about computer programming.
+
+<!-- insert-file closer-help.md -->

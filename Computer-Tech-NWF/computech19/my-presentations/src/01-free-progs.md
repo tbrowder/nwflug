@@ -1,4 +1,4 @@
-title: Cross-Platform FOSS
+title: Free Software (Cross Platform)
 <!-- insert-file headers.md -->
 
 ## AUDIENCE EXPECTATIONS
@@ -9,8 +9,8 @@ title: Cross-Platform FOSS
 
 My purpose is to give you an introduction to available Free and Open
 Source Software (FOSS) for ordinary users as well as scientists and
-other technical persons, and I will demonstrate a program of **immense**
-value to you as well as the FOSS community.
+other technical persons, and I will demonstrate a program of
+**IMMENSE** value to **YOU** as well as the FOSS community.
 
 I hope the parents and grandparents of children interested in a
 technical career can benefit from the information and pass that on.
@@ -19,7 +19,7 @@ technical career can benefit from the information and pass that on.
 
 - **F**ree and **O**pen **S**ource **S**oftware (FOSS) for Windows, Mac, and Linux
 
-## Selected FOSS Programs (Apps)
+## Selected FOSS programs (apps)
 
 (Pay attention, there will be a quiz at the end!)
 
@@ -36,7 +36,7 @@ personal projects:
 
 - **LibreOffice** (replace **MS Office**)
 
-## Selected FOSS Programs (cont.)
+## Selected FOSS programs (cont.)
 
 **Typesetting**
 
@@ -52,15 +52,15 @@ personal projects:
 - **Subversion**
 - **Bazaar**
 
-## Selected FOSS Programs (cont.)
+## Selected FOSS programs (cont.)
 
 **Version control hosting and collaboration**
 
-- **Github**
+- **GitHub**
 - **Bitbucket**
 - **SourceForge**
 
-## Selected FOSS Programs (cont.)
+## Selected FOSS programs (cont.)
 
 Other programs:
 
@@ -107,11 +107,11 @@ And many others...
 
 - Doesn't it seem like socialism?
 
-## A Killer Program for Everyone!
+## A Killer program for everyone!
 
-**Git**
+**Git** ["Get IT"?]
 
-We can use it for free version control on Githup.com or Bitbucket.org!
+We can use it for free version control on **Github.com** or **Bitbucket.org**!
 
 Plus, we get free backups, too!
 
@@ -126,7 +126,11 @@ Requirements:
 If you want to have a private backup, you'll have to use Bitbucket or
 pay a small amount to Github.
 
-Let's look at my Github account for illustration...
+Let's look at my Github account for illustration using the command line...
+
+<**<https://github.com/tbrowder>**>
+
+Many GUI clients are available. I use **SmartGit** from Syntevo:
 
 <**<https://github.com/tbrowder>**>
 

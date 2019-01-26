@@ -1,0 +1,20 @@
+%!
+
+% defaults:
+%   position is the lower-left corner
+%     of the paper (canvas): 0 0
+%   units are in PS points, 72 per inch
+%   paper size depends, usually US Letter
+%     for Debian
+
+% create our box and title
+250 400 translate
+0 0 moveto
+ 100   0 rlineto
+   0 100 rlineto
+-100  0 rlineto
+closepath stroke
+
+50 50 moveto
+/Times-Roman 20 selectfont
+(A Title) show

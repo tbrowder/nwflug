@@ -20,7 +20,7 @@ TPCBASEDIR    = $(TPCDIR)/talks/2019
 # presentations (talks)
 #P00_FNAME = 00-exercises
 P1_FNAME = 01-free-progs
-P2_FNAME = 02-why-linux
+P2_FNAME = 02-intro2linux
 P3_FNAME = 03-intro2coding
 P4_FNAME = 04-linux-q-and-a
 
