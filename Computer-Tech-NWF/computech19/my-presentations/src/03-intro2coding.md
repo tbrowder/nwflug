@@ -12,12 +12,10 @@ modern digital world.
 
 ## Computer programming
 
-A definition:
-
-+ Computer programming is the process of writing instructions that get
-  executed by computers. The instructions, also known as code, are
-  written in a programming language which the computer can understand
-  and use to perform a task or solve a problem. [edX]
+**Computer programming** is the process of writing instructions that
+get executed by computers. The instructions, also known as code, are
+written in a programming language which the computer can understand
+and use to perform a task or solve a problem. [edX]
 
 ## General
 
@@ -25,7 +23,7 @@ Computer programming is required for almost all parts of a computer to
 control the signals connecting all the pieces as well as the pieces
 themselves.
 
-## Computer: External
+## Computer: External interfaces
 
 + IO
 + Power
@@ -34,7 +32,7 @@ themselves.
 + Wireless device
 + Ethernet
 
-## Computer: Internal
+## Computer: Internal interfaces
 
 + Graphics connectors
 + Drives
@@ -42,29 +40,28 @@ themselves.
 + CPU
 + Memory
 + Buses
-+ Misc -chips
++ Miscellaneous chips
 
 ## System(s) programming
 
 That low-level programming is referred to as **System Programming**,
 most of which is located in firmware or other semi-permanent medium.
 
-A definition:
-
-+ System programming is the activity of programming computer system
-  software. The primary distinguishing characteristic of systems
-  programming when compared to application programming is that
-  application... [Wikipedia]
+**System programming** is the activity of programming computer system
+software. The primary distinguishing characteristic of systems
+programming...aims to produce software and software platforms which
+provide services to other software, are performance constrained, or
+both (e.g., operating systems, computational science applications, game
+engines and AAA video games, industrial automation, and software as a
+service applications). [Wikipedia]
 
 ## Application programming
 
-A definition:
-
-+ An application, also referred to as an application program or
-  application software, is a computer software package that performs a
-  specific function directly for an end user or, in some cases, for
-  another application. An application can be self-contained or a group
-  of programs. [TechTarget]
+An **application**, also referred to as an **application program** or
+application software, is a computer software package that performs a
+specific function directly for an end user or, in some cases, for
+another application. An application can be self-contained or a group
+of programs. [TechTarget]
 
 
 ## Application programming (cont.)
@@ -92,16 +89,18 @@ Transforming data via pipelines of separate filters (programs or
 
 ## Computer programming languages
 
-General purpose language - broadly applicable across domains [Wikipedia]
+Two general categories
 
-Domain-specific language (DSL) - specialized to a particular
-application domain [Wikipedia]
++ Interpreted - build and execute
 
-## Two general categories
++ Compiled - build separate from execute
 
-+ Interpreted
+Two subcategories:
 
-+ Compiled
++ General purpose - broadly applicable across domains [Wikipedia]
+
++ Domain-specific (DSL) - specialized to a particular application
+  domain [Wikipedia]
 
 ## General purpose languages
 
@@ -131,21 +130,22 @@ Further subdivided into:
 
 Examples iclude:
 
-+ PostScript [page description language (PDL)]
++ PostScript - page description language (PDL)
 
-+ Erlang [telecom]
++ Erlang - telecom
 
 ## Glue languages
 
 A **glue** language is one that is suitable for calling other
-languages or tools from one applications.
+languages or tools from one application.
 
-Two glue languages I use a lot are
+Three glue languages I use a lot are
 
 + Perl 6 <**<https://perl6.org>**>
 
 + PostScript
 
++ Shell
 
 ## PostScript demonstration
 
@@ -186,7 +186,7 @@ glad to present through the auspices of the **Niceville Perl Mongers**:
 ## Summary
 
 - Today we have taken a tiny peek at the huge world of computer
-  programming..
+  programming.
 
 - For me, creating PostScript documents is fun and challenging, your
   programming interest may differ.

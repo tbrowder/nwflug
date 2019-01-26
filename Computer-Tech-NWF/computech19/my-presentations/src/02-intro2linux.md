@@ -119,7 +119,7 @@ On Windows or Mac:
 
 + Install Linux as a VM guest on Windows 10 Pro Hyper-V
 
-+ Install VirtualBox or VMwareto run a Linux Virtual Machine
++ Install VirtualBox or VMware to run a Linux Virtual Machine
 
 On a Chromebook:
 
@@ -201,8 +201,8 @@ There is practically an infinite amount of Linux resources to be found
 on the Internet.
 
 My group, the Northwest Florida Linux User Group (NWFLUG), meets
-monthly, and we have an installation meeting (by appointment only) on
-the third Monday of every month.
+monthly on the first Monday, and we have an installation meeting (by
+appointment only) on the third Monday of every month.
 
 Check out our website at <**<https://nwflug.org>**>.
 

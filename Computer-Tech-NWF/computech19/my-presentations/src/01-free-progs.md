@@ -132,7 +132,7 @@ Let's look at my Github account for illustration using the command line...
 
 Many GUI clients are available. I use **SmartGit** from Syntevo:
 
-<**<https://github.com/tbrowder>**>
+<**<https://https://www.syntevo.com/>**>
 
 
 ## Summary
