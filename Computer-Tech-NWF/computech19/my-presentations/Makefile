@@ -22,26 +22,26 @@ TPCBASEDIR    = $(TPCDIR)/talks/2019
 P1_FNAME = 01-free-progs
 P2_FNAME = 02-intro2linux
 P3_FNAME = 03-intro2coding
-P4_FNAME = 04-linux-q-and-a
+#P4_FNAME = 04-linux-q-and-a
 
 #P0_DIR = $(CTECHBASEDIR)/0730-$(P0_FNAME)
 P1_DIR = $(CTECHBASEDIR)/0900-$(P1_FNAME)
 P2_DIR = $(CTECHBASEDIR)/1000-$(P2_FNAME)
 P3_DIR = $(CTECHBASEDIR)/1100-$(P3_FNAME)
-P4_DIR = $(CTECHBASEDIR)/1300-$(P4_FNAME)
-P5_DIR = $(CTECHBASEDIR)/1415-$(P4_FNAME)
+#P4_DIR = $(CTECHBASEDIR)/1300-$(P4_FNAME)
+#P5_DIR = $(CTECHBASEDIR)/1415-$(P4_FNAME)
 
 SITEDIR = $(CDSADIR)/pdf
 
 SITEPRODS  = ../CTech-$(CTECHYEAR)-Flyer.pdf
-SITEPRODS += ../CTech-$(CTECHYEAR)-Windows-Misc.pdf
-SITEPRODS += ../CTech-$(CTECHYEAR)-Apple-Mac-Linux.pdf
+SITEPRODS += ../CTech-$(CTECHYEAR)-Windows-Linux-Other.pdf
+SITEPRODS += ../CTech-$(CTECHYEAR)-Apple-Mac.pdf
 SITEPRODS += ../CTech-$(CTECHYEAR)-NWFSC-Niceville-Campus.pdf
 
 CMN_PRODS  =
 CMN_PRODS += common-handouts/common-link-list-handout-ctech19.pdf
 CMN_PRODS += common-handouts/foss-handout-ctech19.pdf
-CMN_PRODS += otp/00-exercises.pdf
+#CMN_PRODS += otp/00-exercises.pdf
 
 P0_PRODS  =
 P0_PRODS +=  $(CMN_PRODS)
@@ -59,27 +59,27 @@ P3_PRODS  = otp/$(P3_FNAME).pdf
 P3_PRODS +=  $(CMN_PRODS)
 #P3_PRODS += $(P3_FNAME)/Questions-answered-and-Notes.txt
 
-P4_PRODS  = otp/$(P4_FNAME).pdf
-P4_PRODS +=  $(CMN_PRODS)
+#P4_PRODS  = otp/$(P4_FNAME).pdf
+#P4_PRODS +=  $(CMN_PRODS)
 #P4_PRODS +=  $(P4_FNAME)/wall-calendar-2018-missy.pdf
 
-P5_PRODS  = otp/$(P4_FNAME).pdf
-P5_PRODS +=  $(CMN_PRODS)
+#P5_PRODS  = otp/$(P4_FNAME).pdf
+#P5_PRODS +=  $(CMN_PRODS)
 #P4_PRODS +=  $(P4_FNAME)/wall-calendar-2018-missy.pdf
 
-TBZRHDIR = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr
-P3_PRODS_XDIR = $(TBZRHDIR)/myps/xmas/example
-P3_PRODS_CDIR = /usr/local/bzr-repos/calendar/example
+#TBZRHDIR = /usr/local/people/tbrowde/mydata/tbrowde-home-bzr
+#P3_PRODS_XDIR = $(TBZRHDIR)/myps/xmas/example
+#P3_PRODS_CDIR = /usr/local/bzr-repos/calendar/example
 
 TALKS  =
 #TALKS += example
 #TALKS += example2
-TALKS += $(P00_FNAME)
-TALKS += $(P0_FNAME)
+#TALKS += $(P00_FNAME)
+#TALKS += $(P0_FNAME)
 TALKS += $(P1_FNAME)
 TALKS += $(P2_FNAME)
 TALKS += $(P3_FNAME)
-TALKS += $(P4_FNAME)
+#TALKS += $(P4_FNAME)
 
 #COMMON += src/cmn/prelims2.md
 #COMMON += src/cmn/headers2.md
@@ -120,15 +120,15 @@ pdoc: $(pdocs)
 .PHONY : list list-presentations
 list: list-presentations
 
+#	@-ls -1 otp/$(P00_FNAME).pdf
+#	@-ls -1 otp/$(P0_FNAME).pdf
+#	@-ls -1 otp/$(P4_FNAME).pdf
 list-presentations:
 	@echo Presentations:
 	@echo -------------
-	@-ls -1 otp/$(P00_FNAME).pdf
-	@-ls -1 otp/$(P0_FNAME).pdf
 	@-ls -1 otp/$(P1_FNAME).pdf
 	@-ls -1 otp/$(P2_FNAME).pdf
 	@-ls -1 otp/$(P3_FNAME).pdf
-	@-ls -1 otp/$(P4_FNAME).pdf
 	@echo
 
 src/%.pdoc :: src/%.md $(COMMON) src/make-pdoc-from-md.p6
@@ -178,6 +178,7 @@ realclean: clean
 	(cd otp; rm -f *.log ; rm -f *.pdf )
 	(cd src; rm -f *.pdoc )
 
+distclean: realclean
 
 trash  = $(patsubst %, otp/%.log, $(TALKS))
 trash += $(patsubst %, otp/%.aux, $(TALKS))

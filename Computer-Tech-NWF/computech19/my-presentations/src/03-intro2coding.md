@@ -166,10 +166,30 @@ closepath stroke
 
 Break to the demonstration...
 
+## PostScript demonstration
+
+The natural extenstion to the simple PostScript document we just saw
+is to create a much larger document from an organized collection of
+text and images.
+
+That is how a glue language, Perl 6 in this case, can add value to
+other languages and data sets by tying them together into a final
+product.
+
+## Perl 6
+
+If anyone is interested, I have an introductory course on Perl 6 I am
+glad to present through the auspices of the **Niceville Perl Mongers**:
+
+<**<http://niceville.pm.org>**>
+
 ## Summary
 
 - Today we have taken a tiny peek at the huge world of computer
   programming..
+
+- For me, creating PostScript documents is fun and challenging, your
+  programming interest may differ.
 
 - There is plenty of help to go in any direction you want to with
   college courses, books, videos, online training, and other

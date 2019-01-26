@@ -180,6 +180,21 @@ My slide generator runs on Linux, and consists of several major pieces:
 
 I can fix errors almost on the fly. Seen any yet?
 
+## Linux on-line server in the works
+
+Keep an eye out for my upcoming publicly available cloud server to be
+available at **Perl6.club**.
+
+It will provide CLI access with a user name and password to be
+provided upon request.
+
+All you have to do is get access to a suitable secure shell (ssh)
+terminal on your device such as:
+
++ **Putty** on Windows
+
++ **Termius** on an iPad
+
 ## Linux help?
 
 There is practically an infinite amount of Linux resources to be found
@@ -196,6 +211,7 @@ Check out our website at <**<https://nwflug.org>**>.
 - Today we have looked at the utility of Linux and the advantages it
   can provide in many domains.
 
-- Stay for my next session to learn a bit about computer programming.
+- Stay for my next session to learn a bit about computer programming
+  on a Linux host.
 
 <!-- insert-file closer-help.md -->
