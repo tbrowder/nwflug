@@ -1,5 +1,8 @@
 #!/usr/bin/env perl6
 
+my $test  = 1;
+my $debug = 1;
+
 # calculate meeting dates and PR media deadlines
 my %mon = [
     1,  'January', 
@@ -87,6 +90,10 @@ for 1..12 -> $mon {
 
 for @first-mondays -> $d {
     my $mon  = $d.month;
+
+    # if testing we want start and finish with March
+    next if $mon < 3 || $mon > 3 && $test;
+
     my $mnam = %mon{$mon};
     my $day  = $d.day;
     say "First Monday in $mnam is $day";
@@ -94,7 +101,7 @@ for @first-mondays -> $d {
     # a dir per meeting date
     my $dir = 'mtg-' ~ $mtg-date;
     if $dir.IO.d {
-        say "Meeting directory '$dir' exists...ignoring";
+        say "Meeting directory '$dir' exists...ignoring" if $debug;
     }
     else {
         say "Need to create meeting directory '$dir'";
@@ -102,3 +109,8 @@ for @first-mondays -> $d {
     }
 }
  
+##### SUBROUTINES #####
+sub print-bay-beacon(Date $d, :$props) {
+    # create the text string, then convert to docx
+}
+
