@@ -1,59 +1,11 @@
 #!/usr/bin/env perl6
 
+use Date::Names;
+
 my $test  = 1;
 my $debug = 1;
 
 # calculate meeting dates and PR media deadlines
-my %mon = [
-    1,  'January', 
-    2,  'February', 
-    3,  'March', 
-    4,  'April', 
-    5,  'May', 
-    6,  'June', 
-    7,  'July', 
-    8,  'August', 
-    9,  'September', 
-    10, 'October', 
-    11, 'November', 
-    12, 'December' 
-];
-
-my %mon-abbrev = [
-    1,  'Jan', 
-    2,  'Feb', 
-    3,  'Mar', 
-    4,  'Apr', 
-    5,  'May', 
-    6,  'Jun', 
-    7,  'Jul', 
-    8,  'Aug', 
-    9,  'Sep', 
-    10, 'Oct', 
-    11, 'Nov', 
-    12, 'Dec' 
-];
-
-my %dow = [ 
-    1, 'Monday',
-    2, 'Tuesday', 
-    3, 'Wednesday',
-    4, 'Thursday',
-    5, 'Friday',
-    6, 'Saturday',
-    7, 'Sunday'
-];
-
-my %dow-abbrev = [ 
-    1, 'Mon',
-    2, 'Tue', 
-    3, 'Wed',
-    4, 'Thu',
-    5, 'Fri',
-    6, 'Sat',
-    7, 'Sun'
-];
-
 if !@*ARGS {
     say "Usage: $*PROGRAM <year>";
     exit;
