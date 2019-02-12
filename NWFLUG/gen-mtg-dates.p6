@@ -36,8 +36,8 @@ my $D = Date.new: :year($y);
 my $ndays = $D.is-leap-year ?? 366 !! 365;
 
 # save the date info for all days
-my @days; 
-my @first-mondays; 
+my @days;
+my @first-mondays;
 for 1..12 -> $mon {
     $D = Date.new: :year($y), :month($mon);
     my $ndays = $D.days-in-month;
@@ -61,18 +61,18 @@ for 1..12 -> $mon {
 # constant delta days:
 # BAY BEACON
 constant $bb-show = -5;            # show in the paper the wednesday prior to the mtg
-constant $bb-send = $bb-show - 14; # send email two weeks prior to desired paper 
+constant $bb-send = $bb-show - 14; # send email two weeks prior to desired paper
 # NWF DAILY NEWS
 constant $nw-show = -1;            # show in the paper the sunday prior to the mtg
-constant $nw-send = $nw-show - 22; # send email 22 days prior to desired paper 
+constant $nw-send = $nw-show - 22; # send email 22 days prior to desired paper
 for @first-mondays -> $d {
     my $mon  = $d.month;
 
     # calculate pertinent dates
     my $nw-show-date = $d.earlier: :days(-$nw-show);
     my $nw-send-date = $d.earlier: :days(-$nw-send);
-    my $bb-show-date = $d.earlier: :days(-$bb-show);
     my $bb-send-date = $d.earlier: :days(-$bb-send);
+    my $bb-show-date = $d.earlier: :days(-$bb-show);
 
     # if testing we want start and finish with March
     next if $mon < 3 || $mon > 3 && $test;
@@ -96,14 +96,13 @@ for @first-mondays -> $d {
 
     # print pertinent dates
     say "  send email to NWF Daily News: $nw-send-date";
-    say "  send email to Bay Beacon:     $bb-show-date";
-    say "  show in Bay Beacon:           $bb-send-date";
+    say "  send email to Bay Beacon:     $bb-send-date";
+    say "  show in Bay Beacon:           $bb-show-date";
     say "  show in NWF Daily News:       $nw-show-date";
-    
+
 }
- 
+
 ##### SUBROUTINES #####
 sub print-bay-beacon(Date $d, :$props) {
     # create the text string, then convert to docx
 }
-
