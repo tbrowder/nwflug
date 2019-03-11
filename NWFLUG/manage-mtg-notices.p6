@@ -2,6 +2,9 @@
 
 use Date::Names;
 
+use lib <./lib>;
+use Strings;
+
 my $test  = 0;
 my $debug = 0;
 
@@ -77,14 +80,18 @@ constant $bb-send = $bb-show - 14; # send email two weeks prior to desired paper
 # NWF DAILY NEWS
 constant $nw-show = -1;            # show in the paper the sunday prior to the mtg
 constant $nw-send = $nw-show - 22; # send email 22 days prior to desired paper
+constant $all-send = $nw-send;
+
+my $nw-show-date;
+my $bb-show-date;
+my $all-send-date;
 for @first-mondays -> $d {
     my $mon  = $d.month;
 
     # calculate pertinent dates
-    my $nw-show-date = $d.earlier: :days(-$nw-show);
-    my $nw-send-date = $d.earlier: :days(-$nw-send);
-    my $bb-send-date = $d.earlier: :days(-$bb-send);
-    my $bb-show-date = $d.earlier: :days(-$bb-show);
+    $all-send-date = $d.earlier: :days(-$all-send);
+    $bb-show-date  = $d.earlier: :days(-$bb-show);
+    $nw-show-date  = $d.earlier: :days(-$nw-show);
 
     # if testing we want start and finish with March
     next if $test && $mon < 3 || $mon > 3 && $test;
@@ -106,8 +113,7 @@ for @first-mondays -> $d {
     }
 
     # print pertinent dates
-    say "  send email to NWF Daily News: $nw-send-date";
-    say "  send email to Bay Beacon:     $bb-send-date";
+    say "  send email to Bay Beacon and NWF Daily News: $all-send-date";
     say "  show in Bay Beacon:           $bb-show-date";
     say "  show in NWF Daily News:       $nw-show-date";
 
@@ -118,7 +124,7 @@ if !$m {
     exit;
 }
 
-my $ans = prompt "Do you want to create the docx files (y/n) => ";
+my $ans = prompt "\nDo you want to create the docx files (y/n) => ";
 if $ans ~~ /:i ^y/ {
     say "You entered 'YES'";
 }
@@ -134,7 +140,23 @@ print-bay-beacon;
 
 # third step is to submit the emails
 
+my @ofils;
+my $nf = +@ofils;
+say "Normal end.";
+if $nf {
+    my $s = $nf > 1 ?? 's' !! '';
+    say "See output file$s:";
+    say "  $_" for @ofils;
+}
+else {
+    say "No files were created.";
+}
+
 ##### SUBROUTINES #####
-sub print-bay-beacon(Date $d, :$props) {
-    # create the text string, then convert to docx
+sub print-all-docs(:$send!, :$bay-show!, :$nw-show!, :$do-props, :$debug) {
+    print-nw-email;
+    print-nw-presser;
+    print-bay-email;
+    print-bay-presser;
+
 }
