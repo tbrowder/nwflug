@@ -1,6 +1,6 @@
 #!/usr/bin/env perl6
 
-use Date::Names::en;
+use Date::Names;
 
 my $test  = 0;
 my $debug = 0;
@@ -10,6 +10,8 @@ if !@*ARGS {
     say "Usage: $*PROGRAM <year> [<month>]";
     exit;
 }
+
+my $dn = Date::Names.new: :dset('dow3'), :mset('mon3');
 
 # start with the first day of the desired year:
 my $y = @*ARGS.shift;
@@ -33,7 +35,7 @@ for 1..12 -> $mon {
         my $dow = $d.day-of-week;
         if !$first-monday && $dow == 1 {
             # a Monday!
-            my $mnam = %mon{$mon};
+            my $mnam = $dn.mon($mon);
             #say "First Monday in $mnam is $day";
             $first-monday = $day;
             @first-mondays.append: $d;
@@ -64,7 +66,7 @@ for @first-mondays -> $d {
     next if $mon < $m || $mon > $m && $m;
 
 
-    my $mnam = %mon{$mon};
+    my $mnam = $dn.mon($mon);
     my $day  = $d.day;
     say "First Monday in $mnam is $day";
     my $mtg-date = sprintf "%04d-%02d-%02d", $y, $mon, $day;
