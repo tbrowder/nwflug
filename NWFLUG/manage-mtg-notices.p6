@@ -87,9 +87,9 @@ for @first-mondays -> $d {
     my $bb-show-date = $d.earlier: :days(-$bb-show);
 
     # if testing we want start and finish with March
-    next if $mon < 3 || $mon > 3 && $test;
+    next if $test && $mon < 3 || $mon > 3 && $test;
     # if we have entered another month
-    next if $mon < $m || $mon > $m && $m;
+    next if $m && $mon < $m || $mon > $m;
 
     my $mnam = $dn.mon($mon);
     my $day  = $d.day;
@@ -126,7 +126,9 @@ else {
     say "You did NOT enter 'y' or 'Y'...exiting";
     exit;
 }
+
 # first step is tranforming test templates to show the proper dates
+print-bay-beacon;
 
 # second step is transforming the markdown into docx
 
