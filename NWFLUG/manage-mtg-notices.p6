@@ -7,7 +7,9 @@ my $debug = 0;
 
 # calculate meeting dates and PR media deadlines
 if !@*ARGS {
-    say "Usage: $*PROGRAM <year> [<month>]";
+    say qq:to/HERE/;
+    Usage: $*PROGRAM <year> | go [<month>]
+    HERE
     exit;
 }
 
@@ -16,6 +18,30 @@ my $dn = Date::Names.new: :dset('dow3'), :mset('mon3');
 # start with the first day of the desired year:
 my $y = @*ARGS.shift;
 my $m = @*ARGS.elems ?? @*ARGS.shift !! 0;
+if $m ~~ /(\D+)/ {
+    # transform name to number
+    my $mnam = ~$0;
+    given $mnam {
+        when /:i ^jan/ { $m =  1; }
+        when /:i ^feb/ { $m =  2; }
+        when /:i ^mar/ { $m =  3; }
+        when /:i ^apr/ { $m =  4; }
+        when /:i ^may/ { $m =  5; }
+        when /:i ^jun/ { $m =  6; }
+        when /:i ^jul/ { $m =  7; }
+        when /:i ^aug/ { $m =  8; }
+        when /:i ^sep/ { $m =  9; }
+        when /:i ^oct/ { $m = 10; }
+        when /:i ^nov/ { $m = 11; }
+        when /:i ^dec/ { $m = 12; }
+        default {
+            die "Unknown or month input '$_'";
+        }
+    }
+}
+
+#say "DEBUG: input mon num is $m"; exit;
+
 my $D = Date.new: :year($y);
 
 # how many days in the year of interest?
@@ -65,7 +91,6 @@ for @first-mondays -> $d {
     # if we have entered another month
     next if $mon < $m || $mon > $m && $m;
 
-
     my $mnam = $dn.mon($mon);
     my $day  = $d.day;
     say "First Monday in $mnam is $day";
@@ -87,6 +112,25 @@ for @first-mondays -> $d {
     say "  show in NWF Daily News:       $nw-show-date";
 
 }
+
+if !$m {
+    say "Exiting, cannot create docx files for multiple months yet.";
+    exit;
+}
+
+my $ans = prompt "Do you want to create the docx files (y/n) => ";
+if $ans ~~ /:i ^y/ {
+    say "You entered 'YES'";
+}
+else {
+    say "You did NOT enter 'y' or 'Y'...exiting";
+    exit;
+}
+# first step is tranforming test templates to show the proper dates
+
+# second step is transforming the markdown into docx
+
+# third step is to submit the emails
 
 ##### SUBROUTINES #####
 sub print-bay-beacon(Date $d, :$props) {
