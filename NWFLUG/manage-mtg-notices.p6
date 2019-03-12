@@ -201,7 +201,6 @@ sub print-all-docs(
     :$email-date!,
     :$nw-pub-date!,
     :$bb-pub-date!,
-    :$do-props,
     :$debug,
 ) {
     # we need three dates as input:
@@ -210,7 +209,7 @@ sub print-all-docs(
     #   date to publish in Bay Beacon
 
     # define string vars used:
-    my $mtg-month-name         = $dn.mon($mtg-date.month);
+    my $mtg-month-name         = $mtg-date.year; #$dn.mon($mtg-date.month);
     my $mtg-date-std-format    = date-std-fmt $mtg-date;    # June 4, 2019
     my $bb-pub-date-std-format = date-std-fmt $bb-pub-date; # June 4, 2019
     my $nw-pub-date-std-format = date-std-fmt $nw-pub-date; # September 21, 2020
@@ -223,34 +222,62 @@ sub print-all-docs(
     my $f4 = "nwfdn-presr-CROSS-{$email-date}";
     my $f5 = "nwfdn-presr-PROPS-{$email-date}";
     my @list = $f0, $f1, $f2, $f3, $f4, $f5;
-    if 1 {
+    if 0 {
         say "DEBUG: base names:";
         say "  $_" for @list;
     }
 
-    # first step is tranforming test templates to show the proper dates
+    for @list -> $f {
+        # Bay Beacon
+        my $str;
+        given $f {
+            when /:i bay/ {
+                say "Working Bay Beacon file '$_'...";
+                when /:i email / {
+                    $str = get-bb-email :$bb-pub-date-std-format, :$mtg-month-name;
+                }
+                when /:i cross / {
+                    $str = get-bb-cross :$bb-pub-date-std-format,:$mtg-date-std-format;
+                }
+                when /:i props / {
+                    $str = get-bb-props :$bb-pub-date-std-format, :$mtg-date-std-format;
+                }
+                default {
+                    die "FATAL: Unknown file = '$_'";
+                }
+            }
+            # NWF Daily News
+            when /:i nwfdn / {
+                say "Working NWF Daily News file '$_'...";
+                when /:i email / {
+                    $str = get-nw-email :$nw-pub-date-std-format, :$mtg-month-name;
+                }
+                when /:i cross / {
+                    $str = get-nw-cross :$nw-pub-date-std-format,:$mtg-date-std-format;
+                }
+                when /:i props / {
+                    $str = get-nw-props :$nw-pub-date-std-format, :$mtg-date-std-format;
+                }
+                default {
+                    die "FATAL: Unknown file = '$_'";
+                }
+            }
+            default {
+                die "FATAL: Unknown file = '$_'";
+            }
+        }
 
-    # second step is transforming the markdown into docx
+        # process the file
+        my $md   = $f ~ '.txt';
+        my $docx = $f ~ '.docx';
+        spurt $md, $str;
+        my $cmd = "pandoc -o $docx $md";
+        shell $cmd;
+        @ofils.append: $md;
+        @ofils.append: $docx;
 
-    # third step is to submit the emails
+    }
 
-    print-nw-email;
-    print-nw-presser;
-    print-bb-email;
-    print-bb-presser;
-
-}
-
-sub print-nw-email() {
-}
-
-sub print-nw-presser() {
-}
-
-sub print-bb-email() {
-}
-
-sub print-bb-presser() {
 }
 
 multi sub date-std-fmt(Date $D) {
