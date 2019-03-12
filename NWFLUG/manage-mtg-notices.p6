@@ -10,22 +10,45 @@ use NW-Email;
 use NW-Cross;
 use NW-Props;
 
-my $test  = 0;
-my $debug = 0;
 
 # calculate meeting dates and PR media deadlines
 if !@*ARGS {
     say qq:to/HERE/;
-    Usage: $*PROGRAM <year> | go [<month>]
+    Usage: $*PROGRAM go | [y=YYYY] [m=N|MMM][debug][test][print]
     HERE
     exit;
+}
+
+my $test  = 0;
+my $debug = 0;
+my $print = 0;
+# add more sophisticated arg handling
+my $y = DateTime.now.year; # default
+my $m = 0;                 # use all months
+for @*ARGS {
+    when /:i '-'? 'y='(\d**4)/ {
+        $y = +$0;
+    }
+    when /:i '-'? 'm='(\S+)/ {
+        $m = ~$0;
+    }
+    when /:i ^d/ {
+        $debug = 1;
+    }
+    when /:i ^t/ {
+        $test = 1;
+    }
+    when /:i ^p/ {
+        $print = 1;
+    }
+    default {
+        die "FATAL: Unknown arg '$_'";
+    }
 }
 
 my $dn = Date::Names.new: :dset('dow3'), :mset('mon3');
 
 # start with the first day of the desired year:
-my $y = @*ARGS.shift;
-my $m = @*ARGS.elems ?? @*ARGS.shift !! 0;
 if $m ~~ /(\D+)/ {
     # transform name to number
     my $mnam = ~$0;
