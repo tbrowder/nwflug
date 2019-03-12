@@ -27,7 +27,8 @@ my $do-props = 0;
 my $y = DateTime.now.year; # default
 my $m = 0;                 # use all months
 for @*ARGS {
-    when /:i '-'? 'y='(\d**4)/ {
+    #say "DEBUG: arg '$_'";
+    when /:i ^ '-'? 'y='(\d**4)/ {
         $y = +$0;
     }
     when /:i '-'? 'm='(\S+)/ {
@@ -39,10 +40,10 @@ for @*ARGS {
     when /:i ^t/ {
         $test = 1;
     }
-    when /:i ^P/ {
+    when /^ P / {
         $do-props = 1;
     }
-    when /:i ^p/ {
+    when /^ p / {
         $print = 1;
     }
     default {
@@ -50,7 +51,7 @@ for @*ARGS {
     }
 }
 
-my $dn = Date::Names.new: :dset('dow3'), :mset('mon3');
+my $dn = Date::Names.new: :dset('dow3'), :mset('mon');
 
 # start with the first day of the desired year:
 if $m ~~ /(\D+)/ {
@@ -114,16 +115,19 @@ constant $nw-pub = -1;            # publish in the paper the sunday prior to the
 constant $nw-send = $nw-pub - 22; # send email 22 days prior to desired paper
 constant $all-send = $nw-send;
 
+my $mtg-date;
+my $email-date;
 my $nw-pub-date;
 my $bb-pub-date;
-my $all-send-date;
+
 for @first-mondays -> $d {
     my $mon  = $d.month;
 
     # calculate pertinent dates
-    $all-send-date = $d.earlier: :days(-$all-send);
-    $bb-pub-date  = $d.earlier: :days(-$bb-pub);
-    $nw-pub-date  = $d.earlier: :days(-$nw-pub);
+    $mtg-date    = $d;
+    $email-date  = $d.earlier: :days(-$all-send);
+    $bb-pub-date = $d.earlier: :days(-$bb-pub);
+    $nw-pub-date = $d.earlier: :days(-$nw-pub);
 
     # if testing we want start and finish with March
     next if $test && $mon < 3 || $mon > 3 && $test;
@@ -133,7 +137,9 @@ for @first-mondays -> $d {
     my $mnam = $dn.mon($mon);
     my $day  = $d.day;
     say "First Monday in $mnam is $day";
-    my $mtg-date = sprintf "%04d-%02d-%02d", $y, $mon, $day;
+    #my $mtg-date = sprintf "%04d-%02d-%02d", $y, $mon, $day;
+    #my $mtg-date-std-format = date-std-fmt $d; # sprintf "%s %d, %s", $mnam, $day, $y;
+
     # a dir per meeting date
     my $dir = 'mtg-' ~ $mtg-date;
     if $dir.IO.d {
@@ -145,10 +151,12 @@ for @first-mondays -> $d {
     }
 
     # print pertinent dates
-    say "  send email to Bay Beacon and NWF Daily News: $all-send-date";
+    say "  send email to Bay Beacon and NWF Daily News: $email-date";
     say "  publish in Bay Beacon:                       $bb-pub-date";
     say "  publish in NWF Daily News:                   $nw-pub-date";
 
+    # if we have entered another month
+    last if $m == $mon;
 }
 
 if !$m {
@@ -168,13 +176,13 @@ if !$print {
     }
 }
 
-# first step is tranforming test templates to show the proper dates
-
-# second step is transforming the markdown into docx
-
-# third step is to submit the emails
 
 my @ofils;
+
+print-all-docs :$mtg-date, :$email-date, :$nw-pub-date, :$bb-pub-date;
+
+
+
 my $nf = +@ofils;
 say "Normal end.";
 if $nf {
@@ -188,10 +196,11 @@ else {
 
 ##### SUBROUTINES #####
 sub print-all-docs(
-    :$mtg-month-name,
-    :$email-send,
-    :$nw-pub,
-    :$bb-pub,
+    # note all following dates are in format: yyyy-mm-dd
+    :$mtg-date!,
+    :$email-date!,
+    :$nw-pub-date!,
+    :$bb-pub-date!,
     :$do-props,
     :$debug,
 ) {
@@ -201,18 +210,29 @@ sub print-all-docs(
     #   date to publish in Bay Beacon
 
     # define string vars used:
-    #  $mtg-month-name;         # March <= input var by caller
-    my $bb-pub-date-std-format; # June 4, 2019
-    my $nw-pub-date-std-format; # September 21, 2020
-    my $mtg-date-std-format;    # June 4, 2019
+    my $mtg-month-name         = $dn.mon($mtg-date.month);
+    my $mtg-date-std-format    = date-std-fmt $mtg-date;    # June 4, 2019
+    my $bb-pub-date-std-format = date-std-fmt $bb-pub-date; # June 4, 2019
+    my $nw-pub-date-std-format = date-std-fmt $nw-pub-date; # September 21, 2020
 
     # output file names without suffixes
-    my $f1 = "bay-beacon-email-{$email-send}";
-    my $f2 = "bay-beacon-presr-CROSS-{$email-send}";
-    my $f3 = "bay-beacon-presr-PROPS-{$email-send}";
-    my $f4 = "nwfdn-email-{$email-send}";
-    my $f5 = "nwfdn-presr-CROSS-{$email-send}";
-    my $f6 = "nwfdn-presr-PROPS-{$email-send}";
+    my $f0 = "bay-beacon-email-{$email-date}";
+    my $f1 = "bay-beacon-presr-CROSS-{$email-date}";
+    my $f2 = "bay-beacon-presr-PROPS-{$email-date}";
+    my $f3 = "nwfdn-email-{$email-date}";
+    my $f4 = "nwfdn-presr-CROSS-{$email-date}";
+    my $f5 = "nwfdn-presr-PROPS-{$email-date}";
+    my @list = $f0, $f1, $f2, $f3, $f4, $f5;
+    if 1 {
+        say "DEBUG: base names:";
+        say "  $_" for @list;
+    }
+
+    # first step is tranforming test templates to show the proper dates
+
+    # second step is transforming the markdown into docx
+
+    # third step is to submit the emails
 
     print-nw-email;
     print-nw-presser;
@@ -231,4 +251,14 @@ sub print-bb-email() {
 }
 
 sub print-bb-presser() {
+}
+
+multi sub date-std-fmt(Date $D) {
+    # e.g., "May 7, 2019"
+    my $y = $D.year;
+    my $d = $D.day;
+    my $m = $D.month;
+    state $dn = Date::Names.new: :mset('mon');
+
+    return sprintf "%s %d, %d", $dn.mon($m), $d, $y;
 }
