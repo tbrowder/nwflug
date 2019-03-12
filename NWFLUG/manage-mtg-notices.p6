@@ -3,7 +3,12 @@
 use Date::Names;
 
 use lib <./lib>;
-use Strings;
+use BB-Email;
+use BB-Cross;
+use BB-Props;
+use NW-Email;
+use NW-Cross;
+use NW-Props;
 
 my $test  = 0;
 my $debug = 0;
@@ -153,9 +158,9 @@ else {
 
 ##### SUBROUTINES #####
 sub print-all-docs(:$email-send!,
-                   :$bb-show!, 
-                   :$nw-show!, 
-                   :$do-props, 
+                   :$bb-show!,
+                   :$nw-show!,
+                   :$do-props,
                    :$debug,
                   ) {
     # define string vars used:
@@ -189,6 +194,3 @@ sub print-bb-email() {
 
 sub print-bb-presser() {
 }
-
-
-
