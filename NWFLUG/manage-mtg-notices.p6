@@ -134,7 +134,6 @@ else {
 }
 
 # first step is tranforming test templates to show the proper dates
-print-bay-beacon;
 
 # second step is transforming the markdown into docx
 
@@ -174,7 +173,22 @@ sub print-all-docs(:$email-send!,
 
     print-nw-email;
     print-nw-presser;
-    print-bay-email;
-    print-bay-presser;
+    print-bb-email;
+    print-bb-presser;
 
 }
+
+sub print-nw-email() {
+}
+
+sub print-nw-presser() {
+}
+
+sub print-bb-email() {
+}
+
+sub print-bb-presser() {
+}
+
+
+
