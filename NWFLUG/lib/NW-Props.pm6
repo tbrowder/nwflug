@@ -1,6 +1,6 @@
 unit module NW-Props;
 
-sub get-nw-props(:$nw-showdate-std-format!,
+sub get-nw-props(:$nw-pub-date-std-format!,
                  :$mtg-date-std-format!,
                 ) is export {
 
@@ -8,7 +8,7 @@ my $ltr = qq:to/HERE/;
 FOR IMMEDIATE RELEASE:
 
 DESIRED NWF DAILY NEWS\\
-SUNDAY LIFESTYLE PUBLICATION DATE: {$nw-showdate-std-format}
+SUNDAY LIFESTYLE PUBLICATION DATE: {$nw-pub-date-std-format}
 
 Linux User Group Meeting
 

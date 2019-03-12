@@ -14,7 +14,7 @@ use NW-Props;
 # calculate meeting dates and PR media deadlines
 if !@*ARGS {
     say qq:to/HERE/;
-    Usage: $*PROGRAM go | [y=YYYY] [m=N|MMM][debug][test][print]
+    Usage: $*PROGRAM go | [y=YYYY] [m=N|MMM][debug][test][print][Props]
     HERE
     exit;
 }
@@ -22,6 +22,7 @@ if !@*ARGS {
 my $test  = 0;
 my $debug = 0;
 my $print = 0;
+my $do-props = 0;
 # add more sophisticated arg handling
 my $y = DateTime.now.year; # default
 my $m = 0;                 # use all months
@@ -37,6 +38,9 @@ for @*ARGS {
     }
     when /:i ^t/ {
         $test = 1;
+    }
+    when /:i ^P/ {
+        $do-props = 1;
     }
     when /:i ^p/ {
         $print = 1;
@@ -103,23 +107,23 @@ for 1..12 -> $mon {
 # show the pertinent dates
 # constant delta days:
 # BAY BEACON
-constant $bb-show = -5;            # show in the paper the wednesday prior to the mtg
-constant $bb-send = $bb-show - 14; # send email two weeks prior to desired paper
+constant $bb-pub = -5;            # publish in the paper the wednesday prior to the mtg
+constant $bb-send = $bb-pub - 14; # send email two weeks prior to desired paper
 # NWF DAILY NEWS
-constant $nw-show = -1;            # show in the paper the sunday prior to the mtg
-constant $nw-send = $nw-show - 22; # send email 22 days prior to desired paper
+constant $nw-pub = -1;            # publish in the paper the sunday prior to the mtg
+constant $nw-send = $nw-pub - 22; # send email 22 days prior to desired paper
 constant $all-send = $nw-send;
 
-my $nw-show-date;
-my $bb-show-date;
+my $nw-pub-date;
+my $bb-pub-date;
 my $all-send-date;
 for @first-mondays -> $d {
     my $mon  = $d.month;
 
     # calculate pertinent dates
     $all-send-date = $d.earlier: :days(-$all-send);
-    $bb-show-date  = $d.earlier: :days(-$bb-show);
-    $nw-show-date  = $d.earlier: :days(-$nw-show);
+    $bb-pub-date  = $d.earlier: :days(-$bb-pub);
+    $nw-pub-date  = $d.earlier: :days(-$nw-pub);
 
     # if testing we want start and finish with March
     next if $test && $mon < 3 || $mon > 3 && $test;
@@ -142,8 +146,8 @@ for @first-mondays -> $d {
 
     # print pertinent dates
     say "  send email to Bay Beacon and NWF Daily News: $all-send-date";
-    say "  show in Bay Beacon:           $bb-show-date";
-    say "  show in NWF Daily News:       $nw-show-date";
+    say "  publish in Bay Beacon:                       $bb-pub-date";
+    say "  publish in NWF Daily News:                   $nw-pub-date";
 
 }
 
@@ -152,13 +156,16 @@ if !$m {
     exit;
 }
 
-my $ans = prompt "\nDo you want to create the docx files (y/n) => ";
-if $ans ~~ /:i ^y/ {
-    say "You entered 'YES'";
-}
-else {
-    say "You did NOT enter 'y' or 'Y'...exiting";
-    exit;
+if !$print {
+    my $ans = prompt "\nDo you want to create the docx files (y/n) => ";
+    if $ans ~~ /:i ^y/ {
+        say "You entered 'YES'";
+        ++$print;
+    }
+    else {
+        say "You did NOT enter 'y' or 'Y'...exiting";
+        exit;
+    }
 }
 
 # first step is tranforming test templates to show the proper dates
@@ -180,23 +187,31 @@ else {
 }
 
 ##### SUBROUTINES #####
-sub print-all-docs(:$email-send!,
-                   :$bb-show!,
-                   :$nw-show!,
-                   :$do-props,
-                   :$debug,
-                  ) {
+sub print-all-docs(
+    :$mtg-month-name,
+    :$email-send,
+    :$nw-pub,
+    :$bb-pub,
+    :$do-props,
+    :$debug,
+) {
+    # we need three dates as input:
+    #   date to send email
+    #   date to publish in NWFDN
+    #   date to publish in Bay Beacon
+
     # define string vars used:
-    my $mtg-month-name;          # March
-    my $bb-show-date-std-format; # June 4, 2019
-    my $nw-show-date-std-format; # September 21, 2020
+    #  $mtg-month-name;         # March <= input var by caller
+    my $bb-pub-date-std-format; # June 4, 2019
+    my $nw-pub-date-std-format; # September 21, 2020
+    my $mtg-date-std-format;    # June 4, 2019
 
     # output file names without suffixes
-    my $f1 = "bay-beacon-email-COMMON-{$email-send}";
-    my $f2 = "bay-beacon-presr-CROSSPOINT-{$email-send}";
+    my $f1 = "bay-beacon-email-{$email-send}";
+    my $f2 = "bay-beacon-presr-CROSS-{$email-send}";
     my $f3 = "bay-beacon-presr-PROPS-{$email-send}";
-    my $f4 = "nwfdn-email-COMMON-{$email-send}";
-    my $f5 = "nwfdn-presr-CROSSPOINT-{$email-send}";
+    my $f4 = "nwfdn-email-{$email-send}";
+    my $f5 = "nwfdn-presr-CROSS-{$email-send}";
     my $f6 = "nwfdn-presr-PROPS-{$email-send}";
 
     print-nw-email;

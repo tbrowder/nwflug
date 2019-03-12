@@ -1,13 +1,13 @@
 unit module BB-Props;
 
-sub get-bb-props(:$bb-show-date-std-format!,
+sub get-bb-props(:$bb-pub-date-std-format!,
                  :$mtg-date-std-format!,
                 ) is export {
 
 my $ltr = qq:to/HERE/;
 FOR IMMEDIATE RELEASE:
 
-DESIRED PUBLICATION DATE:  {$bb-show-date-std-format}
+DESIRED PUBLICATION DATE:  {$bb-pub-date-std-format}
 
 Linux User Group Meeting
 

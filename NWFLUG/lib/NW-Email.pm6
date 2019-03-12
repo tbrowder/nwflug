@@ -1,7 +1,7 @@
 unit module NW-Email;
 
 sub get-nw-email(:$mtg-month-name!,
-                 :$nw-show-date-std-format!,
+                 :$nw-pub-date-std-format!,
                 ) is export {
 
 my $ltr = qq:to/HERE/;
@@ -21,7 +21,7 @@ persons are invited.
 
 I would appreciate it if appropriate details could be entered into
 the Sunday Lifestyle section for
-{$nw-show-date-std-format}.
+{$nw-pub-date-std-format}.
 
 Best regards,
 

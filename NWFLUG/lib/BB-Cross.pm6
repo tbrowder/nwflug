@@ -1,13 +1,13 @@
 unit module BB-Cross;
 
-sub get-bb-cross(:$bb-show-date-std-format!,
+sub get-bb-cross(:$bb-pub-date-std-format!,
                  :$mtg-date-std-format!,
                 ) is export {
 
 my $ltr = qq:to/HERE/;
 FOR IMMEDIATE RELEASE:
 
-DESIRED BAY BEACON PUBLICATION DATE:  {$bb-show-date-std-format}
+DESIRED BAY BEACON PUBLICATION DATE:  {$bb-pub-date-std-format}
 
 Linux User Group Meeting
 

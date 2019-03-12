@@ -1,6 +1,6 @@
 unit module BB-Email;
 
-sub get-bb-email(:$bb-show-date-std-format!,
+sub get-bb-email(:$bb-pub-date-std-format!,
                  :$mtg-month-name!,
                 ) is export {
 
@@ -19,7 +19,7 @@ persons are invited.
 
 I would appreciate it if appropriate details could be entered into
 the "{$mtg-month-name} Calendar" column for the Bay Beacon issue for
-{$bb-show-date-std-format}.
+{$bb-pub-date-std-format}.
 
 Best regards,
 
