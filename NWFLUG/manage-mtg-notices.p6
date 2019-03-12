@@ -153,7 +153,25 @@ else {
 }
 
 ##### SUBROUTINES #####
-sub print-all-docs(:$send!, :$bay-show!, :$nw-show!, :$do-props, :$debug) {
+sub print-all-docs(:$email-send!,
+                   :$bb-show!, 
+                   :$nw-show!, 
+                   :$do-props, 
+                   :$debug,
+                  ) {
+    # define string vars used:
+    my $mtg-month-name;          # March
+    my $bb-show-date-std-format; # June 4, 2019
+    my $nw-show-date-std-format; # September 21, 2020
+
+    # output file names without suffixes
+    my $f1 = "bay-beacon-email-COMMON-{$email-send}";
+    my $f2 = "bay-beacon-presr-CROSSPOINT-{$email-send}";
+    my $f3 = "bay-beacon-presr-PROPS-{$email-send}";
+    my $f4 = "nwfdn-email-COMMON-{$email-send}";
+    my $f5 = "nwfdn-presr-CROSSPOINT-{$email-send}";
+    my $f6 = "nwfdn-presr-PROPS-{$email-send}";
+
     print-nw-email;
     print-nw-presser;
     print-bay-email;
