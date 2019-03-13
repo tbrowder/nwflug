@@ -5,11 +5,11 @@ sub get-bb-props(:$bb-pub-date-std-format!,
                 ) is export {
 
 my $ltr = qq:to/HERE/;
-**FOR IMMEDIATE RELEASE:
+**FOR IMMEDIATE RELEASE:**
 
-DESIRED PUBLICATION DATE:  {$bb-pub-date-std-format}
+**DESIRED PUBLICATION DATE:  {$bb-pub-date-std-format}**
 
-Linux User Group Meeting**
+**Linux User Group Meeting**
 
 *Niceville, Florida*
 

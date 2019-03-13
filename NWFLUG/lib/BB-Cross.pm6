@@ -5,11 +5,11 @@ sub get-bb-cross(:$bb-pub-date-std-format!,
                 ) is export {
 
 my $ltr = qq:to/HERE/;
-**FOR IMMEDIATE RELEASE:
+**FOR IMMEDIATE RELEASE:**
 
-DESIRED BAY BEACON PUBLICATION DATE:  {$bb-pub-date-std-format}
+**DESIRED BAY BEACON PUBLICATION DATE:  {$bb-pub-date-std-format}**
 
-Linux User Group Meeting**
+**Linux User Group Meeting**
 
 *Niceville, Florida*
 
