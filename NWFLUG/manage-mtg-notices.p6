@@ -23,6 +23,7 @@ my $test  = 0;
 my $debug = 0;
 my $print = 0;
 my $do-props = 0;
+my $force = 0;
 # add more sophisticated arg handling
 my $y = DateTime.now.year; # default
 my $m = 0;                 # use all months
@@ -40,11 +41,17 @@ for @*ARGS {
     when /:i ^t/ {
         $test = 1;
     }
+    when /:i ^f/ {
+        $force = 1;
+    }
     when /^ P / {
         $do-props = 1;
     }
     when /^ p / {
         $print = 1;
+    }
+    when /:i ^g / {
+        ; # go: ok
     }
     default {
         die "FATAL: Unknown arg '$_'";
@@ -98,7 +105,7 @@ for 1..12 -> $mon {
         if !$first-monday && $dow == 1 {
             # a Monday!
             my $mnam = $dn.mon($mon);
-            #say "First Monday in $mnam is $day";
+            say "First Monday in $mnam is $day" if $debug;
             $first-monday = $day;
             @first-mondays.append: $d;
         }
@@ -120,8 +127,12 @@ my $email-date;
 my $nw-pub-date;
 my $bb-pub-date;
 
+my @ofils;
+
+MONTH:
 for @first-mondays -> $d {
-    my $mon  = $d.month;
+    my $mon  = $d.month; # 1..12
+    my $mnam = $dn.mon($mon);
 
     # calculate pertinent dates
     $mtg-date    = $d;
@@ -130,11 +141,12 @@ for @first-mondays -> $d {
     $nw-pub-date = $d.earlier: :days(-$nw-pub);
 
     # if testing we want start and finish with March
-    next if $test && $mon < 3 || $mon > 3 && $test;
+    next if $test && ($mon < 3 || $mon > 3 && $test);
     # if we have entered another month
-    next if $m && $mon < $m || $mon > $m;
+    next if $m && ($mon < $m || $mon > $m);
 
-    my $mnam = $dn.mon($mon);
+    say "DEBUG: working month '$mnam'..." if $debug;
+
     my $day  = $d.day;
     say "First Monday in $mnam is $day";
     #my $mtg-date = sprintf "%04d-%02d-%02d", $y, $mon, $day;
@@ -143,7 +155,8 @@ for @first-mondays -> $d {
     # a dir per meeting date
     my $dir = 'mtg-' ~ $mtg-date;
     if $dir.IO.d {
-        say "Meeting directory '$dir' exists...ignoring" if $debug;
+        say "Meeting directory '$dir' exists...ignoring and skipping"; # if $debug;
+        next MONTH;
     }
     else {
         say "Need to create meeting directory '$dir'";
@@ -155,10 +168,15 @@ for @first-mondays -> $d {
     say "  publish in Bay Beacon:                       $bb-pub-date";
     say "  publish in NWF Daily News:                   $nw-pub-date";
 
+    if $print {
+        print-all-docs :$dir, :$mtg-date, :$email-date, :$nw-pub-date, :$bb-pub-date, :$force;
+    }
+
     # if we have entered another month
     last if $m == $mon;
 }
 
+=begin comment
 if !$m {
     say "Exiting, cannot create docx files for multiple months yet.";
     exit;
@@ -176,11 +194,8 @@ if !$print {
     }
 }
 
-
-my @ofils;
-
 print-all-docs :$mtg-date, :$email-date, :$nw-pub-date, :$bb-pub-date;
-
+=end comment
 
 
 my $nf = +@ofils;
@@ -202,6 +217,8 @@ sub print-all-docs(
     :$nw-pub-date!,
     :$bb-pub-date!,
     :$debug,
+    :$force,
+    :$dir = '.';
 ) {
     # we need three dates as input:
     #   date to send email
@@ -268,8 +285,8 @@ sub print-all-docs(
         }
 
         # process the file
-        my $md   = $f ~ '.txt';
-        my $docx = $f ~ '.docx';
+        my $md   = "{$dir}/{$f}.txt";
+        my $docx = "{$dir}/{$f}.docx";
         spurt $md, $str;
         my $cmd = "pandoc -o $docx $md";
         shell $cmd;
