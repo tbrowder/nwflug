@@ -226,7 +226,8 @@ sub print-all-docs(
     #   date to publish in Bay Beacon
 
     # define string vars used:
-    my $mtg-month-name         = $mtg-date.year; #$dn.mon($mtg-date.month);
+    my $mtg-month-name         = "{$dn.mon($mtg-date.month)} {$mtg-date.year}";
+    my $mtg-year               = "{$mtg-date.year}";
     my $mtg-date-std-format    = date-std-fmt $mtg-date;    # June 4, 2019
     my $bb-pub-date-std-format = date-std-fmt $bb-pub-date; # June 4, 2019
     my $nw-pub-date-std-format = date-std-fmt $nw-pub-date; # September 21, 2020
@@ -251,7 +252,7 @@ sub print-all-docs(
             when /:i bay/ {
                 say "Working Bay Beacon file '$_'...";
                 when /:i email / {
-                    $str = get-bb-email :$bb-pub-date-std-format, :$mtg-month-name;
+                    $str = get-bb-email :$bb-pub-date-std-format, :$mtg-month-name, :$mtg-year;
                 }
                 when /:i cross / {
                     $str = get-bb-cross :$bb-pub-date-std-format,:$mtg-date-std-format;
