@@ -273,7 +273,12 @@ sub print-all-docs(
         spurt $md, $str;
         my $cmd = "pandoc -o $docx $md";
         shell $cmd;
-        @ofils.append: $md;
+        if $test {
+            @ofils.append: $md;
+        }
+        else {
+            unlink $md;
+        }
         @ofils.append: $docx;
 
     }
