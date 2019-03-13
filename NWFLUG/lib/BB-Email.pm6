@@ -2,6 +2,7 @@ unit module BB-Email;
 
 sub get-bb-email(:$bb-pub-date-std-format!,
                  :$mtg-month-name!,
+                 :$mtg-year!,
                 ) is export {
 
 my $ltr = qq:to/HERE/;
@@ -18,7 +19,7 @@ Northwest Florida Linux User Group (NWFLUG) to which all interested
 persons are invited.
 
 I would appreciate it if appropriate details could be entered into
-the "{$mtg-month-name} Calendar" column for the Bay Beacon issue for
+the "{$mtg-year} Calendar" column for the Bay Beacon issue for
 {$bb-pub-date-std-format}.
 
 Best regards,
