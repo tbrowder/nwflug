@@ -15,6 +15,8 @@ use NW-Props;
 if !@*ARGS {
     say qq:to/HERE/;
     Usage: $*PROGRAM go | [y=YYYY] [m=N|MMM][debug][test][print][Props]
+
+    Note you MUST use the 'print' option to get permanent output.
     HERE
     exit;
 }
