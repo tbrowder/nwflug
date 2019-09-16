@@ -89,11 +89,9 @@ fake-src/%.pdoc : src/%.pdoc
 
 fake-src/%.tex : fake-src/%.pdoc
 	$(PANDOC) $< -o $@
-	#-rm $(trash)
 
 otp/%.pdf : fake-src/%.tex
 	$(PDFLATEX) -output-directory=otp $<
-	#-rm $(trash)
 
 #.PHONY: deliver
 #deliver:
@@ -103,7 +101,7 @@ otp/%.pdf : fake-src/%.tex
 #	cp $(SITEPRODS) $(SITEDIR)
 #	@echo "Website updated\n"
 
-.PHONY: clean
+.PHONY: clean realclean
 clean:
 	(cd otp; rm -f *.dvi ; rm -f *.aux ; rm -f *.out ; \
 	            rm -f *.nav ; rm -f *.snm ; rm -f *.ps ;  \
@@ -117,6 +115,7 @@ clean:
 realclean: clean
 	(cd otp; rm -f *.log ; rm -f *.pdf )
 	(cd src; rm -f *.pdoc )
+	(cd fake-src; rm -f *.pdoc ; rm -f *.tex )
 
 
 trash  = $(patsubst %, otp/%.log, $(TALKS))
@@ -127,5 +126,6 @@ trash += $(patsubst %, otp/%.out, $(TALKS))
 trash += $(patsubst %, otp/%.nav, $(TALKS))
 trash += $(patsubst %, otp/%.vrb, $(TALKS))
 trash += $(patsubst %, otp/%.toc, $(TALKS))
-trash += src/*.bak src/*~
-trash += fake-src/*.bak
+trash += $(patsubst %, src/%.bak, $(TALKS))
+trash += $(patsubst %, src/%~, $(TALKS))
+trash += $(patsubst %, fake-src/%.bak, $(TALKS))

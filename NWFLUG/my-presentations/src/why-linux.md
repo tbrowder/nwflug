@@ -1,6 +1,8 @@
+---
 title: Why Linux?
 <!-- insert-file why-linux-headers.md -->
 date: 2018-12-31
+---
 
 ## Hypothesis
 
