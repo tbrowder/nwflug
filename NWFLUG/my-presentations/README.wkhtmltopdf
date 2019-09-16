@@ -1,0 +1,61 @@
+Program: wkhtmltopdf (and wkhtmltoimage) 
+
+Website: http://wkhtmltopdf.org/
+
+Download precompiled binary (or build from source).
+
+Binaries available (32- and 64-bit) for Linux, Windows (Vista+;
+bundles VC++ Runtime 2013), or Mac OS X (10.6+).
+
+Download Linux 64-bit binary:
+
+Comes in a tar.xz archive:
+
+# watch for dir pollution ('tar -t' vs. 'tar -x'):
+$ tar -tvJf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+drwxr-xr-x root/root         0 2016-01-20 02:33 wkhtmltox/
+drwxr-xr-x root/root         0 2016-01-20 02:32 wkhtmltox/lib/
+-rwxr-xr-x root/root  45072792 2016-01-20 02:32 wkhtmltox/lib/libwkhtmltox.so.0.12.3
+...
+
+Use it on any html document:
+
+$ wkhtmltopdf https://nwflug.org nwflug-org.pdf
+
+Lots of options:
+
+$ wkhtmltopdf --help
+
+Name:
+  wkhtmltoimage 0.12.3 (with patched qt)
+
+Synopsis:
+  wkhtmltoimage [OPTIONS]... <input file> <output file>
+  
+Description:
+  Converts an HTML page into an image, 
+
+General Options:
+      --crop-h <int>                  Set height for cropping
+      --crop-w <int>                  Set width for cropping
+      --crop-x <int>                  Set x coordinate for cropping
+      --crop-y <int>                  Set y coordinate for cropping
+  -H, --extended-help                 Display more extensive help, detailing
+                                      less common command switches
+  -f, --format <format>               Output file format
+      --height <int>                  Set screen height (default is calculated
+                                      from page content) (default 0)
+  -h, --help                          Display help
+      --license                       Output license information and exit
+      --quality <int>                 Output image quality (between 0 and 100)
+                                      (default 94)
+  -q, --quiet                         Be less verbose
+  -V, --version                       Output version information and exit
+      --width <int>                   Set screen width, note that this is used
+                                      only as a guide line. Use
+                                      --disable-smart-width to make it strict.
+                                      (default 1024)
+
+Contact:
+  If you experience bugs or want to request new features please visit 
+  <https://github.com/wkhtmltopdf/wkhtmltopdf/issues>
