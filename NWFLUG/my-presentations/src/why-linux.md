@@ -24,7 +24,7 @@ Chromebook, and the *Internet of Things* (IoT).
 
 ## What is Linux?
 
-A more detailed look:
+For a much more detailed look see this link:
 
 <**<https://www.lifewire.com/basic-guide-linux-operating-system-2202786>**>
 
@@ -128,7 +128,7 @@ On a Chromebook:
 
 + Use the Linux App
 
-Best:
+Best choice:
 
 + Use a dual-boot, native installation
 
@@ -154,7 +154,10 @@ There is practically an infinite amount of Linux resources to be found
 on the Internet.
 
 My group, the Northwest Florida Linux User Group (NWFLUG), meets
-monthly, and we have an installation meeting (by appointment only) on
-the third Monday of every month.
+regularly on the first Monday of every month, and we have an
+installation meeting (by appointment only) on the third Monday of
+every month.
 
-Check out our website at <**<https://nwflug.org>**>.
+Check out our website for meeting details and locations at:
+
+<**<https://nwflug.org>**>.
