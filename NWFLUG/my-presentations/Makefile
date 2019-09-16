@@ -1,14 +1,7 @@
-# based on code at:
-#   https://github.com/edumentab/rakudo-and-nqp-internals-course
-
 LATEX    = latex
 DVIPS    = dvips
 PS2PDF   = ps2pdf
-MD2TEX   = tools/md2tex
-BREAK    = tools/break-after-colon-in-title-slides
-INSERT   = tools/insert-into-template
-PERL     = perl
-PANDOC   = pandoc
+PANDOC   = pandoc -s -t beamer -V theme:Rochester
 PDFLATEX = pdflatex
 
 #CTECHYEAR     = 2016
@@ -59,7 +52,7 @@ TALKS  =
 #TALKS += agenda-2018-08-06
 #TALKS += install-perl6
 #TALKS += agenda-2018-12-03
-TALKS += agenda-2019-01-07
+TALKS += agenda-2019-10-07
 TALKS += why-linux
 
 COMMON +=
@@ -91,19 +84,16 @@ src/%.pdoc :: src/%.md $(COMMON) src/headers.md src/make-pdoc-from-md.p6
 #echo "working file $(@)..."
 #touch $@
 
-
 fake-src/%.pdoc : src/%.pdoc
 	-cp $< $@
 
-fake-src/%.tex : fake-src/%.pdoc $(MD2TEX)
-	$(PERL) $(MD2TEX) $< $@
-	$(PERL) -pi.bak -e "s/\(FIXUP\)//g"   $@
-	$(PERL) -i.bak $(BREAK)               $@
-	-rm $(trash)
+fake-src/%.tex : fake-src/%.pdoc
+	$(PANDOC) $< -o $@
+	#-rm $(trash)
 
 otp/%.pdf : fake-src/%.tex
 	$(PDFLATEX) -output-directory=otp $<
-	-rm $(trash)
+	#-rm $(trash)
 
 #.PHONY: deliver
 #deliver:
