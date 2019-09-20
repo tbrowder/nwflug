@@ -101,7 +101,7 @@ otp/%.pdf : fake-src/%.tex
 #	cp $(SITEPRODS) $(SITEDIR)
 #	@echo "Website updated\n"
 
-.PHONY: clean realclean
+.PHONY: clean realclean trash
 clean:
 	(cd otp; rm -f *.dvi ; rm -f *.aux ; rm -f *.out ; \
 	            rm -f *.nav ; rm -f *.snm ; rm -f *.ps ;  \
