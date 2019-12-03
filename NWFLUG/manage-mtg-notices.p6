@@ -5,10 +5,10 @@ use Date::Names;
 use lib <./lib>;
 use BB-Email;
 use BB-Cross;
-use BB-Props;
+#use BB-Props;
 use NW-Email;
 use NW-Cross;
-use NW-Props;
+#use NW-Props;
 
 
 # calculate meeting dates and PR media deadlines
@@ -95,7 +95,9 @@ my $ndays = $D.is-leap-year ?? 366 !! 365;
 # save the date info for all days
 my @days;
 my @first-mondays;
-for 1..12 -> $mon {
+#for 1..12 -> $mon {
+# start bi-monthly in 2020
+for 2, 4 ... 12 -> $mon {
     $D = Date.new: :year($y), :month($mon);
     my $ndays = $D.days-in-month;
     my $first-monday = 0;
@@ -237,11 +239,11 @@ sub print-all-docs(
     # output file names without suffixes
     my $f0 = "bay-beacon-email-{$email-date}";
     my $f1 = "bay-beacon-presr-CROSS-{$email-date}";
-    my $f2 = "bay-beacon-presr-PROPS-{$email-date}";
-    my $f3 = "nwfdn-email-{$email-date}";
-    my $f4 = "nwfdn-presr-CROSS-{$email-date}";
-    my $f5 = "nwfdn-presr-PROPS-{$email-date}";
-    my @list = $f0, $f1, $f2, $f3, $f4, $f5;
+    my $f2 = "nwfdn-email-{$email-date}";
+    my $f3 = "nwfdn-presr-CROSS-{$email-date}";
+#    my $f4 = "bay-beacon-presr-PROPS-{$email-date}";
+#    my $f5 = "nwfdn-presr-PROPS-{$email-date}";
+    my @list = $f0, $f1, $f2, $f3; # $f4, $f5;
     if 0 {
         say "DEBUG: base names:";
         say "  $_" for @list;
@@ -259,9 +261,11 @@ sub print-all-docs(
                 when /:i cross / {
                     $str = get-bb-cross :$bb-pub-date-std-format,:$mtg-date-std-format;
                 }
+                =begin comment
                 when /:i props / {
                     $str = get-bb-props :$bb-pub-date-std-format, :$mtg-date-std-format;
                 }
+                =end comment
                 default {
                     die "FATAL: Unknown file = '$_'";
                 }
@@ -275,9 +279,11 @@ sub print-all-docs(
                 when /:i cross / {
                     $str = get-nw-cross :$nw-pub-date-std-format,:$mtg-date-std-format;
                 }
+                =begin comment
                 when /:i props / {
                     $str = get-nw-props :$nw-pub-date-std-format, :$mtg-date-std-format;
                 }
+                =end comment
                 default {
                     die "FATAL: Unknown file = '$_'";
                 }
