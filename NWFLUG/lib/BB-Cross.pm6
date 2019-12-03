@@ -9,20 +9,21 @@ my $ltr = qq:to/HERE/;
 
 **DESIRED BAY BEACON PUBLICATION DATE:  {$bb-pub-date-std-format}**
 
-**Linux User Group Meeting**
+**Bimonthly Linux User Group Meeting**
 
 *Niceville, Florida*
 
 The Northwest Florida Linux User Group (NWFLUG) will hold its next
-monthly meeting on Monday, {$mtg-date-std-format}, from 5:30 PM until no later
-than 7:30 PM,
-in Room 400 of the Crosspoint United Methodist Church
-in Niceville, Florida.
-Directions and details of the (always free)
-planned program can be found on the group's website at
-<https://nwflug.org>.  All interested persons are invited to join us
-(and bring your laptops!).  Persons planning to attend are encouraged
-to notify us via email to <tom.browder@gmail.com>.
+next bimonthly meeting on Monday, {$mtg-date-std-format}, from 5:30 PM
+until no later than 7:30 PM, in Room 400 of the Crosspoint United
+Methodist Church in Niceville, Florida.
+
+The featured presentation will be: ***ENTER DATA HERE***
+
+Directions and details of the free, planned program can be found on
+the group's website at <https://nwflug.org>.  All are invited to join
+us at any meeting (and bring your laptops!.  Those planning to attend
+are encouraged to notify us via email to <tom.browder@gmail.com>.
 
 For more information, contact Tom Browder.
 
