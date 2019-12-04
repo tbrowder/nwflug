@@ -15,7 +15,7 @@ my $ltr = qq:to/HERE/;
 *Niceville, Florida*
 
 The Northwest Florida Linux User Group (NWFLUG) will hold its next
-next bimonthly meeting on Monday, {$mtg-date-std-format}, from 5:30 PM
+bimonthly meeting on Monday, {$mtg-date-std-format}, from 5:30 PM
 until no later than 7:30 PM, in Room 400 of the Crosspoint United
 Methodist Church in Niceville, Florida.
 
