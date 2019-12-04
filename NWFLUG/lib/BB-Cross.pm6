@@ -22,7 +22,7 @@ The featured presentation will be: ***ENTER DATA HERE***
 
 Directions and details of the free, planned program can be found on
 the group's website at <https://nwflug.org>.  All are invited to join
-us at any meeting (and bring your laptops!.  Those planning to attend
+us at any meeting (and bring your laptops!).  Those planning to attend
 are encouraged to notify us via email to <tom.browder@gmail.com>.
 
 For more information, contact Tom Browder.

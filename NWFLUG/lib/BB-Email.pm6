@@ -14,7 +14,7 @@ SUBJ: Bimonthly Meeting of the Northwest Florida Linux User Group (NWFLUG)
 
 Dear Sir or Madam:
 
-Attached is a press release announcing the next, bimonthly meeting
+Attached is a press release announcing the next bimonthly meeting
 ($mtg-month-name) of the Northwest Florida Linux User Group (NWFLUG)
 to which all interested persons are invited.
 
