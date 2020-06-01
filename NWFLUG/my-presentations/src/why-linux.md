@@ -1,14 +1,15 @@
 ---
 title: Why Linux?
 <!-- insert-file why-linux-headers.md -->
-date: 2019-09-16
+date: 2020-06-01
 ---
 
 ## Hypothesis
 
 Young people interested in careers involved with science, mathematics,
-engineering, or almost any technical field should be introduced to
-**Linux**.
+engineering, art, music, or almost any technical field should be
+introduced to **Linux**. (And if not **Linux**, they should be
+introduced to **FOSS** on Windows or Mac.)
 
 ## What is Linux?
 
@@ -30,14 +31,15 @@ For a much more detailed look see this link:
 
 ## Why Linux?
 
-The command-line environment provides the user with almost complete
-freedom to automate tasks typical in research or other work or study
-in technical fields.
+The command-line environment (equivalent to the *command* or *run*
+window on Windows) provides the user with almost complete freedom to
+automate tasks typical in research or other work or study in technical
+fields.
 
 **Linux** also gives the user much greater control over what happens
 and what does not happen on his or her computer.
 
-As a bonus, **Linux** comes packaged with thousands of free
+As a bonus, **Linux** comes packaged with **thousands** of free
 applications in such categories as: games, office suites, publishing
 and graphics, CAD, FEA, education, science, mathematics, music, art,
 and many others.
@@ -116,13 +118,13 @@ On Windows or Mac:
 
 + Install the Windows 10 Ubuntu subsystem
 
-+ Use a live, bootable CD/DVD [only as a last resort]
++ Install Linux as a VM guest on Windows 10 Pro Hyper-V
 
 ## Linux: How to get it (cont.)
 
-+ Install Linux as a VM guest on Windows 10 Pro Hyper-V
++ Install VirtualBox or VMware to run a Linux Virtual Machine
 
-+ Install VirtualBox or VMwareto run a Linux Virtual Machine
++ Use a live, bootable CD/DVD [only as a last resort]
 
 On a Chromebook:
 
@@ -144,7 +146,7 @@ popularity, download statistics, and other stats on hundreds of
 **distros**.
 
 We think *Linux Mint* is one of the best *distros* for beginners. I
-prefer *Debian* and have used it for over ten years.
+prefer *Debian* and have used it for well over ten years.
 
 (Note that Google has moved to **Debian** from Ubuntu recently.)
 

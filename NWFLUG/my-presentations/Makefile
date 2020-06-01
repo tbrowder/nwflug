@@ -52,7 +52,8 @@ TALKS  =
 #TALKS += agenda-2018-08-06
 #TALKS += install-perl6
 #TALKS += agenda-2018-12-03
-TALKS += agenda-2019-10-07
+#TALKS += agenda-2019-10-07
+TALKS += agenda-2020-06-01
 TALKS += why-linux
 
 COMMON +=
@@ -129,3 +130,7 @@ trash += $(patsubst %, otp/%.toc, $(TALKS))
 trash += $(patsubst %, src/%.bak, $(TALKS))
 trash += $(patsubst %, src/%~, $(TALKS))
 trash += $(patsubst %, fake-src/%.bak, $(TALKS))
+
+.PHONY: deliver-pdf
+deliver-pdf:
+	cp otp/why-linux.pdf /home/tbrowde/mydata/tbrowde-home/mydomains/domains/primary-web-servers/web-sites/nwflug.org/public/docs
