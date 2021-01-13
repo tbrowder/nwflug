@@ -6,15 +6,15 @@ use lib <./lib>;
 use BB-Email;
 use BB-Cross;
 #use BB-Props;
-use NW-Email;
-use NW-Cross;
+#use NW-Email;
+#use NW-Cross;
 #use NW-Props;
 
 
 # calculate meeting dates and PR media deadlines
 if !@*ARGS {
     say qq:to/HERE/;
-    Usage: $*PROGRAM go | [y=YYYY] [m=N|MMM][debug][test][print][Props]
+    Usage: $*PROGRAM go | [y=YYYY] [m=N|MMM][debug][test][print][Props][NWFDN
 
     Note you MUST use the 'print' option to get permanent output.
     HERE
@@ -25,6 +25,7 @@ my $test  = 0;
 my $debug = 0;
 my $print = 0;
 my $do-props = 0;
+my $do-nwfdn = 0;
 my $force = 0;
 # add more sophisticated arg handling
 my $y = DateTime.now.year; # default
@@ -48,6 +49,9 @@ for @*ARGS {
     }
     when /^ P / {
         $do-props = 1;
+    }
+    when /^ N / {
+        $do-nwfdn = 1;
     }
     when /^ p / {
         $print = 1;
@@ -142,7 +146,7 @@ for @first-mondays -> $d {
     $mtg-date    = $d;
     $email-date  = $d.earlier: :days(-$all-send);
     $bb-pub-date = $d.earlier: :days(-$bb-pub);
-    $nw-pub-date = $d.earlier: :days(-$nw-pub);
+    #$nw-pub-date = $d.earlier: :days(-$nw-pub);
 
     # if testing we want start and finish with March
     next if $test && ($mon < 3 || $mon > 3 && $test);
@@ -160,7 +164,7 @@ for @first-mondays -> $d {
     my $dir = 'mtg-' ~ $mtg-date;
     if $dir.IO.d {
         say "Meeting directory '$dir' exists...ignoring and skipping"; # if $debug;
-        next MONTH;
+        #next MONTH;
     }
     else {
         say "Need to create meeting directory '$dir'";
@@ -168,9 +172,10 @@ for @first-mondays -> $d {
     }
 
     # print pertinent dates
-    say "  send email to Bay Beacon and NWF Daily News: $email-date";
+    #say "  send email to Bay Beacon and NWF Daily News: $email-date";
+    say "  send email to Bay Beacon: $email-date";
     say "  publish in Bay Beacon:                       $bb-pub-date";
-    say "  publish in NWF Daily News:                   $nw-pub-date";
+    #say "  publish in NWF Daily News:                   $nw-pub-date";
 
     if $print {
         print-all-docs :$dir, :$mtg-date, :$email-date, :$nw-pub-date, :$bb-pub-date, :$force;
@@ -234,16 +239,16 @@ sub print-all-docs(
     my $mtg-year               = "{$mtg-date.year}";
     my $mtg-date-std-format    = date-std-fmt $mtg-date;    # June 4, 2019
     my $bb-pub-date-std-format = date-std-fmt $bb-pub-date; # June 4, 2019
-    my $nw-pub-date-std-format = date-std-fmt $nw-pub-date; # September 21, 2020
+    #my $nw-pub-date-std-format = date-std-fmt $nw-pub-date; # September 21, 2020
 
     # output file names without suffixes
     my $f0 = "bay-beacon-email-{$email-date}";
     my $f1 = "bay-beacon-presr-CROSS-{$email-date}";
-    my $f2 = "nwfdn-email-{$email-date}";
-    my $f3 = "nwfdn-presr-CROSS-{$email-date}";
+    #my $f2 = "nwfdn-email-{$email-date}";
+    #my $f3 = "nwfdn-presr-CROSS-{$email-date}";
 #    my $f4 = "bay-beacon-presr-PROPS-{$email-date}";
 #    my $f5 = "nwfdn-presr-PROPS-{$email-date}";
-    my @list = $f0, $f1, $f2, $f3; # $f4, $f5;
+    my @list = $f0, $f1; # , $f2, $f3; # $f4, $f5;
     if 0 {
         say "DEBUG: base names:";
         say "  $_" for @list;
@@ -270,6 +275,7 @@ sub print-all-docs(
                     die "FATAL: Unknown file = '$_'";
                 }
             }
+            =begin comment
             # NWF Daily News
             when /:i nwfdn / {
                 say "Working NWF Daily News file '$_'...";
@@ -288,6 +294,7 @@ sub print-all-docs(
                     die "FATAL: Unknown file = '$_'";
                 }
             }
+            =end comment
             default {
                 die "FATAL: Unknown file = '$_'";
             }
